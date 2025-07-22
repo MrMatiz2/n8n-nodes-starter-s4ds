@@ -1,0 +1,22 @@
+{
+  "name": "releaseInventory",
+  "method": "PATCH",
+  "endpoint": "/orders/releaseInventory/{orderNumber}",
+  "description": "Releases inventory for a specific order",
+  "parameters": [
+    {
+      "name": "orderNumber",
+      "type": "string",
+      "required": false,
+      "description": "Order number to release inventory",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "object"
+    }
+  }
+}

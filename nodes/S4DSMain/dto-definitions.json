@@ -604,5 +604,539 @@
         "required": false
       }
     }
+  },
+  "CreateOrderDTO": {
+    "type": "object",
+    "properties": {
+      "warehouseCode": {
+        "type": "string",
+        "description": "Warehouse code",
+        "required": false
+      },
+      "currency": {
+        "type": "string",
+        "description": "Currency code",
+        "required": false
+      },
+      "customer": {
+        "type": "object",
+        "description": "Customer information",
+        "schema": "CustomerDTO",
+        "required": false
+      },
+      "distributor": {
+        "type": "object",
+        "description": "Distributor information",
+        "schema": "DistributorDTO",
+        "required": false
+      },
+      "entrepreneur": {
+        "type": "object",
+        "description": "Entrepreneur information",
+        "schema": "EntrepreneurDTO",
+        "required": false
+      },
+      "items": {
+        "type": "array",
+        "description": "Order line items",
+        "items": {
+          "type": "object",
+          "schema": "LineItemDTO"
+        },
+        "required": false
+      },
+      "orderStatus": {
+        "type": "string",
+        "description": "Order status",
+        "required": false
+      },
+      "orderNumber": {
+        "type": "integer",
+        "description": "Order number",
+        "required": false
+      },
+      "couponDiscounts": {
+        "type": "number",
+        "description": "Coupon discount amount",
+        "required": false
+      },
+      "orderTotalValueAvailable": {
+        "type": "number",
+        "description": "Available order total value",
+        "required": false
+      },
+      "orderDate": {
+        "type": "string",
+        "description": "Order date",
+        "required": false
+      },
+      "metadata": {
+        "type": "object",
+        "description": "Order metadata",
+        "required": false
+      },
+      "deliveryInstructions": {
+        "type": "string",
+        "description": "Delivery instructions",
+        "required": false
+      },
+      "shippingTax": {
+        "type": "number",
+        "description": "Shipping tax amount",
+        "required": false
+      },
+      "exportLot": {
+        "type": "integer",
+        "description": "Export lot number",
+        "required": false
+      },
+      "orderTotalValue": {
+        "type": "number",
+        "description": "Total order value",
+        "required": false
+      },
+      "grossTotal": {
+        "type": "number",
+        "description": "Gross total amount",
+        "required": false
+      },
+      "taxTotal": {
+        "type": "number",
+        "description": "Total tax amount",
+        "required": false
+      },
+      "discountTotal": {
+        "type": "number",
+        "description": "Total discount amount",
+        "required": false
+      },
+      "trackingCode": {
+        "type": "string",
+        "description": "Tracking code",
+        "required": false
+      },
+      "generalDiscount": {
+        "type": "number",
+        "description": "General discount amount",
+        "required": false
+      },
+      "type": {
+        "type": "string",
+        "description": "Order type",
+        "required": false
+      },
+      "stateTax": {
+        "type": "number",
+        "description": "State tax amount",
+        "required": false
+      },
+      "countyTax": {
+        "type": "number",
+        "description": "County tax amount",
+        "required": false
+      },
+      "specialTax": {
+        "type": "number",
+        "description": "Special tax amount",
+        "required": false
+      },
+      "cancellationReason": {
+        "type": "integer",
+        "description": "Cancellation reason code",
+        "required": false
+      },
+      "cancelationDate": {
+        "type": "string",
+        "description": "Cancellation date",
+        "required": false
+      },
+      "logisticalOperator": {
+        "type": "integer",
+        "description": "Logistical operator ID",
+        "required": false
+      },
+      "shippingValue": {
+        "type": "number",
+        "description": "Shipping value",
+        "required": false
+      }
+    }
+  },
+  "DeleteOrderDTO": {
+    "type": "object",
+    "properties": {
+      "orderNumber": {
+        "type": "string",
+        "description": "Order number to delete",
+        "required": false
+      }
+    }
+  },
+  "UpdateInvoiceDTO": {
+    "type": "object",
+    "properties": {
+      "orderNumber": {
+        "type": "integer",
+        "description": "Order number",
+        "required": false
+      },
+      "invoiceDate": {
+        "type": "string",
+        "description": "Invoice date",
+        "required": false
+      },
+      "deadlineDate": {
+        "type": "string",
+        "description": "Invoice deadline date",
+        "required": false
+      },
+      "invoiceValue": {
+        "type": "number",
+        "description": "Invoice value",
+        "required": false
+      },
+      "invoicePath": {
+        "type": "string",
+        "description": "Path to invoice file",
+        "required": false
+      },
+      "invoiceNumber": {
+        "type": "string",
+        "description": "Invoice number",
+        "required": false
+      },
+      "invoiceDateConverted": {
+        "type": "string",
+        "description": "Invoice date converted to date-time format",
+        "required": false
+      },
+      "deadlineDateConverted": {
+        "type": "string",
+        "description": "Deadline date converted to date-time format",
+        "required": false
+      },
+      "invoicesInfo": {
+        "type": "array",
+        "description": "Array of invoice information objects",
+        "items": {
+          "type": "object"
+        },
+        "required": false
+      }
+    }
+  },
+  "OrderDocumentDTO": {
+    "type": "object",
+    "properties": {
+      "orderNumber": {
+        "type": "integer",
+        "description": "Order number",
+        "required": false
+      },
+      "documentName": {
+        "type": "string",
+        "description": "Document name",
+        "required": false
+      },
+      "documentData": {
+        "type": "string",
+        "description": "Document data",
+        "required": false
+      },
+      "documentUrl": {
+        "type": "string",
+        "description": "Document URL",
+        "required": false
+      },
+      "documentType": {
+        "type": "string",
+        "description": "Document type",
+        "required": false
+      },
+      "newDocumentName": {
+        "type": "string",
+        "description": "New document name",
+        "required": false
+      }
+    }
+  },
+  "CommentDTO": {
+    "type": "object",
+    "properties": {
+      "orderNumber": {
+        "type": "integer",
+        "description": "Order number",
+        "required": false
+      },
+      "comment": {
+        "type": "string",
+        "description": "Comment text",
+        "required": false
+      },
+      "visible": {
+        "type": "string",
+        "description": "Comment visibility",
+        "required": false
+      },
+      "commentId": {
+        "type": "string",
+        "description": "Comment ID",
+        "required": false
+      }
+    }
+  },
+  "UpdateOrderItemsDTO": {
+    "type": "object",
+    "properties": {
+      "orderId": {
+        "type": "integer",
+        "description": "Order ID",
+        "required": false
+      },
+      "orderNumber": {
+        "type": "string",
+        "description": "Order number",
+        "required": false
+      },
+      "items": {
+        "type": "array",
+        "description": "Array of order items to update",
+        "items": {
+          "type": "object",
+          "schema": "LineItemDTO"
+        },
+        "required": false
+      }
+    }
+  },
+  "UpdateOrderDetailsDTO": {
+    "type": "object",
+    "properties": {
+      "orderId": {
+        "type": "integer",
+        "description": "Order ID",
+        "required": false
+      },
+      "orderNumber": {
+        "type": "string",
+        "description": "Order number",
+        "required": false
+      },
+      "warehouse": {
+        "type": "string",
+        "description": "Warehouse identifier",
+        "required": false
+      },
+      "orderTotalValue": {
+        "type": "number",
+        "description": "Total order value",
+        "required": false
+      },
+      "customer": {
+        "type": "object",
+        "description": "Customer document data",
+        "schema": "DocumentDataDTO",
+        "required": false
+      },
+      "distributor": {
+        "type": "object",
+        "description": "Distributor document data",
+        "schema": "DocumentDataDTO",
+        "required": false
+      },
+      "entrepreneur": {
+        "type": "object",
+        "description": "Entrepreneur document data",
+        "schema": "DocumentDataDTO",
+        "required": false
+      },
+      "taxData": {
+        "type": "object",
+        "description": "Tax information",
+        "schema": "TaxDataDTO",
+        "required": false
+      },
+      "shippingData": {
+        "type": "object",
+        "description": "Shipping information",
+        "schema": "ShippingDataDTO",
+        "required": false
+      }
+    }
+  },
+  "LineItemDTO": {
+    "type": "object",
+    "properties": {
+      "sku": {
+        "type": "string",
+        "description": "Product SKU",
+        "required": false
+      },
+      "quantity": {
+        "type": "integer",
+        "description": "Item quantity",
+        "required": false
+      },
+      "totalValue": {
+        "type": "number",
+        "description": "Total value for this line item",
+        "required": false
+      },
+      "discountPercentage": {
+        "type": "number",
+        "description": "Discount percentage applied",
+        "required": false
+      },
+      "type": {
+        "type": "string",
+        "description": "Item type",
+        "required": false
+      },
+      "catalogPrice": {
+        "type": "number",
+        "description": "Catalog price",
+        "required": false
+      },
+      "productDescription": {
+        "type": "string",
+        "description": "Product description",
+        "required": false
+      },
+      "taxPercentage": {
+        "type": "number",
+        "description": "Tax percentage",
+        "required": false
+      },
+      "earnedPoints": {
+        "type": "number",
+        "description": "Points earned from this item",
+        "required": false
+      },
+      "redemptionPoints": {
+        "type": "number",
+        "description": "Points redeemed for this item",
+        "required": false
+      },
+      "orderEntryCode": {
+        "type": "string",
+        "description": "Order entry code",
+        "required": false
+      },
+      "equivalentCode1": {
+        "type": "string",
+        "description": "Equivalent code 1",
+        "required": false
+      },
+      "specialTax": {
+        "type": "number",
+        "description": "Special tax amount",
+        "required": false
+      },
+      "stateTax": {
+        "type": "number",
+        "description": "State tax amount",
+        "required": false
+      },
+      "countyTax": {
+        "type": "number",
+        "description": "County tax amount",
+        "required": false
+      },
+      "specialTax2": {
+        "type": "number",
+        "description": "Additional special tax amount",
+        "required": false
+      },
+      "isCommissionable": {
+        "type": "number",
+        "description": "Whether item is commissionable",
+        "required": false
+      },
+      "isQualified": {
+        "type": "number",
+        "description": "Whether item is qualified",
+        "required": false
+      },
+      "extendedField1": {
+        "type": "string",
+        "description": "Extended field 1",
+        "required": false
+      },
+      "extendedField2": {
+        "type": "string",
+        "description": "Extended field 2",
+        "required": false
+      },
+      "extendedField3": {
+        "type": "string",
+        "description": "Extended field 3",
+        "required": false
+      },
+      "extendedField4": {
+        "type": "string",
+        "description": "Extended field 4",
+        "required": false
+      },
+      "originalConsultant": {
+        "type": "number",
+        "description": "Original consultant",
+        "required": false
+      },
+      "originalCatalog": {
+        "type": "number",
+        "description": "Original catalog",
+        "required": false
+      }
+    }
+  },
+  "TaxDataDTO": {
+    "type": "object",
+    "properties": {
+      "stateTax": {
+        "type": "number",
+        "description": "State tax amount",
+        "required": false
+      },
+      "countryTax": {
+        "type": "number",
+        "description": "Country tax amount",
+        "required": false
+      },
+      "specialTax": {
+        "type": "number",
+        "description": "Special tax amount",
+        "required": false
+      }
+    }
+  },
+  "ShippingDataDTO": {
+    "type": "object",
+    "properties": {
+      "shippingTax": {
+        "type": "number",
+        "description": "Shipping tax amount",
+        "required": false
+      },
+      "shippingValue": {
+        "type": "number",
+        "description": "Shipping value",
+        "required": false
+      }
+    }
+  },
+  "DocumentDataDTO": {
+    "type": "object",
+    "properties": {
+      "documentType": {
+        "type": "string",
+        "description": "Document type",
+        "required": false
+      },
+      "documentId": {
+        "type": "string",
+        "description": "Document ID",
+        "required": false
+      }
+    }
   }
 } 

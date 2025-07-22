@@ -1,0 +1,29 @@
+{
+  "name": "processOrder",
+  "method": "POST",
+  "endpoint": "/orders/processOrder/{orderNumber}",
+  "description": "Processes a specific order",
+  "parameters": [
+    {
+      "name": "orderNumber",
+      "type": "string",
+      "required": false,
+      "description": "Order number to process",
+      "in": "path"
+    },
+    {
+      "name": "force",
+      "type": "string",
+      "required": false,
+      "description": "Force processing (default: F)",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "object"
+    }
+  }
+}

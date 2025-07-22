@@ -1,0 +1,36 @@
+{
+  "name": "getCustomersWithoutOrder",
+  "method": "GET",
+  "endpoint": "/orders/customersWithoutOrder",
+  "description": "Retrieves customers without orders",
+  "parameters": [
+    {
+      "name": "orderStatusToExclude",
+      "type": "array",
+      "required": false,
+      "description": "Order statuses to exclude",
+      "in": "query"
+    },
+    {
+      "name": "campaign",
+      "type": "string",
+      "required": false,
+      "description": "Campaign filter",
+      "in": "query"
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "Limit results (default: 5)",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "customers": "array"
+    }
+  }
+}

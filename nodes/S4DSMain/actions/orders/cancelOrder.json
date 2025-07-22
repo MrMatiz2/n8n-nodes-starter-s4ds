@@ -1,0 +1,18 @@
+{
+  "name": "cancelOrder",
+  "method": "DELETE",
+  "endpoint": "/orders",
+  "description": "Cancels an order",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "DeleteOrderDTO",
+    "required": true
+  },
+  "response": {
+    "type": "string",
+    "properties": {
+      "message": "string"
+    }
+  }
+}

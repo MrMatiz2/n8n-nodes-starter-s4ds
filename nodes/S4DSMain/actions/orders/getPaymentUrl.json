@@ -1,0 +1,29 @@
+{
+  "name": "getPaymentUrl",
+  "method": "GET",
+  "endpoint": "/orders/getPaymentUrl",
+  "description": "Gets payment URL for order",
+  "parameters": [
+    {
+      "name": "orderNumber",
+      "type": "string",
+      "required": false,
+      "description": "Order number",
+      "in": "query"
+    },
+    {
+      "name": "Authorization",
+      "type": "string",
+      "required": false,
+      "description": "Authorization header",
+      "in": "header"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "paymentUrl": "string"
+    }
+  }
+}

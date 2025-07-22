@@ -1,0 +1,22 @@
+{
+  "name": "getSpecificOrder",
+  "method": "GET",
+  "endpoint": "/orders/pecificOrder",
+  "description": "Retrieves specific order details",
+  "parameters": [
+    {
+      "name": "orderNumber",
+      "type": "string",
+      "required": false,
+      "description": "Order number",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "order": "object"
+    }
+  }
+}

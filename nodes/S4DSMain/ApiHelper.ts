@@ -9,6 +9,28 @@ import getProductCount from './actions/products/getProductCount.json';
 import getCustomerByDocument from './actions/customers/getCustomerByDocument.json';
 import createCustomer from './actions/customers/createCustomer.json';
 import updateCustomer from './actions/customers/updateCustomer.json';
+// Orders imports
+import getOrders from './actions/orders/getOrders.json';
+import createOrder from './actions/orders/createOrder.json';
+import cancelOrder from './actions/orders/cancelOrder.json';
+import updateInvoice from './actions/orders/updateInvoice.json';
+import getOrderDocument from './actions/orders/getOrderDocument.json';
+import updateOrderDocument from './actions/orders/updateOrderDocument.json';
+import setOrderDocument from './actions/orders/setOrderDocument.json';
+import deleteOrderDocument from './actions/orders/deleteOrderDocument.json';
+import getCommentOrder from './actions/orders/getCommentOrder.json';
+import updateOrderComment from './actions/orders/updateOrderComment.json';
+import addCommentOrder from './actions/orders/addCommentOrder.json';
+import deleteOrderComment from './actions/orders/deleteOrderComment.json';
+import processOrder from './actions/orders/processOrder.json';
+import finishOrder from './actions/orders/finishOrder.json';
+import releaseInventory from './actions/orders/releaseInventory.json';
+import updateOrderItems from './actions/orders/updateOrderItems.json';
+import updateOrderDetails from './actions/orders/updateOrderDetails.json';
+import getSpecificOrder from './actions/orders/getSpecificOrder.json';
+import getOrderWrapper from './actions/orders/getOrderWrapper.json';
+import getPaymentUrl from './actions/orders/getPaymentUrl.json';
+import getCustomersWithoutOrder from './actions/orders/getCustomersWithoutOrder.json';
 
 export interface ApiDefinition {
 	method: string;
@@ -62,6 +84,29 @@ const staticApiDefinitions: Record<string, Record<string, ApiDefinition>> = {
     getCustomerByDocument: getCustomerByDocument as ApiDefinition,
     createCustomer: createCustomer as ApiDefinition,
     updateCustomer: updateCustomer as ApiDefinition,
+  },
+  orders: {
+    getOrders: getOrders as ApiDefinition,
+    createOrder: createOrder as ApiDefinition,
+    cancelOrder: cancelOrder as ApiDefinition,
+    updateInvoice: updateInvoice as ApiDefinition,
+    getOrderDocument: getOrderDocument as ApiDefinition,
+    updateOrderDocument: updateOrderDocument as ApiDefinition,
+    setOrderDocument: setOrderDocument as ApiDefinition,
+    deleteOrderDocument: deleteOrderDocument as ApiDefinition,
+    getCommentOrder: getCommentOrder as ApiDefinition,
+    updateOrderComment: updateOrderComment as ApiDefinition,
+    addCommentOrder: addCommentOrder as ApiDefinition,
+    deleteOrderComment: deleteOrderComment as ApiDefinition,
+    processOrder: processOrder as ApiDefinition,
+    finishOrder: finishOrder as ApiDefinition,
+    releaseInventory: releaseInventory as ApiDefinition,
+    updateOrderItems: updateOrderItems as ApiDefinition,
+    updateOrderDetails: updateOrderDetails as ApiDefinition,
+    getSpecificOrder: getSpecificOrder as ApiDefinition,
+    getOrderWrapper: getOrderWrapper as ApiDefinition,
+    getPaymentUrl: getPaymentUrl as ApiDefinition,
+    getCustomersWithoutOrder: getCustomersWithoutOrder as ApiDefinition,
   },
 };
 

@@ -1,0 +1,22 @@
+{
+  "name": "getOrderWrapper",
+  "method": "GET",
+  "endpoint": "/orders/orderExtended",
+  "description": "Retrieves extended order information",
+  "parameters": [
+    {
+      "name": "orderNumber",
+      "type": "string",
+      "required": false,
+      "description": "Order number",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "orderExtended": "object"
+    }
+  }
+}

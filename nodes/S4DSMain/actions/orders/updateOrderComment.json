@@ -1,0 +1,26 @@
+{
+  "name": "updateOrderComment",
+  "method": "PUT",
+  "endpoint": "/orders/comments",
+  "description": "Updates order comment",
+  "parameters": [
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "Limit parameter (default: 100)",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "CommentDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "object"
+    }
+  }
+}
