@@ -66,5 +66,21 @@
         "file": "actions/customers/getAdvancedSearch.json"
       }
     ]
+  },
+  "commissions": {
+    "services": [
+      {
+        "name": "createCommissionPayment",
+        "file": "actions/commissions/createCommissionPayment.json"
+      },
+      {
+        "name": "getCommissions",
+        "file": "actions/commissions/getCommissions.json"
+      },
+      {
+        "name": "getIndicators",
+        "file": "actions/commissions/getIndicators.json"
+      }
+    ]
   }
 } 

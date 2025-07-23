@@ -1,0 +1,58 @@
+{
+  "name": "getIndicators",
+  "method": "GET",
+  "endpoint": "/commissions/indicator",
+  "description": "Get commission indicators with filtering options.",
+  "parameters": [
+    {
+      "name": "documentId",
+      "in": "query",
+      "required": false,
+      "type": "string",
+      "description": "Document ID to filter by"
+    },
+    {
+      "name": "documentType",
+      "in": "query",
+      "required": false,
+      "type": "string",
+      "description": "Document type to filter by"
+    },
+    {
+      "name": "campaignId",
+      "in": "query",
+      "required": false,
+      "type": "integer",
+      "description": "Campaign ID to filter by"
+    },
+    {
+      "name": "formatIndicator",
+      "in": "query",
+      "required": false,
+      "type": "string",
+      "description": "Format for the indicator"
+    },
+    {
+      "name": "moreDetails",
+      "in": "query",
+      "required": false,
+      "type": "boolean",
+      "default": false,
+      "description": "Include more detailed information"
+    },
+    {
+      "name": "year",
+      "in": "query",
+      "required": false,
+      "type": "string",
+      "description": "Year to filter by"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "indicators": "array"
+    }
+  }
+}

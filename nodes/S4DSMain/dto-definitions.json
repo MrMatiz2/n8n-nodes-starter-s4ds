@@ -682,5 +682,40 @@
         "required": false
       }
     }
+  },
+  "CommissionPaymentDTO": {
+    "type": "object",
+    "properties": {
+      "documentId": {
+        "type": "string",
+        "description": "Document ID",
+        "required": true
+      },
+      "documentType": {
+        "type": "string",
+        "description": "Document type",
+        "required": true
+      },
+      "periodId": {
+        "type": "integer",
+        "description": "Period ID",
+        "required": true
+      },
+      "value": {
+        "type": "string",
+        "description": "Payment value",
+        "required": true
+      },
+      "currency": {
+        "type": "string",
+        "description": "Currency code",
+        "required": true
+      },
+      "paymentDate": {
+        "type": "string",
+        "description": "Payment date",
+        "required": true
+      }
+    }
   }
 } 
