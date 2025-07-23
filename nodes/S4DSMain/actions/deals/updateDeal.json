@@ -1,0 +1,15 @@
+{
+  "method": "PATCH",
+  "endpoint": "/deal",
+  "description": "Update an existing deal",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "UpdateDealDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

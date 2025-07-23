@@ -1,0 +1,75 @@
+{
+  "method": "GET",
+  "endpoint": "/notes",
+  "description": "Get notes by user with optional filtering",
+  "parameters": [
+    {
+      "name": "internalCode",
+      "type": "string",
+      "required": false,
+      "description": "Internal code to filter by",
+      "in": "query"
+    },
+    {
+      "name": "noteNumber",
+      "type": "string",
+      "required": false,
+      "description": "Note number to filter by",
+      "in": "query"
+    },
+    {
+      "name": "quantity",
+      "type": "string",
+      "required": false,
+      "description": "Number of notes to return (default: 10)",
+      "in": "query"
+    },
+    {
+      "name": "documentId",
+      "type": "string",
+      "required": false,
+      "description": "Document ID to filter by",
+      "in": "query"
+    },
+    {
+      "name": "documentType",
+      "type": "string",
+      "required": false,
+      "description": "Document type to filter by",
+      "in": "query"
+    },
+    {
+      "name": "dateFrom",
+      "type": "string",
+      "required": false,
+      "description": "Start date for filtering",
+      "in": "query"
+    },
+    {
+      "name": "dateTo",
+      "type": "string",
+      "required": false,
+      "description": "End date for filtering",
+      "in": "query"
+    },
+    {
+      "name": "campaignId",
+      "type": "integer",
+      "required": false,
+      "description": "Campaign ID to filter by",
+      "in": "query"
+    },
+    {
+      "name": "conceptCode",
+      "type": "string",
+      "required": false,
+      "description": "Concept code to filter by",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

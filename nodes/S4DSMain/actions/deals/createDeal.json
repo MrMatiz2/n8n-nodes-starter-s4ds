@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "endpoint": "/deal",
+  "description": "Create a new deal",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "CreateDealDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

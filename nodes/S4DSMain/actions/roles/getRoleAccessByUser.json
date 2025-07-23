@@ -1,0 +1,26 @@
+{
+  "method": "GET",
+  "endpoint": "/roles/userRoleaccess",
+  "description": "Get role access information for a specific user",
+  "parameters": [
+    {
+      "name": "username",
+      "type": "string",
+      "required": false,
+      "description": "Username to get role access for",
+      "in": "query"
+    },
+    {
+      "name": "roleaccess",
+      "type": "string",
+      "required": false,
+      "description": "Role access to filter by",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

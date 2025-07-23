@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "endpoint": "/lead",
+  "description": "Create a new lead",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "PostLeadDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

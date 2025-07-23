@@ -1,0 +1,26 @@
+{
+  "method": "DELETE",
+  "endpoint": "/product",
+  "description": "Delete a product by ID or reference",
+  "parameters": [
+    {
+      "name": "productId",
+      "type": "integer",
+      "required": false,
+      "description": "Product ID to delete",
+      "in": "query"
+    },
+    {
+      "name": "reference",
+      "type": "string",
+      "required": false,
+      "description": "Product reference to delete",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

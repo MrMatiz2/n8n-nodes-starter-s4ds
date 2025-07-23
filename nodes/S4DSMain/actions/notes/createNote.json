@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "endpoint": "/notes",
+  "description": "Create a new note",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "CreateNoteDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

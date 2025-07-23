@@ -1,0 +1,19 @@
+{
+  "method": "GET",
+  "endpoint": "/product/{reference}",
+  "description": "Get a product by its reference",
+  "parameters": [
+    {
+      "name": "reference",
+      "type": "string",
+      "required": true,
+      "description": "Product reference",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "endpoint": "/product/catalogs",
+  "description": "Create a product and associate it with catalogs",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "ProductXCatalogDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

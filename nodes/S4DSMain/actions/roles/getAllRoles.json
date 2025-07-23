@@ -1,0 +1,40 @@
+{
+  "method": "GET",
+  "endpoint": "/roles",
+  "description": "Get all roles with optional filtering",
+  "parameters": [
+    {
+      "name": "rolId",
+      "type": "integer",
+      "required": false,
+      "description": "Role ID to filter by",
+      "in": "query"
+    },
+    {
+      "name": "rolName",
+      "type": "string",
+      "required": false,
+      "description": "Role name to filter by",
+      "in": "query"
+    },
+    {
+      "name": "priority",
+      "type": "integer",
+      "required": false,
+      "description": "Role priority to filter by",
+      "in": "query"
+    },
+    {
+      "name": "quantity",
+      "type": "integer",
+      "required": false,
+      "description": "Number of roles to return (default: 100)",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}
