@@ -18,6 +18,9 @@ import getOffSyncCustomers from './actions/customers/getOffSyncCustomers.json';
 import getOrdersByCustomer from './actions/customers/getOrdersByCustomer.json';
 import getUserByToken from './actions/customers/getUserByToken.json';
 import inactiveCustomer from './actions/customers/inactiveCustomer.json';
+import createCommissionPayment from './actions/commissions/createCommissionPayment.json';
+import getCommissions from './actions/commissions/getCommissions.json';
+import getIndicators from './actions/commissions/getIndicators.json';
 
 export interface ApiDefinition {
 	method: string;
@@ -81,8 +84,12 @@ const staticApiDefinitions: Record<string, Record<string, ApiDefinition>> = {
     getUserByToken: getUserByToken as ApiDefinition,
     inactiveCustomer: inactiveCustomer as ApiDefinition,
   },
+  commissions: {
+    createCommissionPayment: createCommissionPayment as ApiDefinition,
+    getCommissions: getCommissions as ApiDefinition,
+    getIndicators: getIndicators as ApiDefinition
+  },
 };
-
 export class ApiHelper {
   // Return the static API definitions
   static getApiDefinitions(): Record<string, Record<string, ApiDefinition>> {
