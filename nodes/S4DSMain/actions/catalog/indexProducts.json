@@ -1,0 +1,19 @@
+{
+  "method": "GET",
+  "endpoint": "/catalog/indexProducts",
+  "description": "Index catalog products",
+  "parameters": [
+    {
+      "name": "removeIndex",
+      "type": "boolean",
+      "required": false,
+      "description": "Remove existing index before creating new one (default: false)",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

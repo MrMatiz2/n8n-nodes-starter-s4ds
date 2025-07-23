@@ -1,0 +1,15 @@
+{
+  "method": "PUT",
+  "endpoint": "/catalog",
+  "description": "Update an existing catalog",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "PutCatalog",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

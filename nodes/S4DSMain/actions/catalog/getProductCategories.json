@@ -1,0 +1,11 @@
+{
+  "method": "GET",
+  "endpoint": "/catalog/getProductCategories",
+  "description": "Get product categories for catalogs",
+  "parameters": [],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

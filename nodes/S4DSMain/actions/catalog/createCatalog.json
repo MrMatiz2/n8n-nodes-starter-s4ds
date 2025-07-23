@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "endpoint": "/catalog",
+  "description": "Create a new catalog",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "PostCatalog",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "method": "DELETE",
+  "endpoint": "/catalog/{catalogId}",
+  "description": "Delete a catalog by ID",
+  "parameters": [
+    {
+      "name": "catalogId",
+      "type": "integer",
+      "required": true,
+      "description": "The catalog ID to delete",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}
