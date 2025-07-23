@@ -1,0 +1,22 @@
+{
+  "name": "finishOrder",
+  "method": "POST",
+  "endpoint": "/orders/finishOrder/{orderNumber}",
+  "description": "Finishes/completes a specific order",
+  "parameters": [
+    {
+      "name": "orderNumber",
+      "type": "string",
+      "required": false,
+      "description": "Order number to finish",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "object"
+    }
+  }
+}

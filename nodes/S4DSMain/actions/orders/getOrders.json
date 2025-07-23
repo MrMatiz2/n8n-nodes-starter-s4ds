@@ -1,0 +1,92 @@
+{
+  "name": "getOrders",
+  "method": "GET",
+  "endpoint": "/orders",
+  "description": "Retrieves orders with filtering capabilities",
+  "parameters": [
+    {
+      "name": "quantity",
+      "type": "integer",
+      "required": false,
+      "description": "Number of orders to retrieve (default: 100)",
+      "in": "query"
+    },
+    {
+      "name": "orderNumber",
+      "type": "string",
+      "required": false,
+      "description": "Filter by order number",
+      "in": "query"
+    },
+    {
+      "name": "orderStatus",
+      "type": "string",
+      "required": false,
+      "description": "Filter by order status (default: F)",
+      "in": "query"
+    },
+    {
+      "name": "orderStartDate",
+      "type": "string",
+      "required": false,
+      "description": "Filter by start date",
+      "in": "query"
+    },
+    {
+      "name": "orderEndDate",
+      "type": "string",
+      "required": false,
+      "description": "Filter by end date",
+      "in": "query"
+    },
+    {
+      "name": "campaignId",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by campaign ID",
+      "in": "query"
+    },
+    {
+      "name": "orderType",
+      "type": "string",
+      "required": false,
+      "description": "Filter by order type",
+      "in": "query"
+    },
+    {
+      "name": "documentType",
+      "type": "string",
+      "required": false,
+      "description": "Filter by document type",
+      "in": "query"
+    },
+    {
+      "name": "documentId",
+      "type": "string",
+      "required": false,
+      "description": "Filter by document ID",
+      "in": "query"
+    },
+    {
+      "name": "returnParamsList",
+      "type": "array",
+      "required": false,
+      "description": "List of parameters to return",
+      "in": "query"
+    },
+    {
+      "name": "orderBy",
+      "type": "string",
+      "required": false,
+      "description": "Order results by field",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "orders": "array"
+    }
+  }
+}

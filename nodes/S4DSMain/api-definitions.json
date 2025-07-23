@@ -126,5 +126,93 @@
         "file": "actions/catalog/getCountAllCatalog.json"
       }
     ]
+  },
+  "orders": {
+    "services": [
+      {
+        "name": "getOrders",
+        "file": "actions/orders/getOrders.json"
+      },
+      {
+        "name": "createOrder",
+        "file": "actions/orders/createOrder.json"
+      },
+      {
+        "name": "cancelOrder",
+        "file": "actions/orders/cancelOrder.json"
+      },
+      {
+        "name": "updateInvoice",
+        "file": "actions/orders/updateInvoice.json"
+      },
+      {
+        "name": "getOrderDocument",
+        "file": "actions/orders/getOrderDocument.json"
+      },
+      {
+        "name": "updateOrderDocument",
+        "file": "actions/orders/updateOrderDocument.json"
+      },
+      {
+        "name": "setOrderDocument",
+        "file": "actions/orders/setOrderDocument.json"
+      },
+      {
+        "name": "deleteOrderDocument",
+        "file": "actions/orders/deleteOrderDocument.json"
+      },
+      {
+        "name": "getCommentOrder",
+        "file": "actions/orders/getCommentOrder.json"
+      },
+      {
+        "name": "updateOrderComment",
+        "file": "actions/orders/updateOrderComment.json"
+      },
+      {
+        "name": "addCommentOrder",
+        "file": "actions/orders/addCommentOrder.json"
+      },
+      {
+        "name": "deleteOrderComment",
+        "file": "actions/orders/deleteOrderComment.json"
+      },
+      {
+        "name": "processOrder",
+        "file": "actions/orders/processOrder.json"
+      },
+      {
+        "name": "finishOrder",
+        "file": "actions/orders/finishOrder.json"
+      },
+      {
+        "name": "releaseInventory",
+        "file": "actions/orders/releaseInventory.json"
+      },
+      {
+        "name": "updateOrderItems",
+        "file": "actions/orders/updateOrderItems.json"
+      },
+      {
+        "name": "updateOrderDetails",
+        "file": "actions/orders/updateOrderDetails.json"
+      },
+      {
+        "name": "getSpecificOrder",
+        "file": "actions/orders/getSpecificOrder.json"
+      },
+      {
+        "name": "getOrderWrapper",
+        "file": "actions/orders/getOrderWrapper.json"
+      },
+      {
+        "name": "getPaymentUrl",
+        "file": "actions/orders/getPaymentUrl.json"
+      },
+      {
+        "name": "getCustomersWithoutOrder",
+        "file": "actions/orders/getCustomersWithoutOrder.json"
+      }
+    ]
   }
 } 
