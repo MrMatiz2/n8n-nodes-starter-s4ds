@@ -604,5 +604,83 @@
         "required": false
       }
     }
+  },
+  "CloneUserDTO": {
+    "type": "object",
+    "properties": {
+      "username": {
+        "type": "string",
+        "description": "Source username to clone from",
+        "required": true
+      },
+      "newUsername": {
+        "type": "string",
+        "description": "New username to clone to",
+        "required": true
+      },
+      "displayName": {
+        "type": "string",
+        "description": "Display name for the cloned user",
+        "required": true
+      },
+      "password": {
+        "type": "string",
+        "description": "Password for the new user",
+        "required": true
+      },
+      "confirmPassword": {
+        "type": "string",
+        "description": "Password confirmation",
+        "required": true
+      }
+    }
+  },
+  "DsUserSession": {
+    "type": "object",
+    "properties": {
+      "userId": {
+        "type": "string",
+        "description": "User ID",
+        "required": false
+      },
+      "username": {
+        "type": "string",
+        "description": "Username",
+        "required": false
+      },
+      "token": {
+        "type": "string",
+        "description": "Session token",
+        "required": false
+      },
+      "roles": {
+        "type": "array",
+        "description": "User roles",
+        "items": {
+          "type": "string"
+        },
+        "required": false
+      }
+    }
+  },
+  "DeleteCustomerDTO": {
+    "type": "object",
+    "properties": {
+      "documentId": {
+        "type": "string",
+        "description": "Document ID of customer to delete",
+        "required": true
+      },
+      "documentType": {
+        "type": "string",
+        "description": "Document type",
+        "required": true
+      },
+      "reason": {
+        "type": "string",
+        "description": "Reason for deletion",
+        "required": false
+      }
+    }
   }
 } 
