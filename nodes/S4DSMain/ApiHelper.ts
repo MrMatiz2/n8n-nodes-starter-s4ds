@@ -21,6 +21,16 @@ import inactiveCustomer from './actions/customers/inactiveCustomer.json';
 import createCommissionPayment from './actions/commissions/createCommissionPayment.json';
 import getCommissions from './actions/commissions/getCommissions.json';
 import getIndicators from './actions/commissions/getIndicators.json';
+import getAllCatalogs from './actions/catalog/getAllCatalogs.json';
+import createCatalog from './actions/catalog/createCatalog.json';
+import updateCatalog from './actions/catalog/updateCatalog.json';
+import getCatalogById from './actions/catalog/getCatalogById.json';
+import deleteCatalog from './actions/catalog/deleteCatalog.json';
+import getMongoDBCatalogProducts from './actions/catalog/getMongoDBCatalogProducts.json';
+import indexProducts from './actions/catalog/indexProducts.json';
+import getProductCategories from './actions/catalog/getProductCategories.json';
+import getCatalogFilters from './actions/catalog/getCatalogFilters.json';
+import getCountAllCatalog from './actions/catalog/getCountAllCatalog.json';
 
 export interface ApiDefinition {
 	method: string;
@@ -88,6 +98,18 @@ const staticApiDefinitions: Record<string, Record<string, ApiDefinition>> = {
     createCommissionPayment: createCommissionPayment as ApiDefinition,
     getCommissions: getCommissions as ApiDefinition,
     getIndicators: getIndicators as ApiDefinition
+  },
+  catalog: {
+    getAllCatalogs: getAllCatalogs as ApiDefinition,
+    createCatalog: createCatalog as ApiDefinition,
+    updateCatalog: updateCatalog as ApiDefinition,
+    getCatalogById: getCatalogById as ApiDefinition,
+    deleteCatalog: deleteCatalog as ApiDefinition,
+    getMongoDBCatalogProducts: getMongoDBCatalogProducts as ApiDefinition,
+    indexProducts: indexProducts as ApiDefinition,
+    getProductCategories: getProductCategories as ApiDefinition,
+    getCatalogFilters: getCatalogFilters as ApiDefinition,
+    getCountAllCatalog: getCountAllCatalog as ApiDefinition
   },
 };
 export class ApiHelper {

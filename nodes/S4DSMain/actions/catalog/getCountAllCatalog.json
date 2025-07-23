@@ -1,0 +1,11 @@
+{
+  "method": "GET",
+  "endpoint": "/catalog/count",
+  "description": "Get count of all catalogs",
+  "parameters": [],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

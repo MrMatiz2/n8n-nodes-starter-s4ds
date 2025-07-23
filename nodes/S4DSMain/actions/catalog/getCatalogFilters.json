@@ -1,0 +1,33 @@
+{
+  "method": "GET",
+  "endpoint": "/catalog/filters",
+  "description": "Get catalog filters",
+  "parameters": [
+    {
+      "name": "productCategory",
+      "type": "integer",
+      "required": false,
+      "description": "Product category ID to filter by",
+      "in": "query"
+    },
+    {
+      "name": "filterMode",
+      "type": "string",
+      "required": false,
+      "description": "Filter mode to apply",
+      "in": "query"
+    },
+    {
+      "name": "catalogIds",
+      "type": "array",
+      "required": false,
+      "description": "Array of catalog IDs to filter by",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

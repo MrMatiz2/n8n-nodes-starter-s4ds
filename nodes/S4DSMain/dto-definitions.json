@@ -717,5 +717,186 @@
         "required": true
       }
     }
+  },
+  "PostCatalog": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Catalog name",
+        "required": true
+      },
+      "territorialDivision": {
+        "type": "integer",
+        "description": "Territorial division ID",
+        "required": true
+      },
+      "defaultWeb": {
+        "type": "string",
+        "description": "Default web URL",
+        "required": false
+      },
+      "imageUrl": {
+        "type": "string",
+        "description": "Image URL",
+        "required": false
+      },
+      "url": {
+        "type": "string",
+        "description": "Catalog URL",
+        "required": false
+      },
+      "path": {
+        "type": "string",
+        "description": "Catalog path",
+        "required": false
+      },
+      "campaignId": {
+        "type": "integer",
+        "description": "Campaign ID",
+        "required": false
+      }
+    }
+  },
+  "PutCatalog": {
+    "type": "object",
+    "properties": {
+      "catalogId": {
+        "type": "integer",
+        "description": "Catalog ID",
+        "required": true
+      },
+      "name": {
+        "type": "string",
+        "description": "Catalog name",
+        "required": true
+      },
+      "territorialDivision": {
+        "type": "integer",
+        "description": "Territorial division ID",
+        "required": true
+      },
+      "defaultWeb": {
+        "type": "string",
+        "description": "Default web URL",
+        "required": false
+      },
+      "imageUrl": {
+        "type": "string",
+        "description": "Image URL",
+        "required": false
+      },
+      "url": {
+        "type": "string",
+        "description": "Catalog URL",
+        "required": false
+      },
+      "path": {
+        "type": "string",
+        "description": "Catalog path",
+        "required": false
+      }
+    }
+  },
+  "MongoProducts": {
+    "type": "object",
+    "properties": {
+      "productId": {
+        "type": "integer",
+        "description": "Product ID",
+        "required": false
+      },
+      "catalogId": {
+        "type": "integer",
+        "description": "Catalog ID",
+        "required": false
+      },
+      "page": {
+        "type": "integer",
+        "description": "Page number",
+        "required": false
+      },
+      "pageSize": {
+        "type": "integer",
+        "description": "Page size",
+        "required": false
+      },
+      "name": {
+        "type": "string",
+        "description": "Product name",
+        "required": false
+      },
+      "reference": {
+        "type": "string",
+        "description": "Product reference",
+        "required": false
+      },
+      "categoryIds": {
+        "type": "array",
+        "description": "Category IDs",
+        "items": {
+          "type": "integer"
+        },
+        "required": false
+      },
+      "skus": {
+        "type": "array",
+        "description": "Product SKUs",
+        "items": {
+          "type": "string"
+        },
+        "required": false
+      },
+      "brands": {
+        "type": "array",
+        "description": "Product brands",
+        "items": {
+          "type": "string"
+        },
+        "required": false
+      },
+      "colors": {
+        "type": "array",
+        "description": "Product colors",
+        "items": {
+          "type": "string"
+        },
+        "required": false
+      },
+      "sizes": {
+        "type": "array",
+        "description": "Product sizes",
+        "items": {
+          "type": "string"
+        },
+        "required": false
+      },
+      "tags": {
+        "type": "array",
+        "description": "Product tags",
+        "items": {
+          "type": "string"
+        },
+        "required": false
+      },
+      "priceMin": {
+        "type": "number",
+        "description": "Minimum price",
+        "required": false
+      },
+      "priceMax": {
+        "type": "number",
+        "description": "Maximum price",
+        "required": false
+      },
+      "discountPercents": {
+        "type": "array",
+        "description": "Discount percentages",
+        "items": {
+          "type": "integer"
+        },
+        "required": false
+      }
+    }
   }
 } 

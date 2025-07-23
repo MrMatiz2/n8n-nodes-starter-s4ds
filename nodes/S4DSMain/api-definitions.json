@@ -82,5 +82,49 @@
         "file": "actions/commissions/getIndicators.json"
       }
     ]
+  },
+  "catalog": {
+    "services": [
+      {
+        "name": "getAllCatalogs",
+        "file": "actions/catalog/getAllCatalogs.json"
+      },
+      {
+        "name": "createCatalog",
+        "file": "actions/catalog/createCatalog.json"
+      },
+      {
+        "name": "updateCatalog",
+        "file": "actions/catalog/updateCatalog.json"
+      },
+      {
+        "name": "getCatalogById",
+        "file": "actions/catalog/getCatalogById.json"
+      },
+      {
+        "name": "deleteCatalog",
+        "file": "actions/catalog/deleteCatalog.json"
+      },
+      {
+        "name": "getMongoDBCatalogProducts",
+        "file": "actions/catalog/getMongoDBCatalogProducts.json"
+      },
+      {
+        "name": "indexProducts",
+        "file": "actions/catalog/indexProducts.json"
+      },
+      {
+        "name": "getProductCategories",
+        "file": "actions/catalog/getProductCategories.json"
+      },
+      {
+        "name": "getCatalogFilters",
+        "file": "actions/catalog/getCatalogFilters.json"
+      },
+      {
+        "name": "getCountAllCatalog",
+        "file": "actions/catalog/getCountAllCatalog.json"
+      }
+    ]
   }
 } 

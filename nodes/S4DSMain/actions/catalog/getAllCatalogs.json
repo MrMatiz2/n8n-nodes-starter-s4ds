@@ -1,0 +1,33 @@
+{
+  "method": "GET",
+  "endpoint": "/catalog",
+  "description": "Get all catalogs with optional filtering",
+  "parameters": [
+    {
+      "name": "campaignId",
+      "type": "integer",
+      "required": false,
+      "description": "Campaign ID to filter catalogs",
+      "in": "query"
+    },
+    {
+      "name": "catalogId",
+      "type": "integer",
+      "required": false,
+      "description": "Catalog ID to filter catalogs",
+      "in": "query"
+    },
+    {
+      "name": "quantity",
+      "type": "integer",
+      "required": false,
+      "description": "Number of catalogs to return (default: 100)",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}
