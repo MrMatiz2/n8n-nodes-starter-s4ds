@@ -605,6 +605,300 @@
       }
     }
   },
+  "CloneUserDTO": {
+    "type": "object",
+    "properties": {
+      "username": {
+        "type": "string",
+        "description": "Source username to clone from",
+        "required": true
+      },
+      "newUsername": {
+        "type": "string",
+        "description": "New username to clone to",
+        "required": true
+      },
+      "displayName": {
+        "type": "string",
+        "description": "Display name for the cloned user",
+        "required": true
+      },
+      "password": {
+        "type": "string",
+        "description": "Password for the new user",
+        "required": true
+      },
+      "confirmPassword": {
+        "type": "string",
+        "description": "Password confirmation",
+        "required": true
+      }
+    }
+  },
+  "DsUserSession": {
+    "type": "object",
+    "properties": {
+      "userId": {
+        "type": "string",
+        "description": "User ID",
+        "required": false
+      },
+      "username": {
+        "type": "string",
+        "description": "Username",
+        "required": false
+      },
+      "token": {
+        "type": "string",
+        "description": "Session token",
+        "required": false
+      },
+      "roles": {
+        "type": "array",
+        "description": "User roles",
+        "items": {
+          "type": "string"
+        },
+        "required": false
+      }
+    }
+  },
+  "DeleteCustomerDTO": {
+    "type": "object",
+    "properties": {
+      "documentId": {
+        "type": "string",
+        "description": "Document ID of customer to delete",
+        "required": true
+      },
+      "documentType": {
+        "type": "string",
+        "description": "Document type",
+        "required": true
+      },
+      "reason": {
+        "type": "string",
+        "description": "Reason for deletion",
+        "required": false
+      }
+    }
+  },
+  "CommissionPaymentDTO": {
+    "type": "object",
+    "properties": {
+      "documentId": {
+        "type": "string",
+        "description": "Document ID",
+        "required": true
+      },
+      "documentType": {
+        "type": "string",
+        "description": "Document type",
+        "required": true
+      },
+      "periodId": {
+        "type": "integer",
+        "description": "Period ID",
+        "required": true
+      },
+      "value": {
+        "type": "string",
+        "description": "Payment value",
+        "required": true
+      },
+      "currency": {
+        "type": "string",
+        "description": "Currency code",
+        "required": true
+      },
+      "paymentDate": {
+        "type": "string",
+        "description": "Payment date",
+        "required": true
+      }
+    }
+  },
+  "PostCatalog": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Catalog name",
+        "required": true
+      },
+      "territorialDivision": {
+        "type": "integer",
+        "description": "Territorial division ID",
+        "required": true
+      },
+      "defaultWeb": {
+        "type": "string",
+        "description": "Default web URL",
+        "required": false
+      },
+      "imageUrl": {
+        "type": "string",
+        "description": "Image URL",
+        "required": false
+      },
+      "url": {
+        "type": "string",
+        "description": "Catalog URL",
+        "required": false
+      },
+      "path": {
+        "type": "string",
+        "description": "Catalog path",
+        "required": false
+      },
+      "campaignId": {
+        "type": "integer",
+        "description": "Campaign ID",
+        "required": false
+      }
+    }
+  },
+  "PutCatalog": {
+    "type": "object",
+    "properties": {
+      "catalogId": {
+        "type": "integer",
+        "description": "Catalog ID",
+        "required": true
+      },
+      "name": {
+        "type": "string",
+        "description": "Catalog name",
+        "required": true
+      },
+      "territorialDivision": {
+        "type": "integer",
+        "description": "Territorial division ID",
+        "required": true
+      },
+      "defaultWeb": {
+        "type": "string",
+        "description": "Default web URL",
+        "required": false
+      },
+      "imageUrl": {
+        "type": "string",
+        "description": "Image URL",
+        "required": false
+      },
+      "url": {
+        "type": "string",
+        "description": "Catalog URL",
+        "required": false
+      },
+      "path": {
+        "type": "string",
+        "description": "Catalog path",
+        "required": false
+      }
+    }
+  },
+  "MongoProducts": {
+    "type": "object",
+    "properties": {
+      "productId": {
+        "type": "integer",
+        "description": "Product ID",
+        "required": false
+      },
+      "catalogId": {
+        "type": "integer",
+        "description": "Catalog ID",
+        "required": false
+      },
+      "page": {
+        "type": "integer",
+        "description": "Page number",
+        "required": false
+      },
+      "pageSize": {
+        "type": "integer",
+        "description": "Page size",
+        "required": false
+      },
+      "name": {
+        "type": "string",
+        "description": "Product name",
+        "required": false
+      },
+      "reference": {
+        "type": "string",
+        "description": "Product reference",
+        "required": false
+      },
+      "categoryIds": {
+        "type": "array",
+        "description": "Category IDs",
+        "items": {
+          "type": "integer"
+        },
+        "required": false
+      },
+      "skus": {
+        "type": "array",
+        "description": "Product SKUs",
+        "items": {
+          "type": "string"
+        },
+        "required": false
+      },
+      "brands": {
+        "type": "array",
+        "description": "Product brands",
+        "items": {
+          "type": "string"
+        },
+        "required": false
+      },
+      "colors": {
+        "type": "array",
+        "description": "Product colors",
+        "items": {
+          "type": "string"
+        },
+        "required": false
+      },
+      "sizes": {
+        "type": "array",
+        "description": "Product sizes",
+        "items": {
+          "type": "string"
+        },
+        "required": false
+      },
+      "tags": {
+        "type": "array",
+        "description": "Product tags",
+        "items": {
+          "type": "string"
+        },
+        "required": false
+      },
+      "priceMin": {
+        "type": "number",
+        "description": "Minimum price",
+        "required": false
+      },
+      "priceMax": {
+        "type": "number",
+        "description": "Maximum price",
+        "required": false
+      },
+      "discountPercents": {
+        "type": "array",
+        "description": "Discount percentages",
+        "items": {
+          "type": "integer"
+        },
+        "required": false
+      }
+    }
+  },
   "CreateOrderDTO": {
     "type": "object",
     "properties": {

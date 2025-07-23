@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "endpoint": "/catalog/getMongoDBCatalogProduct",
+  "description": "Get catalog products from MongoDB",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "MongoProducts",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

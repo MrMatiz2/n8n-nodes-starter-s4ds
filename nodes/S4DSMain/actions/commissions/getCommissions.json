@@ -1,0 +1,57 @@
+{
+  "name": "getCommissions",
+  "method": "GET",
+  "endpoint": "/commissions",
+  "description": "Get commissions with filtering options.",
+  "parameters": [
+    {
+      "name": "campaignId",
+      "in": "query",
+      "required": false,
+      "type": "integer",
+      "description": "Campaign ID to filter by"
+    },
+    {
+      "name": "documentId",
+      "in": "query",
+      "required": false,
+      "type": "string",
+      "description": "Document ID to filter by"
+    },
+    {
+      "name": "documentType",
+      "in": "query",
+      "required": false,
+      "type": "string",
+      "description": "Document type to filter by"
+    },
+    {
+      "name": "dateFrom",
+      "in": "query",
+      "required": false,
+      "type": "string",
+      "description": "Start date for filtering"
+    },
+    {
+      "name": "dateTo",
+      "in": "query",
+      "required": false,
+      "type": "string",
+      "description": "End date for filtering"
+    },
+    {
+      "name": "cursor",
+      "in": "query",
+      "required": false,
+      "type": "integer",
+      "description": "Pagination cursor"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "commissions": "array"
+    }
+  }
+}

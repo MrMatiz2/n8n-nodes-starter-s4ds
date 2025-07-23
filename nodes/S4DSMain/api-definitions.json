@@ -28,6 +28,102 @@
       {
         "name": "updateCustomer",
         "file": "actions/customers/updateCustomer.json"
+      },
+      {
+        "name": "cloneUsername",
+        "file": "actions/customers/cloneUsername.json"
+      },
+      {
+        "name": "getDocumentIdByAutocomplete",
+        "file": "actions/customers/getDocumentIdByAutocomplete.json"
+      },
+      {
+        "name": "getOffSyncCustomers",
+        "file": "actions/customers/getOffSyncCustomers.json"
+      },
+      {
+        "name": "getUserByToken",
+        "file": "actions/customers/getUserByToken.json"
+      },
+      {
+        "name": "getOrdersByCustomer",
+        "file": "actions/customers/getOrdersByCustomer.json"
+      },
+      {
+        "name": "customerInfo",
+        "file": "actions/customers/customerInfo.json"
+      },
+      {
+        "name": "getConsultantInformation",
+        "file": "actions/customers/getConsultantInformation.json"
+      },
+      {
+        "name": "inactiveCustomer",
+        "file": "actions/customers/inactiveCustomer.json"
+      },
+      {
+        "name": "getAdvancedSearch",
+        "file": "actions/customers/getAdvancedSearch.json"
+      }
+    ]
+  },
+  "commissions": {
+    "services": [
+      {
+        "name": "createCommissionPayment",
+        "file": "actions/commissions/createCommissionPayment.json"
+      },
+      {
+        "name": "getCommissions",
+        "file": "actions/commissions/getCommissions.json"
+      },
+      {
+        "name": "getIndicators",
+        "file": "actions/commissions/getIndicators.json"
+      }
+    ]
+  },
+  "catalog": {
+    "services": [
+      {
+        "name": "getAllCatalogs",
+        "file": "actions/catalog/getAllCatalogs.json"
+      },
+      {
+        "name": "createCatalog",
+        "file": "actions/catalog/createCatalog.json"
+      },
+      {
+        "name": "updateCatalog",
+        "file": "actions/catalog/updateCatalog.json"
+      },
+      {
+        "name": "getCatalogById",
+        "file": "actions/catalog/getCatalogById.json"
+      },
+      {
+        "name": "deleteCatalog",
+        "file": "actions/catalog/deleteCatalog.json"
+      },
+      {
+        "name": "getMongoDBCatalogProducts",
+        "file": "actions/catalog/getMongoDBCatalogProducts.json"
+      },
+      {
+        "name": "indexProducts",
+        "file": "actions/catalog/indexProducts.json"
+      },
+      {
+        "name": "getProductCategories",
+        "file": "actions/catalog/getProductCategories.json"
+      },
+      {
+        "name": "getCatalogFilters",
+        "file": "actions/catalog/getCatalogFilters.json"
+      },
+      {
+        "name": "getCountAllCatalog",
+        "file": "actions/catalog/getCountAllCatalog.json"
       }
     ]
   },

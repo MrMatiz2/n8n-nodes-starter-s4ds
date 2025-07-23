@@ -1,0 +1,19 @@
+{
+  "method": "GET",
+  "endpoint": "/catalog/{catalogId}",
+  "description": "Get a specific catalog by ID",
+  "parameters": [
+    {
+      "name": "catalogId",
+      "type": "integer",
+      "required": true,
+      "description": "The catalog ID",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}
