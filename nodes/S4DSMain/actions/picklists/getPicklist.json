@@ -1,0 +1,57 @@
+{
+  "name": "getPicklist",
+  "method": "GET",
+  "endpoint": "/picklists",
+  "description": "Retrieve picklists with optional filtering",
+  "parameters": [
+    {
+      "name": "groupName",
+      "type": "string",
+      "required": false,
+      "description": "Filter by group name",
+      "in": "query"
+    },
+    {
+      "name": "isActive",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter by active status",
+      "in": "query"
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Filter by code",
+      "in": "query"
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false,
+      "description": "Filter by description",
+      "in": "query"
+    },
+    {
+      "name": "dropdownColor",
+      "type": "string",
+      "required": false,
+      "description": "Filter by dropdown color",
+      "in": "query"
+    },
+    {
+      "name": "quantity",
+      "type": "integer",
+      "required": false,
+      "description": "Number of results to return (default: 100)",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "picklists": "array"
+    }
+  }
+}

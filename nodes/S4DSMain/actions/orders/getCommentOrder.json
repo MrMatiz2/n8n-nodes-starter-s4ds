@@ -1,0 +1,57 @@
+{
+  "name": "getCommentOrder",
+  "method": "GET",
+  "endpoint": "/orders/comments",
+  "description": "Retrieves order comments",
+  "parameters": [
+    {
+      "name": "orderNumber",
+      "type": "string",
+      "required": false,
+      "description": "Order number",
+      "in": "query"
+    },
+    {
+      "name": "quantity",
+      "type": "string",
+      "required": false,
+      "description": "Number of comments to retrieve (default: 100)",
+      "in": "query"
+    },
+    {
+      "name": "operationStartDate",
+      "type": "string",
+      "required": false,
+      "description": "Operation start date",
+      "in": "query"
+    },
+    {
+      "name": "operationEndDate",
+      "type": "string",
+      "required": false,
+      "description": "Operation end date",
+      "in": "query"
+    },
+    {
+      "name": "campaignId",
+      "type": "integer",
+      "required": false,
+      "description": "Campaign ID",
+      "in": "query"
+    },
+    {
+      "name": "visibleComments",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter visible comments",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "comments": "array"
+    }
+  }
+}

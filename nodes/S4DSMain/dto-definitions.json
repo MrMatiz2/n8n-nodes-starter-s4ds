@@ -899,346 +899,12 @@
       }
     }
   },
-  "UpdateProductDTO": {
+  "CreateOrderDTO": {
     "type": "object",
     "properties": {
-      "productId": {
-        "type": "integer",
-        "description": "Product ID",
-        "required": true
-      },
-      "reference": {
+      "warehouseCode": {
         "type": "string",
-        "description": "Product reference",
-        "required": false
-      },
-      "name": {
-        "type": "string",
-        "description": "Product name",
-        "required": false
-      },
-      "description": {
-        "type": "string",
-        "description": "Product description",
-        "required": false
-      },
-      "taxCategory": {
-        "type": "integer",
-        "description": "Tax category ID",
-        "required": false
-      },
-      "activationStatus": {
-        "type": "string",
-        "description": "Product activation status",
-        "required": false
-      },
-      "imageURL": {
-        "type": "string",
-        "description": "Product image URL",
-        "required": false
-      },
-      "principalImage": {
-        "type": "string",
-        "description": "Principal image URL",
-        "required": false
-      },
-      "volume": {
-        "type": "number",
-        "description": "Product volume",
-        "required": false
-      },
-      "weight": {
-        "type": "number",
-        "description": "Product weight",
-        "required": false
-      },
-      "unit": {
-        "type": "string",
-        "description": "Product unit of measure",
-        "required": false
-      },
-      "minStock": {
-        "type": "integer",
-        "description": "Minimum stock level",
-        "required": false
-      },
-      "additionalTax": {
-        "type": "number",
-        "description": "Additional tax amount",
-        "required": false
-      },
-      "nameTranslation": {
-        "type": "string",
-        "description": "Translated product name",
-        "required": false
-      },
-      "descriptionTranslation": {
-        "type": "string",
-        "description": "Translated product description",
-        "required": false
-      },
-      "cost": {
-        "type": "number",
-        "description": "Product cost",
-        "required": false
-      },
-      "tagsProducts": {
-        "type": "string",
-        "description": "Product tags",
-        "required": false
-      },
-      "metaDescription": {
-        "type": "string",
-        "description": "Meta description for SEO",
-        "required": false
-      },
-      "urlDetail": {
-        "type": "string",
-        "description": "Product detail URL",
-        "required": false
-      },
-      "metaName": {
-        "type": "string",
-        "description": "Meta name for SEO",
-        "required": false
-      },
-      "sort": {
-        "type": "integer",
-        "description": "Sort order",
-        "required": false
-      }
-    }
-  },
-  "CreateProductDTO": {
-    "type": "object",
-    "properties": {
-      "reference": {
-        "type": "string",
-        "description": "Product reference",
-        "required": true
-      },
-      "name": {
-        "type": "string",
-        "description": "Product name",
-        "required": true
-      },
-      "description": {
-        "type": "string",
-        "description": "Product description",
-        "required": false
-      },
-      "taxCategory": {
-        "type": "integer",
-        "description": "Tax category ID",
-        "required": false
-      },
-      "activationStatus": {
-        "type": "string",
-        "description": "Product activation status",
-        "required": false
-      },
-      "imageURL": {
-        "type": "string",
-        "description": "Product image URL",
-        "required": false
-      },
-      "principalImage": {
-        "type": "string",
-        "description": "Principal image URL",
-        "required": false
-      },
-      "productCategoryCode": {
-        "type": "string",
-        "description": "Product category code",
-        "required": false
-      },
-      "volume": {
-        "type": "number",
-        "description": "Product volume",
-        "required": false
-      },
-      "weight": {
-        "type": "number",
-        "description": "Product weight",
-        "required": false
-      },
-      "unit": {
-        "type": "string",
-        "description": "Product unit of measure",
-        "required": false
-      },
-      "minStock": {
-        "type": "integer",
-        "description": "Minimum stock level",
-        "required": false
-      },
-      "additionalTax": {
-        "type": "number",
-        "description": "Additional tax amount",
-        "required": false
-      },
-      "nameTranslation": {
-        "type": "string",
-        "description": "Translated product name",
-        "required": false
-      },
-      "descriptionTranslation": {
-        "type": "string",
-        "description": "Translated product description",
-        "required": false
-      },
-      "cost": {
-        "type": "number",
-        "description": "Product cost",
-        "required": false
-      },
-      "tagsProducts": {
-        "type": "string",
-        "description": "Product tags",
-        "required": false
-      },
-      "metaDescription": {
-        "type": "string",
-        "description": "Meta description for SEO",
-        "required": false
-      },
-      "urlDetail": {
-        "type": "string",
-        "description": "Product detail URL",
-        "required": false
-      },
-      "metaName": {
-        "type": "string",
-        "description": "Meta name for SEO",
-        "required": false
-      },
-      "sort": {
-        "type": "integer",
-        "description": "Sort order",
-        "required": false
-      }
-    }
-  },
-  "SearchProductDTO": {
-    "type": "object",
-    "properties": {
-      "productCode": {
-        "type": "string",
-        "description": "Product code to search for",
-        "required": true
-      },
-      "catalogCode": {
-        "type": "string",
-        "description": "Catalog code to search within",
-        "required": true
-      }
-    }
-  },
-  "ProductXCatalogDTO": {
-    "type": "object",
-    "properties": {
-      "reference": {
-        "type": "string",
-        "description": "Product reference",
-        "required": true
-      },
-      "name": {
-        "type": "string",
-        "description": "Product name",
-        "required": true
-      },
-      "description": {
-        "type": "string",
-        "description": "Product description",
-        "required": false
-      },
-      "taxCategory": {
-        "type": "string",
-        "description": "Tax category",
-        "required": false
-      },
-      "imageURL": {
-        "type": "string",
-        "description": "Product image URL",
-        "required": false
-      },
-      "principalImage": {
-        "type": "string",
-        "description": "Principal image URL",
-        "required": false
-      },
-      "productCategoryId": {
-        "type": "string",
-        "description": "Product category ID",
-        "required": false
-      },
-      "volume": {
-        "type": "number",
-        "description": "Product volume",
-        "required": false
-      },
-      "weight": {
-        "type": "number",
-        "description": "Product weight",
-        "required": false
-      },
-      "units": {
-        "type": "string",
-        "description": "Product units",
-        "required": false
-      },
-      "minStock": {
-        "type": "integer",
-        "description": "Minimum stock level",
-        "required": false
-      },
-      "nameTranslation": {
-        "type": "string",
-        "description": "Translated product name",
-        "required": false
-      },
-      "descriptionTranslation": {
-        "type": "string",
-        "description": "Translated product description",
-        "required": false
-      },
-      "cost": {
-        "type": "number",
-        "description": "Product cost",
-        "required": false
-      },
-      "tagsProducts": {
-        "type": "array",
-        "description": "Product tags",
-        "items": {
-          "type": "string"
-        },
-        "required": false
-      }
-    }
-  },
-  "CreateNoteDTO": {
-    "type": "object",
-    "properties": {
-      "notesCustomer": {
-        "type": "object",
-        "description": "Customer information for the note",
-        "schema": "NotesCustomerDTO",
-        "required": true
-      },
-      "value": {
-        "type": "string",
-        "description": "Note value",
-        "required": false
-      },
-      "noteType": {
-        "type": "string",
-        "description": "Type of note",
-        "required": false
-      },
-      "reason": {
-        "type": "string",
-        "description": "Reason for the note",
+        "description": "Warehouse code",
         "required": false
       },
       "currency": {
@@ -1246,546 +912,513 @@
         "description": "Currency code",
         "required": false
       },
-      "noteDate": {
-        "type": "string",
-        "description": "Date of the note",
+      "customer": {
+        "type": "object",
+        "description": "Customer information",
+        "schema": "CustomerDTO",
         "required": false
       },
-      "conceptCode": {
-        "type": "string",
-        "description": "Concept code",
+      "distributor": {
+        "type": "object",
+        "description": "Distributor information",
+        "schema": "DistributorDTO",
         "required": false
       },
-      "currencyId": {
+      "entrepreneur": {
+        "type": "object",
+        "description": "Entrepreneur information",
+        "schema": "EntrepreneurDTO",
+        "required": false
+      },
+      "items": {
+        "type": "array",
+        "description": "Order line items",
+        "items": {
+          "type": "object",
+          "schema": "LineItemDTO"
+        },
+        "required": false
+      },
+      "orderStatus": {
+        "type": "string",
+        "description": "Order status",
+        "required": false
+      },
+      "orderNumber": {
         "type": "integer",
-        "description": "Currency ID",
+        "description": "Order number",
         "required": false
       },
-      "noteId": {
+      "couponDiscounts": {
+        "type": "number",
+        "description": "Coupon discount amount",
+        "required": false
+      },
+      "orderTotalValueAvailable": {
+        "type": "number",
+        "description": "Available order total value",
+        "required": false
+      },
+      "orderDate": {
+        "type": "string",
+        "description": "Order date",
+        "required": false
+      },
+      "metadata": {
+        "type": "object",
+        "description": "Order metadata",
+        "required": false
+      },
+      "deliveryInstructions": {
+        "type": "string",
+        "description": "Delivery instructions",
+        "required": false
+      },
+      "shippingTax": {
+        "type": "number",
+        "description": "Shipping tax amount",
+        "required": false
+      },
+      "exportLot": {
         "type": "integer",
-        "description": "Note ID",
+        "description": "Export lot number",
         "required": false
       },
-      "noteNumber": {
-        "type": "string",
-        "description": "Note number",
+      "orderTotalValue": {
+        "type": "number",
+        "description": "Total order value",
         "required": false
       },
-      "description": {
-        "type": "string",
-        "description": "Note description",
+      "grossTotal": {
+        "type": "number",
+        "description": "Gross total amount",
         "required": false
       },
-      "username": {
+      "taxTotal": {
+        "type": "number",
+        "description": "Total tax amount",
+        "required": false
+      },
+      "discountTotal": {
+        "type": "number",
+        "description": "Total discount amount",
+        "required": false
+      },
+      "trackingCode": {
         "type": "string",
-        "description": "Username who created the note",
+        "description": "Tracking code",
+        "required": false
+      },
+      "generalDiscount": {
+        "type": "number",
+        "description": "General discount amount",
+        "required": false
+      },
+      "type": {
+        "type": "string",
+        "description": "Order type",
+        "required": false
+      },
+      "stateTax": {
+        "type": "number",
+        "description": "State tax amount",
+        "required": false
+      },
+      "countyTax": {
+        "type": "number",
+        "description": "County tax amount",
+        "required": false
+      },
+      "specialTax": {
+        "type": "number",
+        "description": "Special tax amount",
+        "required": false
+      },
+      "cancellationReason": {
+        "type": "integer",
+        "description": "Cancellation reason code",
+        "required": false
+      },
+      "cancelationDate": {
+        "type": "string",
+        "description": "Cancellation date",
+        "required": false
+      },
+      "logisticalOperator": {
+        "type": "integer",
+        "description": "Logistical operator ID",
+        "required": false
+      },
+      "shippingValue": {
+        "type": "number",
+        "description": "Shipping value",
+        "required": false
+      }
+    }
+  },
+  "DeleteOrderDTO": {
+    "type": "object",
+    "properties": {
+      "orderNumber": {
+        "type": "string",
+        "description": "Order number to delete",
+        "required": false
+      }
+    }
+  },
+  "UpdateInvoiceDTO": {
+    "type": "object",
+    "properties": {
+      "orderNumber": {
+        "type": "integer",
+        "description": "Order number",
+        "required": false
+      },
+      "invoiceDate": {
+        "type": "string",
+        "description": "Invoice date",
+        "required": false
+      },
+      "deadlineDate": {
+        "type": "string",
+        "description": "Invoice deadline date",
+        "required": false
+      },
+      "invoiceValue": {
+        "type": "number",
+        "description": "Invoice value",
+        "required": false
+      },
+      "invoicePath": {
+        "type": "string",
+        "description": "Path to invoice file",
+        "required": false
+      },
+      "invoiceNumber": {
+        "type": "string",
+        "description": "Invoice number",
+        "required": false
+      },
+      "invoiceDateConverted": {
+        "type": "string",
+        "description": "Invoice date converted to date-time format",
+        "required": false
+      },
+      "deadlineDateConverted": {
+        "type": "string",
+        "description": "Deadline date converted to date-time format",
+        "required": false
+      },
+      "invoicesInfo": {
+        "type": "array",
+        "description": "Array of invoice information objects",
+        "items": {
+          "type": "object"
+        },
+        "required": false
+      }
+    }
+  },
+  "OrderDocumentDTO": {
+    "type": "object",
+    "properties": {
+      "orderNumber": {
+        "type": "integer",
+        "description": "Order number",
+        "required": false
+      },
+      "documentName": {
+        "type": "string",
+        "description": "Document name",
+        "required": false
+      },
+      "documentData": {
+        "type": "string",
+        "description": "Document data",
+        "required": false
+      },
+      "documentUrl": {
+        "type": "string",
+        "description": "Document URL",
+        "required": false
+      },
+      "documentType": {
+        "type": "string",
+        "description": "Document type",
+        "required": false
+      },
+      "newDocumentName": {
+        "type": "string",
+        "description": "New document name",
+        "required": false
+      }
+    }
+  },
+  "CommentDTO": {
+    "type": "object",
+    "properties": {
+      "orderNumber": {
+        "type": "integer",
+        "description": "Order number",
+        "required": false
+      },
+      "comment": {
+        "type": "string",
+        "description": "Comment text",
+        "required": false
+      },
+      "visible": {
+        "type": "string",
+        "description": "Comment visibility",
+        "required": false
+      },
+      "commentId": {
+        "type": "string",
+        "description": "Comment ID",
+        "required": false
+      }
+    }
+  },
+  "UpdateOrderItemsDTO": {
+    "type": "object",
+    "properties": {
+      "orderId": {
+        "type": "integer",
+        "description": "Order ID",
         "required": false
       },
       "orderNumber": {
         "type": "string",
-        "description": "Related order number",
+        "description": "Order number",
         "required": false
       },
-      "optionalField1": {
-        "type": "string",
-        "description": "Optional field 1",
-        "required": false
-      },
-      "optionalField2": {
-        "type": "string",
-        "description": "Optional field 2",
-        "required": false
-      },
-      "optionalField3": {
-        "type": "string",
-        "description": "Optional field 3",
-        "required": false
-      }
-    }
-  },
-  "NotesCustomerDTO": {
-    "type": "object",
-    "properties": {
-      "internalCode": {
-        "type": "integer",
-        "description": "Customer internal code",
-        "required": false
-      },
-      "documentType": {
-        "type": "string",
-        "description": "Customer document type",
-        "required": false
-      },
-      "documentId": {
-        "type": "string",
-        "description": "Customer document ID",
-        "required": false
-      },
-      "name": {
-        "type": "string",
-        "description": "Customer name",
-        "required": false
-      }
-    }
-  },
-  "PostLeadDTO": {
-    "type": "object",
-    "properties": {
-      "name": {
-        "type": "string",
-        "description": "Lead name",
-        "required": true
-      },
-      "lastName": {
-        "type": "string",
-        "description": "Lead last name",
-        "required": true
-      },
-      "email": {
-        "type": "string",
-        "description": "Lead email address",
-        "required": false
-      },
-      "leadStatus": {
-        "type": "string",
-        "description": "Lead status",
-        "required": false
-      },
-      "sponsorDocument": {
-        "type": "string",
-        "description": "Sponsor document",
-        "required": false
-      },
-      "sponsorDocumentTypeId": {
-        "type": "string",
-        "description": "Sponsor document type ID",
-        "required": false
-      },
-      "leadType": {
-        "type": "string",
-        "description": "Lead type",
-        "required": false
-      },
-      "leadClassification": {
-        "type": "string",
-        "description": "Lead classification",
-        "required": false
-      },
-      "prefixPhone": {
-        "type": "string",
-        "description": "Phone prefix",
-        "required": false
-      },
-      "cellPhone": {
-        "type": "integer",
-        "description": "Cell phone number",
-        "required": false
-      },
-      "phone": {
-        "type": "integer",
-        "description": "Phone number",
-        "required": false
-      },
-      "contactPhone": {
-        "type": "integer",
-        "description": "Contact phone number",
-        "required": false
-      },
-      "birthdate": {
-        "type": "string",
-        "description": "Birth date",
-        "required": false
-      },
-      "documentTypeId": {
-        "type": "string",
-        "description": "Document type ID",
-        "required": false
-      },
-      "document": {
-        "type": "string",
-        "description": "Document number",
-        "required": false
-      },
-      "leadSource": {
-        "type": "string",
-        "description": "Lead source",
-        "required": false
-      },
-      "receiveNotifications": {
-        "type": "string",
-        "description": "Receive notifications preference",
-        "required": false
-      },
-      "language": {
-        "type": "string",
-        "description": "Preferred language",
-        "required": false
-      },
-      "observations": {
-        "type": "string",
-        "description": "Lead observations",
-        "required": false
-      },
-      "homeAddress": {
-        "type": "object",
-        "description": "Home address",
-        "schema": "AddressDTO",
-        "required": false
-      },
-      "tags": {
+      "items": {
         "type": "array",
-        "description": "Lead tags",
+        "description": "Array of order items to update",
         "items": {
-          "type": "string"
+          "type": "object",
+          "schema": "LineItemDTO"
         },
         "required": false
-      },
-      "metadata": {
-        "type": "object",
-        "description": "Additional metadata",
-        "required": false
       }
     }
   },
-  "LeadUpdateDTO": {
+  "UpdateOrderDetailsDTO": {
     "type": "object",
     "properties": {
-      "name": {
-        "type": "string",
-        "description": "Lead name",
-        "required": false
-      },
-      "lastName": {
-        "type": "string",
-        "description": "Lead last name",
-        "required": false
-      },
-      "documentType": {
-        "type": "string",
-        "description": "Document type",
-        "required": false
-      },
-      "documentId": {
-        "type": "string",
-        "description": "Document ID",
-        "required": false
-      },
-      "leadId": {
+      "orderId": {
         "type": "integer",
-        "description": "Lead ID",
-        "required": true
-      },
-      "email": {
-        "type": "object",
-        "description": "Email information",
-        "schema": "EmailDTO",
+        "description": "Order ID",
         "required": false
       },
-      "person": {
-        "type": "object",
-        "description": "Person information",
-        "schema": "PersonLeadDTO",
-        "required": false
-      },
-      "phone": {
-        "type": "object",
-        "description": "Phone information",
-        "schema": "PhoneDTO",
-        "required": false
-      },
-      "address": {
-        "type": "object",
-        "description": "Address information",
-        "schema": "AddressDTO",
-        "required": false
-      },
-      "leadStatus": {
+      "orderNumber": {
         "type": "string",
-        "description": "Lead status",
+        "description": "Order number",
         "required": false
       },
-      "customerReferencedId": {
-        "type": "integer",
-        "description": "Customer referenced ID",
+      "warehouse": {
+        "type": "string",
+        "description": "Warehouse identifier",
         "required": false
       },
-      "leadType": {
-        "type": "string",
-        "description": "Lead type",
-        "required": false
-      },
-      "leadClassification": {
-        "type": "string",
-        "description": "Lead classification",
-        "required": false
-      },
-      "leadSource": {
-        "type": "string",
-        "description": "Lead source",
-        "required": false
-      },
-      "observations": {
-        "type": "string",
-        "description": "Lead observations",
-        "required": false
-      },
-      "industry": {
-        "type": "string",
-        "description": "Industry",
-        "required": false
-      },
-      "company": {
-        "type": "string",
-        "description": "Company",
-        "required": false
-      }
-    }
-  },
-  "ConvertLeadDTO": {
-    "type": "object",
-    "properties": {
-      "leadId": {
-        "type": "string",
-        "description": "Lead ID to convert",
-        "required": true
-      },
-      "password": {
-        "type": "string",
-        "description": "Password for new customer account",
-        "required": true
-      },
-      "confirmPassword": {
-        "type": "string",
-        "description": "Password confirmation",
-        "required": true
-      }
-    }
-  },
-  "EmailDTO": {
-    "type": "object",
-    "properties": {
-      "email": {
-        "type": "string",
-        "description": "Email address",
-        "required": true
-      },
-      "receiveNotifications": {
-        "type": "boolean",
-        "description": "Receive notifications preference",
-        "required": false
-      }
-    }
-  },
-  "PersonLeadDTO": {
-    "type": "object",
-    "properties": {
-      "name": {
-        "type": "string",
-        "description": "Person name",
-        "required": false
-      },
-      "lastName": {
-        "type": "string",
-        "description": "Person last name",
-        "required": false
-      },
-      "birthdate": {
-        "type": "string",
-        "description": "Birth date",
-        "required": false
-      },
-      "documentType": {
-        "type": "string",
-        "description": "Document type",
-        "required": false
-      },
-      "documentId": {
-        "type": "string",
-        "description": "Document ID",
-        "required": false
-      },
-      "language": {
-        "type": "string",
-        "description": "Preferred language",
-        "required": false
-      }
-    }
-  },
-  "CreateDealDTO": {
-    "type": "object",
-    "properties": {
-      "dealName": {
-        "type": "string",
-        "description": "Deal name",
-        "required": true
-      },
-      "amount": {
+      "orderTotalValue": {
         "type": "number",
-        "description": "Deal amount",
-        "required": false
-      },
-      "expectedCloseDate": {
-        "type": "string",
-        "description": "Expected close date",
-        "required": false
-      },
-      "pipeline": {
-        "type": "string",
-        "description": "Deal pipeline",
-        "required": false
-      },
-      "dealStatus": {
-        "type": "string",
-        "description": "Deal status",
-        "required": false
-      },
-      "assignedTo": {
-        "type": "object",
-        "description": "Person assigned to the deal",
-        "schema": "PersonDTO",
-        "required": false
-      },
-      "source": {
-        "type": "string",
-        "description": "Deal source",
-        "required": false
-      },
-      "dealType": {
-        "type": "string",
-        "description": "Deal type",
-        "required": false
-      },
-      "nextStep": {
-        "type": "string",
-        "description": "Next step for the deal",
-        "required": false
-      },
-      "probability": {
-        "type": "number",
-        "description": "Deal probability",
-        "required": false
-      },
-      "lostReason": {
-        "type": "string",
-        "description": "Reason if deal is lost",
-        "required": false
-      },
-      "weightedRevenue": {
-        "type": "number",
-        "description": "Weighted revenue",
-        "required": false
-      },
-      "description": {
-        "type": "string",
-        "description": "Deal description",
+        "description": "Total order value",
         "required": false
       },
       "customer": {
         "type": "object",
-        "description": "Customer information",
-        "schema": "PersonDTO",
+        "description": "Customer document data",
+        "schema": "DocumentDataDTO",
         "required": false
       },
-      "leadId": {
-        "type": "integer",
-        "description": "Associated lead ID",
-        "required": false
-      },
-      "metadata": {
+      "distributor": {
         "type": "object",
-        "description": "Additional metadata",
+        "description": "Distributor document data",
+        "schema": "DocumentDataDTO",
+        "required": false
+      },
+      "entrepreneur": {
+        "type": "object",
+        "description": "Entrepreneur document data",
+        "schema": "DocumentDataDTO",
+        "required": false
+      },
+      "taxData": {
+        "type": "object",
+        "description": "Tax information",
+        "schema": "TaxDataDTO",
+        "required": false
+      },
+      "shippingData": {
+        "type": "object",
+        "description": "Shipping information",
+        "schema": "ShippingDataDTO",
         "required": false
       }
     }
   },
-  "UpdateDealDTO": {
+  "LineItemDTO": {
     "type": "object",
     "properties": {
-      "id": {
-        "type": "integer",
-        "description": "Deal ID",
-        "required": true
-      },
-      "dealName": {
+      "sku": {
         "type": "string",
-        "description": "Deal name",
+        "description": "Product SKU",
         "required": false
       },
-      "amount": {
+      "quantity": {
+        "type": "integer",
+        "description": "Item quantity",
+        "required": false
+      },
+      "totalValue": {
         "type": "number",
-        "description": "Deal amount",
+        "description": "Total value for this line item",
         "required": false
       },
-      "expectedCloseDate": {
-        "type": "string",
-        "description": "Expected close date",
-        "required": false
-      },
-      "pipeline": {
-        "type": "string",
-        "description": "Deal pipeline",
-        "required": false
-      },
-      "dealStatus": {
-        "type": "string",
-        "description": "Deal status",
-        "required": false
-      },
-      "assignedTo": {
-        "type": "object",
-        "description": "Person assigned to the deal",
-        "schema": "PersonDTO",
-        "required": false
-      },
-      "source": {
-        "type": "string",
-        "description": "Deal source",
-        "required": false
-      },
-      "dealType": {
-        "type": "string",
-        "description": "Deal type",
-        "required": false
-      },
-      "nextStep": {
-        "type": "string",
-        "description": "Next step for the deal",
-        "required": false
-      },
-      "probability": {
-        "type": "integer",
-        "description": "Deal probability",
-        "required": false
-      },
-      "lostReason": {
-        "type": "string",
-        "description": "Reason if deal is lost",
-        "required": false
-      },
-      "weightedRevenue": {
+      "discountPercentage": {
         "type": "number",
-        "description": "Weighted revenue",
+        "description": "Discount percentage applied",
         "required": false
       },
-      "description": {
+      "type": {
         "type": "string",
-        "description": "Deal description",
+        "description": "Item type",
         "required": false
       },
-      "customer": {
-        "type": "object",
-        "description": "Customer information",
-        "schema": "PersonDTO",
+      "catalogPrice": {
+        "type": "number",
+        "description": "Catalog price",
         "required": false
       },
-      "leadId": {
-        "type": "integer",
-        "description": "Associated lead ID",
+      "productDescription": {
+        "type": "string",
+        "description": "Product description",
+        "required": false
+      },
+      "taxPercentage": {
+        "type": "number",
+        "description": "Tax percentage",
+        "required": false
+      },
+      "earnedPoints": {
+        "type": "number",
+        "description": "Points earned from this item",
+        "required": false
+      },
+      "redemptionPoints": {
+        "type": "number",
+        "description": "Points redeemed for this item",
+        "required": false
+      },
+      "orderEntryCode": {
+        "type": "string",
+        "description": "Order entry code",
+        "required": false
+      },
+      "equivalentCode1": {
+        "type": "string",
+        "description": "Equivalent code 1",
+        "required": false
+      },
+      "specialTax": {
+        "type": "number",
+        "description": "Special tax amount",
+        "required": false
+      },
+      "stateTax": {
+        "type": "number",
+        "description": "State tax amount",
+        "required": false
+      },
+      "countyTax": {
+        "type": "number",
+        "description": "County tax amount",
+        "required": false
+      },
+      "specialTax2": {
+        "type": "number",
+        "description": "Additional special tax amount",
+        "required": false
+      },
+      "isCommissionable": {
+        "type": "number",
+        "description": "Whether item is commissionable",
+        "required": false
+      },
+      "isQualified": {
+        "type": "number",
+        "description": "Whether item is qualified",
+        "required": false
+      },
+      "extendedField1": {
+        "type": "string",
+        "description": "Extended field 1",
+        "required": false
+      },
+      "extendedField2": {
+        "type": "string",
+        "description": "Extended field 2",
+        "required": false
+      },
+      "extendedField3": {
+        "type": "string",
+        "description": "Extended field 3",
+        "required": false
+      },
+      "extendedField4": {
+        "type": "string",
+        "description": "Extended field 4",
+        "required": false
+      },
+      "originalConsultant": {
+        "type": "number",
+        "description": "Original consultant",
+        "required": false
+      },
+      "originalCatalog": {
+        "type": "number",
+        "description": "Original catalog",
         "required": false
       }
     }
   },
-  "PersonDTO": {
+  "TaxDataDTO": {
+    "type": "object",
+    "properties": {
+      "stateTax": {
+        "type": "number",
+        "description": "State tax amount",
+        "required": false
+      },
+      "countryTax": {
+        "type": "number",
+        "description": "Country tax amount",
+        "required": false
+      },
+      "specialTax": {
+        "type": "number",
+        "description": "Special tax amount",
+        "required": false
+      }
+    }
+  },
+  "ShippingDataDTO": {
+    "type": "object",
+    "properties": {
+      "shippingTax": {
+        "type": "number",
+        "description": "Shipping tax amount",
+        "required": false
+      },
+      "shippingValue": {
+        "type": "number",
+        "description": "Shipping value",
+        "required": false
+      }
+    }
+  },
+  "DocumentDataDTO": {
     "type": "object",
     "properties": {
       "documentType": {
@@ -1800,136 +1433,258 @@
       }
     }
   },
-  "Search360DTO": {
+  "UpdatePicklistDTO": {
     "type": "object",
     "properties": {
-      "search": {
+      "groupName": {
         "type": "string",
-        "description": "Search term for 360-degree search",
-        "required": true
-      }
-    }
-  },
-  "createLanguagueDTO": {
-    "type": "object",
-    "properties": {
-      "languageCode": {
-        "type": "string",
-        "description": "Language code",
-        "required": true
-      },
-      "languageDescription": {
-        "type": "string",
-        "description": "Language description",
-        "required": true
-      },
-      "isActive": {
-        "type": "boolean",
-        "description": "Whether the language is active",
-        "required": false
-      }
-    }
-  },
-  "updateLanguagueDTO": {
-    "type": "object",
-    "properties": {
-      "languageId": {
-        "type": "integer",
-        "description": "Language ID",
-        "required": true
-      },
-      "languageCode": {
-        "type": "string",
-        "description": "Language code",
-        "required": false
-      },
-      "languageDescription": {
-        "type": "string",
-        "description": "Language description",
+        "description": "Group name",
         "required": false
       },
       "isActive": {
         "type": "boolean",
-        "description": "Whether the language is active",
+        "description": "Whether the picklist item is active",
+        "required": false
+      },
+      "isDefault": {
+        "type": "boolean",
+        "description": "Whether this is the default picklist item",
+        "required": false
+      },
+      "metadata": {
+        "type": "object",
+        "description": "Metadata object",
+        "required": false
+      },
+      "code": {
+        "type": "string",
+        "description": "Picklist code",
+        "required": false
+      },
+      "name": {
+        "type": "string",
+        "description": "Picklist name",
+        "required": false
+      },
+      "description": {
+        "type": "string",
+        "description": "Picklist description",
+        "required": false
+      },
+      "dropdownColor": {
+        "type": "string",
+        "description": "Dropdown color",
+        "required": false
+      },
+      "finalStatus": {
+        "type": "boolean",
+        "description": "Whether this is a final status",
+        "required": false
+      },
+      "highlight": {
+        "type": "boolean",
+        "description": "Whether to highlight this item",
         "required": false
       }
     }
   },
-  "PostLanguageTranslation": {
+  "CreatePicklistDTO": {
     "type": "object",
     "properties": {
-      "identifier": {
+      "groupName": {
         "type": "string",
-        "description": "Translation identifier",
-        "required": true
+        "description": "Group name", 
+        "required": false
       },
-      "translations": {
-        "type": "array",
-        "description": "Array of translations",
-        "required": true,
-        "items": {
-          "type": "object",
-          "schema": "PostTranslation"
-        }
+      "isActive": {
+        "type": "boolean",
+        "description": "Whether the picklist item is active",
+        "required": false
+      },
+      "isDefault": {
+        "type": "boolean",
+        "description": "Whether this is the default picklist item",
+        "required": false
+      },
+      "metadata": {
+        "type": "object",
+        "description": "Metadata object",
+        "required": false
+      },
+      "code": {
+        "type": "string",
+        "description": "Picklist code",
+        "required": false
+      },
+      "name": {
+        "type": "string",
+        "description": "Picklist name",
+        "required": false
+      },
+      "description": {
+        "type": "string",
+        "description": "Picklist description",
+        "required": false
+      },
+      "dropdownColor": {
+        "type": "string",
+        "description": "Dropdown color",
+        "required": false
+      },
+      "finalStatus": {
+        "type": "boolean",
+        "description": "Whether this is a final status",
+        "required": false
+      },
+      "highlight": {
+        "type": "boolean",
+        "description": "Whether to highlight this item",
+        "required": false
       }
     }
   },
-  "PostTranslation": {
+  "DeletePicklistDTO": {
     "type": "object",
     "properties": {
-      "languageCode": {
+      "groupName": {
         "type": "string",
-        "description": "Language code",
-        "required": true
+        "description": "Group name",
+        "required": false
       },
-      "translation": {
-        "type": "string",
-        "description": "Translation text",
-        "required": true
-      }
-    }
-  },
-  "PatchLanguageTranslation": {
-    "type": "object",
-    "properties": {
-      "languageId": {
+      "picklistId": {
         "type": "integer",
-        "description": "Language ID",
+        "description": "Picklist ID",
         "required": false
       },
-      "identifier": {
+      "code": {
         "type": "string",
-        "description": "Translation identifier",
-        "required": true
-      },
-      "translations": {
-        "type": "array",
-        "description": "Array of translations",
-        "required": true,
-        "items": {
-          "type": "object",
-          "schema": "Translation"
-        }
+        "description": "Picklist code",
+        "required": false
       }
     }
   },
-  "Translation": {
+  "UpdateCampaignDTO": {
     "type": "object",
     "properties": {
-      "translationId": {
+      "campaignId": {
         "type": "integer",
-        "description": "Translation ID",
+        "description": "Campaign ID",
         "required": false
       },
-      "languageCode": {
+      "name": {
         "type": "string",
-        "description": "Language code",
-        "required": true
+        "description": "Campaign name",
+        "required": false
       },
-      "translation": {
+      "description": {
         "type": "string",
-        "description": "Translation text",
-        "required": true
+        "description": "Campaign description",
+        "required": false
+      },
+      "startDate": {
+        "type": "string",
+        "description": "Campaign start date",
+        "required": false
+      },
+      "endDate": {
+        "type": "string",
+        "description": "Campaign end date",
+        "required": false
+      },
+      "cycle": {
+        "type": "integer",
+        "description": "Campaign cycle",
+        "required": false
+      },
+      "startDateRelease": {
+        "type": "string",
+        "description": "Release start date",
+        "required": false
+      },
+      "endDateRelease": {
+        "type": "string",
+        "description": "Release end date",
+        "required": false
+      },
+      "group": {
+        "type": "integer",
+        "description": "Campaign group",
+        "required": false
+      },
+      "integrationStatus": {
+        "type": "string",
+        "description": "Integration status",
+        "required": false
+      },
+      "isClosed": {
+        "type": "string",
+        "description": "Whether campaign is closed",
+        "required": false
+      },
+      "isHistory": {
+        "type": "string",
+        "description": "Whether campaign is history",
+        "required": false
+      }
+    }
+  },
+  "CreateCampaignDTO": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Campaign name",
+        "required": false
+      },
+      "description": {
+        "type": "string",
+        "description": "Campaign description",
+        "required": false
+      },
+      "startDate": {
+        "type": "string",
+        "description": "Campaign start date",
+        "required": false
+      },
+      "endDate": {
+        "type": "string",
+        "description": "Campaign end date",
+        "required": false
+      },
+      "cycle": {
+        "type": "integer",
+        "description": "Campaign cycle",
+        "required": false
+      },
+      "startDateRelease": {
+        "type": "string",
+        "description": "Release start date",
+        "required": false
+      },
+      "endDateRelease": {
+        "type": "string",
+        "description": "Release end date",
+        "required": false
+      },
+      "group": {
+        "type": "integer",
+        "description": "Campaign group",
+        "required": false
+      },
+      "integrationStatus": {
+        "type": "string",
+        "description": "Integration status",
+        "required": false
+      },
+      "isClosed": {
+        "type": "string",
+        "description": "Whether campaign is closed",
+        "required": false
+      },
+      "isHistory": {
+        "type": "string",
+        "description": "Whether campaign is history",
+        "required": false
       }
     }
   }

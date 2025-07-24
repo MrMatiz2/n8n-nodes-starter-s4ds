@@ -1,0 +1,18 @@
+{
+  "name": "updateOrderDetails",
+  "method": "PATCH",
+  "endpoint": "/orders/details",
+  "description": "Updates order details",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "UpdateOrderDetailsDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "object"
+    }
+  }
+}

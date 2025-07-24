@@ -1,0 +1,22 @@
+{
+  "name": "getOrderDocument",
+  "method": "GET",
+  "endpoint": "/orders/document",
+  "description": "Retrieves order document",
+  "parameters": [
+    {
+      "name": "orderNumber",
+      "type": "integer",
+      "required": false,
+      "description": "Order number",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "document": "object"
+    }
+  }
+}

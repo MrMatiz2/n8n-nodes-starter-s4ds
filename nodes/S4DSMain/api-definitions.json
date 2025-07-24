@@ -246,5 +246,242 @@
         "file": "actions/pages/getShortcutsList.json"
       }
     ]
+  },
+  "orders": {
+    "services": [
+      {
+        "name": "getOrders",
+        "file": "actions/orders/getOrders.json"
+      },
+      {
+        "name": "createOrder",
+        "file": "actions/orders/createOrder.json"
+      },
+      {
+        "name": "cancelOrder",
+        "file": "actions/orders/cancelOrder.json"
+      },
+      {
+        "name": "updateInvoice",
+        "file": "actions/orders/updateInvoice.json"
+      },
+      {
+        "name": "getOrderDocument",
+        "file": "actions/orders/getOrderDocument.json"
+      },
+      {
+        "name": "updateOrderDocument",
+        "file": "actions/orders/updateOrderDocument.json"
+      },
+      {
+        "name": "setOrderDocument",
+        "file": "actions/orders/setOrderDocument.json"
+      },
+      {
+        "name": "deleteOrderDocument",
+        "file": "actions/orders/deleteOrderDocument.json"
+      },
+      {
+        "name": "getCommentOrder",
+        "file": "actions/orders/getCommentOrder.json"
+      },
+      {
+        "name": "updateOrderComment",
+        "file": "actions/orders/updateOrderComment.json"
+      },
+      {
+        "name": "addCommentOrder",
+        "file": "actions/orders/addCommentOrder.json"
+      },
+      {
+        "name": "deleteOrderComment",
+        "file": "actions/orders/deleteOrderComment.json"
+      },
+      {
+        "name": "processOrder",
+        "file": "actions/orders/processOrder.json"
+      },
+      {
+        "name": "finishOrder",
+        "file": "actions/orders/finishOrder.json"
+      },
+      {
+        "name": "releaseInventory",
+        "file": "actions/orders/releaseInventory.json"
+      },
+      {
+        "name": "updateOrderItems",
+        "file": "actions/orders/updateOrderItems.json"
+      },
+      {
+        "name": "updateOrderDetails",
+        "file": "actions/orders/updateOrderDetails.json"
+      },
+      {
+        "name": "getSpecificOrder",
+        "file": "actions/orders/getSpecificOrder.json"
+      },
+      {
+        "name": "getOrderWrapper",
+        "file": "actions/orders/getOrderWrapper.json"
+      },
+      {
+        "name": "getPaymentUrl",
+        "file": "actions/orders/getPaymentUrl.json"
+      },
+      {
+        "name": "getCustomersWithoutOrder",
+        "file": "actions/orders/getCustomersWithoutOrder.json"
+      }
+    ]
+  },
+  "picklists": {
+    "services": [
+      {
+        "name": "getPicklist",
+        "file": "actions/picklists/getPicklist.json"
+      },
+      {
+        "name": "updatePicklist",
+        "file": "actions/picklists/updatePicklist.json"
+      },
+      {
+        "name": "createPicklist",
+        "file": "actions/picklists/createPicklist.json"
+      },
+      {
+        "name": "deletePicklist",
+        "file": "actions/picklists/deletePicklist.json"
+      }
+    ]
+  },
+  "campaign": {
+    "services": [
+      {
+        "name": "getCampaignByFilters",
+        "file": "actions/campaign/getCampaignByFilters.json"
+      },
+      {
+        "name": "updateCampaignById",
+        "file": "actions/campaign/updateCampaignById.json"
+      },
+      {
+        "name": "createCampaign",
+        "file": "actions/campaign/createCampaign.json"
+      },
+      {
+        "name": "getCycles",
+        "file": "actions/campaign/getCycles.json"
+      },
+      {
+        "name": "deleteCampaignById",
+        "file": "actions/campaign/deleteCampaignById.json"
+      }
+    ]
+  },
+  "tickets": {
+    "services": [
+      {
+        "name": "uploadAttachmentsToHistory",
+        "file": "actions/tickets/uploadAttachmentsToHistory.json"
+      },
+      {
+        "name": "createTicket",
+        "file": "actions/tickets/createTicket.json"
+      },
+      {
+        "name": "getTicketsByFilters",
+        "file": "actions/tickets/getTicketsByFilters.json"
+      },
+      {
+        "name": "addTicketParticipant",
+        "file": "actions/tickets/addTicketParticipant.json"
+      },
+      {
+        "name": "removeTicketParticipant",
+        "file": "actions/tickets/removeTicketParticipant.json"
+      },
+      {
+        "name": "updateTicketParticipant",
+        "file": "actions/tickets/updateTicketParticipant.json"
+      },
+      {
+        "name": "updateTicketHistory",
+        "file": "actions/tickets/updateTicketHistory.json"
+      },
+      {
+        "name": "changeTicketStatus",
+        "file": "actions/tickets/changeTicketStatus.json"
+      },
+      {
+        "name": "searchTickets",
+        "file": "actions/tickets/searchTickets.json"
+      },
+      {
+        "name": "getTicketTypes",
+        "file": "actions/tickets/getTicketTypes.json"
+      },
+      {
+        "name": "getTicketStatuses",
+        "file": "actions/tickets/getTicketStatuses.json"
+      },
+      {
+        "name": "getTicketById",
+        "file": "actions/tickets/getTicketById.json"
+      },
+      {
+        "name": "updateTicket",
+        "file": "actions/tickets/updateTicket.json"
+      },
+      {
+        "name": "deleteTicket",
+        "file": "actions/tickets/deleteTicket.json"
+      }
+    ]
+  },
+  "tasks": {
+    "services": [
+      {
+        "name": "getTasks",
+        "file": "actions/tasks/getTasks.json"
+      },
+      {
+        "name": "createPersonTask",
+        "file": "actions/tasks/createPersonTask.json"
+      },
+      {
+        "name": "updatePersonTask",
+        "file": "actions/tasks/updatePersonTask.json"
+      },
+      {
+        "name": "deletePersonTask",
+        "file": "actions/tasks/deletePersonTask.json"
+      },
+      {
+        "name": "getTaskTypes",
+        "file": "actions/tasks/getTaskTypes.json"
+      },
+      {
+        "name": "getTaskStatuses",
+        "file": "actions/tasks/getTaskStatuses.json"
+      }
+    ]
+  },
+  "timeline": {
+    "services": [
+      {
+        "name": "getTimeLine",
+        "file": "actions/timeline/getTimeLine.json"
+      },
+      {
+        "name": "patchComment",
+        "file": "actions/timeline/patchComment.json"
+      },
+      {
+        "name": "deleteComment",
+        "file": "actions/timeline/deleteComment.json"
+
+      }
+    ]
   }
 } 

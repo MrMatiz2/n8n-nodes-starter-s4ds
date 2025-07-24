@@ -1,0 +1,64 @@
+{
+  "name": "getTasks",
+  "method": "GET",
+  "endpoint": "/person-task",
+  "description": "Get person tasks",
+  "parameters": [
+    {
+      "name": "taskId",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by task ID",
+      "in": "query"
+    },
+    {
+      "name": "personId",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by person ID",
+      "in": "query"
+    },
+    {
+      "name": "taskType",
+      "type": "string",
+      "required": false,
+      "description": "Filter by task type",
+      "in": "query"
+    },
+    {
+      "name": "taskStatus",
+      "type": "string",
+      "required": false,
+      "description": "Filter by task status",
+      "in": "query"
+    },
+    {
+      "name": "dateFrom",
+      "type": "string",
+      "required": false,
+      "description": "Filter by start date",
+      "in": "query"
+    },
+    {
+      "name": "dateTo",
+      "type": "string",
+      "required": false,
+      "description": "Filter by end date",
+      "in": "query"
+    },
+    {
+      "name": "quantity",
+      "type": "integer",
+      "required": false,
+      "description": "Number of results to return (default: 100)",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "tasks": "array"
+    }
+  }
+}

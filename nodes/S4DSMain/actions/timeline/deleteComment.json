@@ -1,0 +1,22 @@
+{
+  "name": "deleteComment",
+  "method": "DELETE",
+  "endpoint": "/time-line/comment/{commentId}",
+  "description": "Delete timeline comment",
+  "parameters": [
+    {
+      "name": "commentId",
+      "type": "integer",
+      "required": false,
+      "description": "Comment ID to delete",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "object"
+    }
+  }
+}
