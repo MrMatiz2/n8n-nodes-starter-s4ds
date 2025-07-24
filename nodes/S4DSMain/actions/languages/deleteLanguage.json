@@ -1,0 +1,22 @@
+{
+  "name": "deleteLanguage",
+  "method": "DELETE",
+  "endpoint": "/languages",
+  "description": "Delete a language by ID.",
+  "parameters": [
+    {
+      "name": "languageId",
+      "type": "integer",
+      "required": false,
+      "description": "Language ID to delete",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "success": "boolean"
+    }
+  }
+}

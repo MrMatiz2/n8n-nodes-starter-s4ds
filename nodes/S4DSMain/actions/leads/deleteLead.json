@@ -1,0 +1,19 @@
+{
+  "method": "DELETE",
+  "endpoint": "/lead/{leadId}",
+  "description": "Delete a lead by ID",
+  "parameters": [
+    {
+      "name": "leadId",
+      "type": "integer",
+      "required": true,
+      "description": "Lead ID to delete",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

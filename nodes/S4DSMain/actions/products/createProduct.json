@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "endpoint": "/product",
+  "description": "Create a new product",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "CreateProductDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

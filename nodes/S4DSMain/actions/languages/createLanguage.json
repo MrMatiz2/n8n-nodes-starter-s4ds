@@ -1,0 +1,18 @@
+{
+  "name": "createLanguage",
+  "method": "POST",
+  "endpoint": "/languages",
+  "description": "Create a new language.",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "createLanguagueDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "language": "object"
+    }
+  }
+}

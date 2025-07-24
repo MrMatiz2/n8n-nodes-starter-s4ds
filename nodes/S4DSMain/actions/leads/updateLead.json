@@ -1,0 +1,15 @@
+{
+  "method": "PATCH",
+  "endpoint": "/lead",
+  "description": "Update an existing lead",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "LeadUpdateDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

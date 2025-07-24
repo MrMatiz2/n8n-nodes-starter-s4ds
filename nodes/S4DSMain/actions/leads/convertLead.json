@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "endpoint": "/lead/convert",
+  "description": "Convert a lead to a customer",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "ConvertLeadDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

@@ -2,6 +2,15 @@ import { INodeProperties, NodePropertyTypes } from 'n8n-workflow';
 import * as dtoDefinitions from './dto-definitions.json';
 import generateToken from './actions/authentication/generateToken.json';
 import getProductCount from './actions/products/getProductCount.json';
+import updateProduct from './actions/products/updateProduct.json';
+import createProduct from './actions/products/createProduct.json';
+import deleteProduct from './actions/products/deleteProduct.json';
+import getProductDetailed from './actions/products/getProductDetailed.json';
+import getAllProducts from './actions/products/getAllProducts.json';
+import createProductAndProductCatalog from './actions/products/createProductAndProductCatalog.json';
+import getProductByReference from './actions/products/getProductByReference.json';
+import getRelatedProduct from './actions/products/getRelatedProduct.json';
+import getFullProduct from './actions/products/getFullProduct.json';
 import getCustomerByDocument from './actions/customers/getCustomerByDocument.json';
 import createCustomer from './actions/customers/createCustomer.json';
 import updateCustomer from './actions/customers/updateCustomer.json';
@@ -27,6 +36,29 @@ import indexProducts from './actions/catalog/indexProducts.json';
 import getProductCategories from './actions/catalog/getProductCategories.json';
 import getCatalogFilters from './actions/catalog/getCatalogFilters.json';
 import getCountAllCatalog from './actions/catalog/getCountAllCatalog.json';
+import getNotesByUser from './actions/notes/getNotesByUser.json';
+import createNote from './actions/notes/createNote.json';
+import getAllLeads from './actions/leads/getAllLeads.json';
+import createLead from './actions/leads/createLead.json';
+import updateLead from './actions/leads/updateLead.json';
+import convertLead from './actions/leads/convertLead.json';
+import deleteLead from './actions/leads/deleteLead.json';
+import getDeals from './actions/deals/getDeals.json';
+import createDeal from './actions/deals/createDeal.json';
+import updateDeal from './actions/deals/updateDeal.json';
+import getDealAmount from './actions/deals/getDealAmount.json';
+import getAllRoles from './actions/roles/getAllRoles.json';
+import getRoleAccessByUser from './actions/roles/getRoleAccessByUser.json';
+import search360 from './actions/pages/search360.json';
+import getPages from './actions/pages/getPages.json';
+import getShortcutsList from './actions/pages/getShortcutsList.json';
+import getLanguages from './actions/languages/getLanguages.json';
+import createLanguage from './actions/languages/createLanguage.json';
+import deleteLanguage from './actions/languages/deleteLanguage.json';
+import updateLanguage from './actions/languages/updateLanguage.json';
+import getLanguageTranslation from './actions/languages/getLanguageTranslation.json';
+import createLanguageTranslation from './actions/languages/createLanguageTranslation.json';
+import updateLanguageTranslation from './actions/languages/updateLanguageTranslation.json';
 import getOrders from './actions/orders/getOrders.json';
 import createOrder from './actions/orders/createOrder.json';
 import cancelOrder from './actions/orders/cancelOrder.json';
@@ -127,6 +159,15 @@ const staticApiDefinitions: Record<string, Record<string, ApiDefinition>> = {
   },
   products: {
     getProductCount: getProductCount as ApiDefinition,
+    updateProduct: updateProduct as ApiDefinition,
+    createProduct: createProduct as ApiDefinition,
+    deleteProduct: deleteProduct as ApiDefinition,
+    getProductDetailed: getProductDetailed as ApiDefinition,
+    getAllProducts: getAllProducts as ApiDefinition,
+    createProductAndProductCatalog: createProductAndProductCatalog as ApiDefinition,
+    getProductByReference: getProductByReference as ApiDefinition,
+    getRelatedProduct: getRelatedProduct as ApiDefinition,
+    getFullProduct: getFullProduct as ApiDefinition,
   },
   customers: {
     getCustomerByDocument: getCustomerByDocument as ApiDefinition,
@@ -158,6 +199,41 @@ const staticApiDefinitions: Record<string, Record<string, ApiDefinition>> = {
     getProductCategories: getProductCategories as ApiDefinition,
     getCatalogFilters: getCatalogFilters as ApiDefinition,
     getCountAllCatalog: getCountAllCatalog as ApiDefinition
+  },
+  notes: {
+    getNotesByUser: getNotesByUser as ApiDefinition,
+    createNote: createNote as ApiDefinition
+  },
+  leads: {
+    getAllLeads: getAllLeads as ApiDefinition,
+    createLead: createLead as ApiDefinition,
+    updateLead: updateLead as ApiDefinition,
+    convertLead: convertLead as ApiDefinition,
+    deleteLead: deleteLead as ApiDefinition
+  },
+  deals: {
+    getDeals: getDeals as ApiDefinition,
+    createDeal: createDeal as ApiDefinition,
+    updateDeal: updateDeal as ApiDefinition,
+    getDealAmount: getDealAmount as ApiDefinition
+  },
+  roles: {
+    getAllRoles: getAllRoles as ApiDefinition,
+    getRoleAccessByUser: getRoleAccessByUser as ApiDefinition
+  },
+  pages: {
+    search360: search360 as ApiDefinition,
+    getPages: getPages as ApiDefinition,
+    getShortcutsList: getShortcutsList as ApiDefinition
+  },
+  languages: {
+    getLanguages: getLanguages as ApiDefinition,
+    createLanguage: createLanguage as ApiDefinition,
+    deleteLanguage: deleteLanguage as ApiDefinition,
+    updateLanguage: updateLanguage as ApiDefinition,
+    getLanguageTranslation: getLanguageTranslation as ApiDefinition,
+    createLanguageTranslation: createLanguageTranslation as ApiDefinition,
+    updateLanguageTranslation: updateLanguageTranslation as ApiDefinition
   },
   orders: {
     getOrders: getOrders as ApiDefinition,

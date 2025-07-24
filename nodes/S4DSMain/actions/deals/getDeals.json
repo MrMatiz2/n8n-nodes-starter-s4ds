@@ -1,0 +1,117 @@
+{
+  "method": "GET",
+  "endpoint": "/deal",
+  "description": "Get deals with extensive filtering options",
+  "parameters": [
+    {
+      "name": "dealId",
+      "type": "integer",
+      "required": false,
+      "description": "Deal ID to filter by",
+      "in": "query"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": false,
+      "description": "Deal name to filter by",
+      "in": "query"
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "required": false,
+      "description": "Deal status to filter by",
+      "in": "query"
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Deal type to filter by",
+      "in": "query"
+    },
+    {
+      "name": "lostReason",
+      "type": "string",
+      "required": false,
+      "description": "Lost reason to filter by",
+      "in": "query"
+    },
+    {
+      "name": "expectedCloseDateFrom",
+      "type": "string",
+      "required": false,
+      "description": "Expected close date from",
+      "in": "query"
+    },
+    {
+      "name": "expectedCloseDateTo",
+      "type": "string",
+      "required": false,
+      "description": "Expected close date to",
+      "in": "query"
+    },
+    {
+      "name": "amountFrom",
+      "type": "number",
+      "required": false,
+      "description": "Amount from",
+      "in": "query"
+    },
+    {
+      "name": "amountTo",
+      "type": "number",
+      "required": false,
+      "description": "Amount to",
+      "in": "query"
+    },
+    {
+      "name": "probabilityFrom",
+      "type": "integer",
+      "required": false,
+      "description": "Probability from",
+      "in": "query"
+    },
+    {
+      "name": "probabilityTo",
+      "type": "integer",
+      "required": false,
+      "description": "Probability to",
+      "in": "query"
+    },
+    {
+      "name": "orderBy",
+      "type": "string",
+      "required": false,
+      "description": "Order results by field",
+      "in": "query"
+    },
+    {
+      "name": "quantity",
+      "type": "integer",
+      "required": false,
+      "description": "Number of deals to return (default: 50)",
+      "in": "query"
+    },
+    {
+      "name": "assignedToDocumentType",
+      "type": "string",
+      "required": false,
+      "description": "Assigned to document type",
+      "in": "query"
+    },
+    {
+      "name": "assignedToDocument",
+      "type": "string",
+      "required": false,
+      "description": "Assigned to document ID",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

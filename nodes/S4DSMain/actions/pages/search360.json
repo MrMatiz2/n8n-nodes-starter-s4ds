@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "endpoint": "/pages/search360",
+  "description": "Perform a 360-degree search across pages",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "Search360DTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

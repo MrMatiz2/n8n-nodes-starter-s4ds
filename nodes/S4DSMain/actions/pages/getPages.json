@@ -1,0 +1,33 @@
+{
+  "method": "GET",
+  "endpoint": "/pages",
+  "description": "Get pages with optional filtering",
+  "parameters": [
+    {
+      "name": "quantity",
+      "type": "integer",
+      "required": false,
+      "description": "Number of pages to return (default: 100)",
+      "in": "query"
+    },
+    {
+      "name": "roleid",
+      "type": "string",
+      "required": false,
+      "description": "Role ID to filter pages by",
+      "in": "query"
+    },
+    {
+      "name": "username",
+      "type": "string",
+      "required": false,
+      "description": "Username to filter pages by",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

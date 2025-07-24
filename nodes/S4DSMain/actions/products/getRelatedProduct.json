@@ -1,0 +1,33 @@
+{
+  "method": "GET",
+  "endpoint": "/product/related/{productCode}",
+  "description": "Get related products for a given product code",
+  "parameters": [
+    {
+      "name": "productCode",
+      "type": "string",
+      "required": true,
+      "description": "Product code to find related products for",
+      "in": "path"
+    },
+    {
+      "name": "catalogId",
+      "type": "integer",
+      "required": false,
+      "description": "Catalog ID to filter by",
+      "in": "query"
+    },
+    {
+      "name": "activeCatalogs",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter by active catalogs only (default: true)",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

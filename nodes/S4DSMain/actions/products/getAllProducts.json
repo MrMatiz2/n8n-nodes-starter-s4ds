@@ -1,0 +1,54 @@
+{
+  "method": "GET",
+  "endpoint": "/product/catalogs",
+  "description": "Get all products with optional filtering",
+  "parameters": [
+    {
+      "name": "productSku",
+      "type": "string",
+      "required": false,
+      "description": "Product SKU to filter by",
+      "in": "query"
+    },
+    {
+      "name": "catalogId",
+      "type": "integer",
+      "required": false,
+      "description": "Catalog ID to filter by",
+      "in": "query"
+    },
+    {
+      "name": "limit",
+      "type": "integer",
+      "required": false,
+      "description": "Number of products to return",
+      "in": "query"
+    },
+    {
+      "name": "orderEntryCode",
+      "type": "string",
+      "required": false,
+      "description": "Order entry code to filter by",
+      "in": "query"
+    },
+    {
+      "name": "activeCatalogs",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter by active catalogs only (default: false)",
+      "in": "query"
+    },
+    {
+      "name": "promotionalProducts",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter promotional products only (default: false)",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

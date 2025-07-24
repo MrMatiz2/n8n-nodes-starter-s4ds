@@ -1,0 +1,173 @@
+{
+  "method": "GET",
+  "endpoint": "/lead",
+  "description": "Get all leads with extensive filtering options",
+  "parameters": [
+    {
+      "name": "leadName",
+      "type": "string",
+      "required": false,
+      "description": "Lead name to filter by",
+      "in": "query"
+    },
+    {
+      "name": "leadLastName",
+      "type": "string",
+      "required": false,
+      "description": "Lead last name to filter by",
+      "in": "query"
+    },
+    {
+      "name": "leadType",
+      "type": "string",
+      "required": false,
+      "description": "Lead type to filter by",
+      "in": "query"
+    },
+    {
+      "name": "leadClassification",
+      "type": "string",
+      "required": false,
+      "description": "Lead classification to filter by",
+      "in": "query"
+    },
+    {
+      "name": "leadTags",
+      "type": "array",
+      "required": false,
+      "description": "Lead tags to filter by",
+      "in": "query"
+    },
+    {
+      "name": "leadSource",
+      "type": "string",
+      "required": false,
+      "description": "Lead source to filter by",
+      "in": "query"
+    },
+    {
+      "name": "sponsorDocumentType",
+      "type": "string",
+      "required": false,
+      "description": "Sponsor document type to filter by",
+      "in": "query"
+    },
+    {
+      "name": "sponsorDocumentId",
+      "type": "string",
+      "required": false,
+      "description": "Sponsor document ID to filter by",
+      "in": "query"
+    },
+    {
+      "name": "creationDateFrom",
+      "type": "string",
+      "required": false,
+      "description": "Creation date from",
+      "in": "query"
+    },
+    {
+      "name": "creationDateUntil",
+      "type": "string",
+      "required": false,
+      "description": "Creation date until",
+      "in": "query"
+    },
+    {
+      "name": "modificationDateFrom",
+      "type": "string",
+      "required": false,
+      "description": "Modification date from",
+      "in": "query"
+    },
+    {
+      "name": "modificationDateUntil",
+      "type": "string",
+      "required": false,
+      "description": "Modification date until",
+      "in": "query"
+    },
+    {
+      "name": "quantity",
+      "type": "integer",
+      "required": false,
+      "description": "Number of leads to return (default: 100)",
+      "in": "query"
+    },
+    {
+      "name": "leadStatus",
+      "type": "string",
+      "required": false,
+      "description": "Lead status to filter by",
+      "in": "query"
+    },
+    {
+      "name": "leadId",
+      "type": "integer",
+      "required": false,
+      "description": "Lead ID to filter by",
+      "in": "query"
+    },
+    {
+      "name": "cellphone",
+      "type": "string",
+      "required": false,
+      "description": "Cellphone number to filter by",
+      "in": "query"
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "required": false,
+      "description": "Email address to filter by",
+      "in": "query"
+    },
+    {
+      "name": "personId",
+      "type": "string",
+      "required": false,
+      "description": "Person ID to filter by",
+      "in": "query"
+    },
+    {
+      "name": "documentId",
+      "type": "string",
+      "required": false,
+      "description": "Document ID to filter by",
+      "in": "query"
+    },
+    {
+      "name": "birthday",
+      "type": "string",
+      "required": false,
+      "description": "Birthday to filter by",
+      "in": "query"
+    },
+    {
+      "name": "by",
+      "type": "array",
+      "required": false,
+      "description": "Filter by specific fields",
+      "in": "query"
+    },
+    {
+      "name": "orderBy",
+      "type": "string",
+      "required": false,
+      "description": "Order results by field",
+      "in": "query"
+    },
+    {
+      "name": "returnParamsList",
+      "type": "array",
+      "required": false,
+      "description": "List of parameters to return",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

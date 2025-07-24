@@ -1,0 +1,15 @@
+{
+  "method": "PUT",
+  "endpoint": "/product",
+  "description": "Update an existing product",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "UpdateProductDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "method": "GET",
+  "endpoint": "/deal/amount",
+  "description": "Get deal amount information with filtering",
+  "parameters": [
+    {
+      "name": "status",
+      "type": "string",
+      "required": false,
+      "description": "Deal status to filter by",
+      "in": "query"
+    },
+    {
+      "name": "documentId",
+      "type": "string",
+      "required": false,
+      "description": "Document ID to filter by",
+      "in": "query"
+    },
+    {
+      "name": "documentType",
+      "type": "string",
+      "required": false,
+      "description": "Document type to filter by",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

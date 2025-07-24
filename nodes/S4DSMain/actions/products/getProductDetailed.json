@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "endpoint": "/product/getDetail",
+  "description": "Get detailed product information",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "SearchProductDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

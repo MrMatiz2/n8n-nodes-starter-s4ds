@@ -12,6 +12,42 @@
       {
         "name": "getProductCount",
         "file": "actions/products/getProductCount.json"
+      },
+      {
+        "name": "updateProduct",
+        "file": "actions/products/updateProduct.json"
+      },
+      {
+        "name": "createProduct",
+        "file": "actions/products/createProduct.json"
+      },
+      {
+        "name": "deleteProduct",
+        "file": "actions/products/deleteProduct.json"
+      },
+      {
+        "name": "getProductDetailed",
+        "file": "actions/products/getProductDetailed.json"
+      },
+      {
+        "name": "getAllProducts",
+        "file": "actions/products/getAllProducts.json"
+      },
+      {
+        "name": "createProductAndProductCatalog",
+        "file": "actions/products/createProductAndProductCatalog.json"
+      },
+      {
+        "name": "getProductByReference",
+        "file": "actions/products/getProductByReference.json"
+      },
+      {
+        "name": "getRelatedProduct",
+        "file": "actions/products/getRelatedProduct.json"
+      },
+      {
+        "name": "getFullProduct",
+        "file": "actions/products/getFullProduct.json"
       }
     ]
   },
@@ -124,6 +160,90 @@
       {
         "name": "getCountAllCatalog",
         "file": "actions/catalog/getCountAllCatalog.json"
+      }
+    ]
+  },
+  "notes": {
+    "services": [
+      {
+        "name": "getNotesByUser",
+        "file": "actions/notes/getNotesByUser.json"
+      },
+      {
+        "name": "createNote",
+        "file": "actions/notes/createNote.json"
+      }
+    ]
+  },
+  "leads": {
+    "services": [
+      {
+        "name": "getAllLeads",
+        "file": "actions/leads/getAllLeads.json"
+      },
+      {
+        "name": "createLead",
+        "file": "actions/leads/createLead.json"
+      },
+      {
+        "name": "updateLead",
+        "file": "actions/leads/updateLead.json"
+      },
+      {
+        "name": "convertLead",
+        "file": "actions/leads/convertLead.json"
+      },
+      {
+        "name": "deleteLead",
+        "file": "actions/leads/deleteLead.json"
+      }
+    ]
+  },
+  "deals": {
+    "services": [
+      {
+        "name": "getDeals",
+        "file": "actions/deals/getDeals.json"
+      },
+      {
+        "name": "createDeal",
+        "file": "actions/deals/createDeal.json"
+      },
+      {
+        "name": "updateDeal",
+        "file": "actions/deals/updateDeal.json"
+      },
+      {
+        "name": "getDealAmount",
+        "file": "actions/deals/getDealAmount.json"
+      }
+    ]
+  },
+  "roles": {
+    "services": [
+      {
+        "name": "getAllRoles",
+        "file": "actions/roles/getAllRoles.json"
+      },
+      {
+        "name": "getRoleAccessByUser",
+        "file": "actions/roles/getRoleAccessByUser.json"
+      }
+    ]
+  },
+  "pages": {
+    "services": [
+      {
+        "name": "search360",
+        "file": "actions/pages/search360.json"
+      },
+      {
+        "name": "getPages",
+        "file": "actions/pages/getPages.json"
+      },
+      {
+        "name": "getShortcutsList",
+        "file": "actions/pages/getShortcutsList.json"
       }
     ]
   },
@@ -360,6 +480,7 @@
       {
         "name": "deleteComment",
         "file": "actions/timeline/deleteComment.json"
+
       }
     ]
   }
