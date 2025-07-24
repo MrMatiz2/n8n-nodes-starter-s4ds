@@ -1,0 +1,22 @@
+{
+  "name": "getTicketById",
+  "method": "GET",
+  "endpoint": "/ticket/{ticketId}",
+  "description": "Get ticket by ID",
+  "parameters": [
+    {
+      "name": "ticketId",
+      "type": "integer",
+      "required": false,
+      "description": "Ticket ID",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "ticket": "object"
+    }
+  }
+}

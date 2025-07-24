@@ -1,0 +1,14 @@
+{
+  "name": "getTicketStatuses",
+  "method": "GET",
+  "endpoint": "/ticket/statuses",
+  "description": "Get available ticket statuses",
+  "parameters": [],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "ticketStatuses": "array"
+    }
+  }
+}

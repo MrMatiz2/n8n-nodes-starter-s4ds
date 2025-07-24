@@ -1,0 +1,18 @@
+{
+  "name": "updateTicketParticipant",
+  "method": "PUT",
+  "endpoint": "/ticket/participants",
+  "description": "Update ticket participant",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "UpdateParticipantDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "object"
+    }
+  }
+}

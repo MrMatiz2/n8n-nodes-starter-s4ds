@@ -1,0 +1,26 @@
+{
+  "name": "updatePersonTask",
+  "method": "PUT",
+  "endpoint": "/person-task/{taskId}",
+  "description": "Update person task by ID",
+  "parameters": [
+    {
+      "name": "taskId",
+      "type": "integer",
+      "required": false,
+      "description": "Task ID to update",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "UpdatePersonTaskDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "object"
+    }
+  }
+}

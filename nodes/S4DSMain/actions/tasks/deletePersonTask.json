@@ -1,0 +1,22 @@
+{
+  "name": "deletePersonTask",
+  "method": "DELETE",
+  "endpoint": "/person-task/{taskId}",
+  "description": "Delete person task by ID",
+  "parameters": [
+    {
+      "name": "taskId",
+      "type": "integer",
+      "required": false,
+      "description": "Task ID to delete",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "object"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "updatePicklist",
+  "method": "PUT",
+  "endpoint": "/picklists/{picklistId}",
+  "description": "Update a specific picklist",
+  "parameters": [
+    {
+      "name": "picklistId",
+      "type": "integer",
+      "required": false,
+      "description": "Picklist ID to update",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "UpdatePicklistDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "object"
+    }
+  }
+}
