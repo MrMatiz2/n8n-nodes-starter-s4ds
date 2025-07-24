@@ -1,8 +1,8 @@
 {
-  "name": "updateTicket",
+  "name": "updateTicketParticipants",
   "method": "PUT",
-  "endpoint": "/ticket/{issue_id}",
-  "description": "Update ticket by issue ID",
+  "endpoint": "/ticket/Participants/{issue_id}",
+  "description": "Update ticket participants by issue ID",
   "parameters": [
     {
       "name": "issue_id",
@@ -14,7 +14,7 @@
   ],
   "requiresAuth": true,
   "requestBody": {
-    "schema": "UpdateTicketDTO",
+    "schema": "UpdateTicketParticipantsDTO",
     "required": true
   },
   "response": {

@@ -1,35 +1,42 @@
 {
   "name": "getTimeLine",
   "method": "GET",
-  "endpoint": "/time-line",
-  "description": "Get timeline entries",
+  "endpoint": "/timeLines",
+  "description": "Get timeline entries by customer",
   "parameters": [
     {
-      "name": "entityId",
-      "type": "integer",
+      "name": "documentType",
+      "type": "string",
       "required": false,
-      "description": "Filter by entity ID",
+      "description": "Customer document type",
       "in": "query"
     },
     {
-      "name": "entityType",
+      "name": "documentId",
       "type": "string",
       "required": false,
-      "description": "Filter by entity type",
+      "description": "Customer document ID",
       "in": "query"
     },
     {
-      "name": "dateFrom",
+      "name": "operationStartDate",
       "type": "string",
       "required": false,
-      "description": "Filter by start date",
+      "description": "Operation start date",
       "in": "query"
     },
     {
-      "name": "dateTo",
+      "name": "operationEndDate",
       "type": "string",
       "required": false,
-      "description": "Filter by end date",
+      "description": "Operation end date",
+      "in": "query"
+    },
+    {
+      "name": "commentVisible",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter by comment visibility",
       "in": "query"
     },
     {

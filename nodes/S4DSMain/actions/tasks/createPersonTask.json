@@ -1,8 +1,8 @@
 {
   "name": "createPersonTask",
   "method": "POST",
-  "endpoint": "/person-task",
-  "description": "Create a new person task",
+  "endpoint": "/tasks",
+  "description": "Create a new task",
   "parameters": [],
   "requiresAuth": true,
   "requestBody": {

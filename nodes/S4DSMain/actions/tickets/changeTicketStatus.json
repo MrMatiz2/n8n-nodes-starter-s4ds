@@ -1,9 +1,17 @@
 {
-  "name": "changeTicketStatus", 
+  "name": "changeTicketStatus",
   "method": "PUT",
-  "endpoint": "/ticket/status",
-  "description": "Change ticket status",
-  "parameters": [],
+  "endpoint": "/ticket/changeStatus/{issue_id}",
+  "description": "Change ticket status by issue ID",
+  "parameters": [
+    {
+      "name": "issue_id",
+      "type": "string",
+      "required": true,
+      "description": "The ticket issue ID",
+      "in": "path"
+    }
+  ],
   "requiresAuth": true,
   "requestBody": {
     "schema": "ChangeTicketStatusDTO",

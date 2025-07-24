@@ -1,7 +1,7 @@
 {
   "name": "patchComment",
-  "method": "POST",
-  "endpoint": "/time-line/comment",
+  "method": "PATCH",
+  "endpoint": "/timeLines",
   "description": "Add/patch timeline comment",
   "parameters": [],
   "requiresAuth": true,
