@@ -53,6 +53,16 @@ import updateDeal from './actions/deals/updateDeal.json';
 import getDealAmount from './actions/deals/getDealAmount.json';
 import getAllRoles from './actions/roles/getAllRoles.json';
 import getRoleAccessByUser from './actions/roles/getRoleAccessByUser.json';
+import search360 from './actions/pages/search360.json';
+import getPages from './actions/pages/getPages.json';
+import getShortcutsList from './actions/pages/getShortcutsList.json';
+import getLanguages from './actions/languages/getLanguages.json';
+import createLanguage from './actions/languages/createLanguage.json';
+import deleteLanguage from './actions/languages/deleteLanguage.json';
+import updateLanguage from './actions/languages/updateLanguage.json';
+import getLanguageTranslation from './actions/languages/getLanguageTranslation.json';
+import createLanguageTranslation from './actions/languages/createLanguageTranslation.json';
+import updateLanguageTranslation from './actions/languages/updateLanguageTranslation.json';
 
 export interface ApiDefinition {
 	method: string;
@@ -162,6 +172,20 @@ const staticApiDefinitions: Record<string, Record<string, ApiDefinition>> = {
   roles: {
     getAllRoles: getAllRoles as ApiDefinition,
     getRoleAccessByUser: getRoleAccessByUser as ApiDefinition
+  },
+  pages: {
+    search360: search360 as ApiDefinition,
+    getPages: getPages as ApiDefinition,
+    getShortcutsList: getShortcutsList as ApiDefinition
+  },
+  languages: {
+    getLanguages: getLanguages as ApiDefinition,
+    createLanguage: createLanguage as ApiDefinition,
+    deleteLanguage: deleteLanguage as ApiDefinition,
+    updateLanguage: updateLanguage as ApiDefinition,
+    getLanguageTranslation: getLanguageTranslation as ApiDefinition,
+    createLanguageTranslation: createLanguageTranslation as ApiDefinition,
+    updateLanguageTranslation: updateLanguageTranslation as ApiDefinition
   },
 };
 export class ApiHelper {

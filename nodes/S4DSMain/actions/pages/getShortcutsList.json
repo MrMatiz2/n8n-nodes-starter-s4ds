@@ -1,0 +1,11 @@
+{
+  "method": "GET",
+  "endpoint": "/pages/shortcutsList",
+  "description": "Get list of page shortcuts",
+  "parameters": [],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

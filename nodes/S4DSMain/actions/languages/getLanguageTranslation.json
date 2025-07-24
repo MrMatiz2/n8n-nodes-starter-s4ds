@@ -1,0 +1,36 @@
+{
+  "name": "getLanguageTranslation",
+  "method": "GET",
+  "endpoint": "/languages/translations",
+  "description": "Get language translations with optional filters.",
+  "parameters": [
+    {
+      "name": "languageId",
+      "type": "integer",
+      "required": false,
+      "description": "Language ID to filter by",
+      "in": "query"
+    },
+    {
+      "name": "languageCode",
+      "type": "string",
+      "required": false,
+      "description": "Language code to filter by",
+      "in": "query"
+    },
+    {
+      "name": "identifier",
+      "type": "string",
+      "required": false,
+      "description": "Translation identifier to filter by",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "array",
+    "properties": {
+      "items": "object"
+    }
+  }
+}
