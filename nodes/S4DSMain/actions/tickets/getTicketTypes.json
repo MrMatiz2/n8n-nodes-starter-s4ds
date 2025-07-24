@@ -1,0 +1,14 @@
+{
+  "name": "getTicketTypes",
+  "method": "GET",
+  "endpoint": "/ticket/types",
+  "description": "Get available ticket types", 
+  "parameters": [],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "ticketTypes": "array"
+    }
+  }
+}

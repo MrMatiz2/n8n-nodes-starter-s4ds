@@ -1,0 +1,22 @@
+{
+  "name": "deleteCampaignById",
+  "method": "DELETE",
+  "endpoint": "/campaign/{campaignId}",
+  "description": "Delete campaign by ID",
+  "parameters": [
+    {
+      "name": "campaignId",
+      "type": "integer",
+      "required": false,
+      "description": "Campaign ID to delete",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "object"
+    }
+  }
+}

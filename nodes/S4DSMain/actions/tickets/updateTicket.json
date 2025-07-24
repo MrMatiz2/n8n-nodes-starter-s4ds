@@ -1,0 +1,26 @@
+{
+  "name": "updateTicket",
+  "method": "PUT", 
+  "endpoint": "/ticket/{ticketId}",
+  "description": "Update ticket by ID",
+  "parameters": [
+    {
+      "name": "ticketId",
+      "type": "integer",
+      "required": false,
+      "description": "Ticket ID to update",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "UnifiedTicketDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "object"
+    }
+  }
+}

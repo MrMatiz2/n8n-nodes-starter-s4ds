@@ -1,9 +1,5 @@
-// If you see type errors for 'fs' or 'path', install @types/node as a dev dependency.
-// npm install --save-dev @types/node
 import { INodeProperties, NodePropertyTypes } from 'n8n-workflow';
 import * as dtoDefinitions from './dto-definitions.json';
-// Remove fs and path imports
-// Import all service JSON files directly
 import generateToken from './actions/authentication/generateToken.json';
 import getProductCount from './actions/products/getProductCount.json';
 import getCustomerByDocument from './actions/customers/getCustomerByDocument.json';
@@ -31,7 +27,6 @@ import indexProducts from './actions/catalog/indexProducts.json';
 import getProductCategories from './actions/catalog/getProductCategories.json';
 import getCatalogFilters from './actions/catalog/getCatalogFilters.json';
 import getCountAllCatalog from './actions/catalog/getCountAllCatalog.json';
-// Orders imports
 import getOrders from './actions/orders/getOrders.json';
 import createOrder from './actions/orders/createOrder.json';
 import cancelOrder from './actions/orders/cancelOrder.json';
@@ -53,6 +48,38 @@ import getSpecificOrder from './actions/orders/getSpecificOrder.json';
 import getOrderWrapper from './actions/orders/getOrderWrapper.json';
 import getPaymentUrl from './actions/orders/getPaymentUrl.json';
 import getCustomersWithoutOrder from './actions/orders/getCustomersWithoutOrder.json';
+import getPicklist from './actions/picklists/getPicklist.json';
+import updatePicklist from './actions/picklists/updatePicklist.json';
+import createPicklist from './actions/picklists/createPicklist.json';
+import deletePicklist from './actions/picklists/deletePicklist.json';
+import getCampaignByFilters from './actions/campaign/getCampaignByFilters.json';
+import updateCampaignById from './actions/campaign/updateCampaignById.json';
+import createCampaign from './actions/campaign/createCampaign.json';
+import getCycles from './actions/campaign/getCycles.json';
+import deleteCampaignById from './actions/campaign/deleteCampaignById.json';
+import uploadAttachmentsToHistory from './actions/tickets/uploadAttachmentsToHistory.json';
+import createTicket from './actions/tickets/createTicket.json';
+import getTicketsByFilters from './actions/tickets/getTicketsByFilters.json';
+import addTicketParticipant from './actions/tickets/addTicketParticipant.json';
+import removeTicketParticipant from './actions/tickets/removeTicketParticipant.json';
+import updateTicketParticipant from './actions/tickets/updateTicketParticipant.json';
+import updateTicketHistory from './actions/tickets/updateTicketHistory.json';
+import changeTicketStatus from './actions/tickets/changeTicketStatus.json';
+import searchTickets from './actions/tickets/searchTickets.json';
+import getTicketTypes from './actions/tickets/getTicketTypes.json';
+import getTicketStatuses from './actions/tickets/getTicketStatuses.json';
+import getTicketById from './actions/tickets/getTicketById.json';
+import updateTicket from './actions/tickets/updateTicket.json';
+import deleteTicket from './actions/tickets/deleteTicket.json';
+import getTasks from './actions/tasks/getTasks.json';
+import createPersonTask from './actions/tasks/createPersonTask.json';
+import updatePersonTask from './actions/tasks/updatePersonTask.json';
+import deletePersonTask from './actions/tasks/deletePersonTask.json';
+import getTaskTypes from './actions/tasks/getTaskTypes.json';
+import getTaskStatuses from './actions/tasks/getTaskStatuses.json';
+import getTimeLine from './actions/timeline/getTimeLine.json';
+import patchComment from './actions/timeline/patchComment.json';
+import deleteComment from './actions/timeline/deleteComment.json';
 
 export interface ApiDefinition {
 	method: string;
@@ -94,7 +121,6 @@ export interface DtoDefinition {
 	properties: Record<string, DtoProperty>;
 }
 
-// Build static API definitions object
 const staticApiDefinitions: Record<string, Record<string, ApiDefinition>> = {
   authentication: {
     generateToken: generateToken as ApiDefinition,
@@ -156,14 +182,54 @@ const staticApiDefinitions: Record<string, Record<string, ApiDefinition>> = {
     getPaymentUrl: getPaymentUrl as ApiDefinition,
     getCustomersWithoutOrder: getCustomersWithoutOrder as ApiDefinition,
   },
+  picklists: {
+    getPicklist: getPicklist as ApiDefinition,
+    updatePicklist: updatePicklist as ApiDefinition,
+    createPicklist: createPicklist as ApiDefinition,
+    deletePicklist: deletePicklist as ApiDefinition,
+  },
+  campaign: {
+    getCampaignByFilters: getCampaignByFilters as ApiDefinition,
+    updateCampaignById: updateCampaignById as ApiDefinition,
+    createCampaign: createCampaign as ApiDefinition,
+    getCycles: getCycles as ApiDefinition,
+    deleteCampaignById: deleteCampaignById as ApiDefinition,
+  },
+  tickets: {
+    uploadAttachmentsToHistory: uploadAttachmentsToHistory as ApiDefinition,
+    createTicket: createTicket as ApiDefinition,
+    getTicketsByFilters: getTicketsByFilters as ApiDefinition,
+    addTicketParticipant: addTicketParticipant as ApiDefinition,
+    removeTicketParticipant: removeTicketParticipant as ApiDefinition,
+    updateTicketParticipant: updateTicketParticipant as ApiDefinition,
+    updateTicketHistory: updateTicketHistory as ApiDefinition,
+    changeTicketStatus: changeTicketStatus as ApiDefinition,
+    searchTickets: searchTickets as ApiDefinition,
+    getTicketTypes: getTicketTypes as ApiDefinition,
+    getTicketStatuses: getTicketStatuses as ApiDefinition,
+    getTicketById: getTicketById as ApiDefinition,
+    updateTicket: updateTicket as ApiDefinition,
+    deleteTicket: deleteTicket as ApiDefinition,
+  },
+  tasks: {
+    getTasks: getTasks as ApiDefinition,
+    createPersonTask: createPersonTask as ApiDefinition,
+    updatePersonTask: updatePersonTask as ApiDefinition,
+    deletePersonTask: deletePersonTask as ApiDefinition,
+    getTaskTypes: getTaskTypes as ApiDefinition,
+    getTaskStatuses: getTaskStatuses as ApiDefinition,
+  },
+  timeline: {
+    getTimeLine: getTimeLine as ApiDefinition,
+    patchComment: patchComment as ApiDefinition,
+    deleteComment: deleteComment as ApiDefinition,
+  },
 };
 
 export class ApiHelper {
-  // Return the static API definitions
   static getApiDefinitions(): Record<string, Record<string, ApiDefinition>> {
     return staticApiDefinitions;
   }
-  // Return a single API definition
   static getApiDefinition(group: string, service: string): ApiDefinition | null {
     return staticApiDefinitions[group]?.[service] || null;
   }
@@ -192,7 +258,6 @@ export class ApiHelper {
 		const definitions = this.getApiDefinitions();
 		const operations: INodeProperties[] = [];
 
-		// Crear operaciones para cada recurso
 		Object.keys(definitions).forEach(resource => {
 			const resourceOperations = Object.keys(definitions[resource]).map(operation => ({
 				name: this.formatOperationName(operation),
@@ -223,18 +288,15 @@ export class ApiHelper {
 		const definitions = this.getApiDefinitions();
 		const fields: INodeProperties[] = [];
 
-		// Ya no agregamos campos de autenticación
 
 		Object.keys(definitions).forEach(resource => {
 			Object.keys(definitions[resource]).forEach(operation => {
 				const apiDef = definitions[resource][operation];
 
-				// Campos específicos de la operación
 				if (apiDef.parameters && apiDef.parameters.length > 0) {
 					fields.push(...this.getOperationFields(resource, operation, apiDef.parameters));
 				}
 
-				// Campos para request body con DTOs
 				if (apiDef.requestBody && apiDef.requestBody.schema) {
 					fields.push(...this.getRequestBodyFields(resource, operation, apiDef.requestBody.schema));
 				}
@@ -247,11 +309,9 @@ export class ApiHelper {
 	private static getOperationFields(resource: string, operation: string, parameters: ApiParameter[]): INodeProperties[] {
 		const fields: INodeProperties[] = [];
 
-		// Agrupar parámetros por tipo
 		const queryParams = parameters.filter(p => p.in === 'query');
 		const bodyParams = parameters.filter(p => p.in === 'body');
 
-		// Campos para parámetros de query
 		if (queryParams.length > 0) {
 			fields.push({
 				displayName: 'Query Parameters',
@@ -276,7 +336,6 @@ export class ApiHelper {
 			});
 		}
 
-		// Campos para parámetros de body
 		if (bodyParams.length > 0) {
 			fields.push({
 				displayName: 'Body Parameters',
@@ -324,7 +383,6 @@ export class ApiHelper {
 		];
 	}
 
-	// Helper para generar un ejemplo de JSON para un DTO
 	private static generateDtoExample(dtoName: string): any {
 		const dtoDef = this.getDtoDefinition(dtoName);
 		if (!dtoDef) return {};
@@ -373,7 +431,6 @@ export class ApiHelper {
 	}
 
 	private static formatOperationName(operation: string): string {
-		// Convertir camelCase a palabras separadas
 		return operation
 			.replace(/([A-Z])/g, ' $1')
 			.replace(/^./, str => str.toUpperCase())
@@ -401,7 +458,6 @@ export class ApiHelper {
 			const displayName = this.capitalizeFirst(propName);
 
 			if (prop.type === 'object' && prop.schema) {
-				// Campo de objeto anidado
 				fields.push({
 					displayName: `${displayName} (${prop.schema})`,
 					name: fieldName,
@@ -413,7 +469,6 @@ export class ApiHelper {
 					options: this.generateDtoFields(prop.schema, fieldName),
 				});
 			} else if (prop.type === 'array' && prop.items?.schema) {
-				// Campo de array de objetos
 				fields.push({
 					displayName: `${displayName} (Array of ${prop.items.schema})`,
 					name: fieldName,
@@ -434,7 +489,6 @@ export class ApiHelper {
 					],
 				});
 			} else {
-				// Campo simple
 				fields.push({
 					displayName,
 					name: fieldName,
@@ -461,20 +515,16 @@ export class ApiHelper {
 
 			if (value !== undefined && value !== '') {
 				if (prop.type === 'object' && prop.schema) {
-					// Objeto anidado
 					result[propName] = this.buildDtoObject(value, prop.schema);
 				} else if (prop.type === 'array' && prop.items?.schema) {
-					// Array de objetos
 					if (Array.isArray(value)) {
 						result[propName] = value.map(item => this.buildDtoObject(item, prop.items!.schema!));
 					} else if (value && typeof value === 'object') {
-						// Para fixedCollection de n8n
 						result[propName] = Object.values(value).map((item: any) => 
 							this.buildDtoObject(item, prop.items!.schema!)
 						);
 					}
 				} else {
-					// Campo simple
 					result[propName] = value;
 				}
 			}

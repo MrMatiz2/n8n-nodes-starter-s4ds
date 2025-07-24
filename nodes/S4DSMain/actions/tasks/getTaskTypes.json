@@ -1,0 +1,14 @@
+{
+  "name": "getTaskTypes",
+  "method": "GET",
+  "endpoint": "/person-task/types",
+  "description": "Get available task types",
+  "parameters": [],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "taskTypes": "array"
+    }
+  }
+}
