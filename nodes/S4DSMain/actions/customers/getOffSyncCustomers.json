@@ -1,7 +1,7 @@
 {
   "name": "getOffSyncCustomers",
   "method": "GET",
-  "endpoint": "/customer/offSync",
+  "endpoint": "/customer",
   "description": "Get customers that are out of sync.",
   "parameters": [
     {
