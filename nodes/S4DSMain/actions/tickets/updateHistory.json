@@ -1,12 +1,12 @@
 {
-  "name": "updateTicketHistory",
-  "method": "PUT",
+  "name": "updateHistory",
+  "method": "POST",
   "endpoint": "/ticket/history",
   "description": "Update ticket history",
   "parameters": [],
   "requiresAuth": true,
   "requestBody": {
-    "schema": "UpdateHistoryDTO",
+    "schema": "UpdateTicketHistoryDTO",
     "required": true
   },
   "response": {

@@ -44,8 +44,15 @@
       "name": "year",
       "in": "query",
       "required": false,
-      "type": "string",
+      "type": "integer",
       "description": "Year to filter by"
+    },
+    {
+      "name": "month",
+      "in": "query",
+      "required": false,
+      "type": "integer",
+      "description": "Month to filter by"
     }
   ],
   "requiresAuth": true,

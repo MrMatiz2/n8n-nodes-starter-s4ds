@@ -1,6 +1,11 @@
 import { INodeProperties, NodePropertyTypes } from 'n8n-workflow';
 import * as dtoDefinitions from './dto-definitions.json';
 import generateToken from './actions/authentication/generateToken.json';
+import changePassword from './actions/authentication/changePassword.json';
+import login from './actions/authentication/login.json';
+import validateAuthenticationCode from './actions/authentication/validateAuthenticationCode.json';
+import sendAuthenticationEmail from './actions/authentication/sendAuthenticationEmail.json';
+import generateJWT from './actions/authentication/generateJWT.json';
 import getProductCount from './actions/products/getProductCount.json';
 import updateProduct from './actions/products/updateProduct.json';
 import createProduct from './actions/products/createProduct.json';
@@ -90,28 +95,23 @@ import createCampaign from './actions/campaign/createCampaign.json';
 import getCycles from './actions/campaign/getCycles.json';
 import deleteCampaignById from './actions/campaign/deleteCampaignById.json';
 import uploadAttachmentsToHistory from './actions/tickets/uploadAttachmentsToHistory.json';
-import createTicket from './actions/tickets/createTicket.json';
-import getTicketsByFilters from './actions/tickets/getTicketsByFilters.json';
-import addTicketParticipant from './actions/tickets/addTicketParticipant.json';
-import removeTicketParticipant from './actions/tickets/removeTicketParticipant.json';
-import updateTicketParticipant from './actions/tickets/updateTicketParticipant.json';
-import updateTicketHistory from './actions/tickets/updateTicketHistory.json';
-import changeTicketStatus from './actions/tickets/changeTicketStatus.json';
-import searchTickets from './actions/tickets/searchTickets.json';
+import getTicketCategories from './actions/tickets/getTicketCategories.json';
+import getTicketPriorities from './actions/tickets/getTicketPriorities.json';
+import getTicketStatus from './actions/tickets/getTicketStatus.json';
 import getTicketTypes from './actions/tickets/getTicketTypes.json';
-import getTicketStatuses from './actions/tickets/getTicketStatuses.json';
+import getTicketParticipants from './actions/tickets/getTicketParticipants.json';
+import changeTicketStatus from './actions/tickets/changeTicketStatus.json';
 import getTicketById from './actions/tickets/getTicketById.json';
 import updateTicket from './actions/tickets/updateTicket.json';
-import deleteTicket from './actions/tickets/deleteTicket.json';
+import createTicket from './actions/tickets/createTicket.json';
+import updateTicketParticipants from './actions/tickets/updateTicketParticipants.json';
+import updateHistory from './actions/tickets/updateHistory.json';
 import getTasks from './actions/tasks/getTasks.json';
 import createPersonTask from './actions/tasks/createPersonTask.json';
-import updatePersonTask from './actions/tasks/updatePersonTask.json';
-import deletePersonTask from './actions/tasks/deletePersonTask.json';
-import getTaskTypes from './actions/tasks/getTaskTypes.json';
-import getTaskStatuses from './actions/tasks/getTaskStatuses.json';
+import closeTask from './actions/tasks/closeTask.json';
 import getTimeLine from './actions/timeline/getTimeLine.json';
 import patchComment from './actions/timeline/patchComment.json';
-import deleteComment from './actions/timeline/deleteComment.json';
+import createMessage from './actions/timeline/createMessage.json';
 
 export interface ApiDefinition {
 	method: string;
@@ -156,6 +156,11 @@ export interface DtoDefinition {
 const staticApiDefinitions: Record<string, Record<string, ApiDefinition>> = {
   authentication: {
     generateToken: generateToken as ApiDefinition,
+    changePassword: changePassword as ApiDefinition,
+    login: login as ApiDefinition,
+    validateAuthenticationCode: validateAuthenticationCode as ApiDefinition,
+    sendAuthenticationEmail: sendAuthenticationEmail as ApiDefinition,
+    generateJWT: generateJWT as ApiDefinition,
   },
   products: {
     getProductCount: getProductCount as ApiDefinition,
@@ -273,32 +278,27 @@ const staticApiDefinitions: Record<string, Record<string, ApiDefinition>> = {
   },
   tickets: {
     uploadAttachmentsToHistory: uploadAttachmentsToHistory as ApiDefinition,
-    createTicket: createTicket as ApiDefinition,
-    getTicketsByFilters: getTicketsByFilters as ApiDefinition,
-    addTicketParticipant: addTicketParticipant as ApiDefinition,
-    removeTicketParticipant: removeTicketParticipant as ApiDefinition,
-    updateTicketParticipant: updateTicketParticipant as ApiDefinition,
-    updateTicketHistory: updateTicketHistory as ApiDefinition,
-    changeTicketStatus: changeTicketStatus as ApiDefinition,
-    searchTickets: searchTickets as ApiDefinition,
+    getTicketCategories: getTicketCategories as ApiDefinition,
+    getTicketPriorities: getTicketPriorities as ApiDefinition,
+    getTicketStatus: getTicketStatus as ApiDefinition,
     getTicketTypes: getTicketTypes as ApiDefinition,
-    getTicketStatuses: getTicketStatuses as ApiDefinition,
+    getTicketParticipants: getTicketParticipants as ApiDefinition,
+    changeTicketStatus: changeTicketStatus as ApiDefinition,
     getTicketById: getTicketById as ApiDefinition,
     updateTicket: updateTicket as ApiDefinition,
-    deleteTicket: deleteTicket as ApiDefinition,
+    createTicket: createTicket as ApiDefinition,
+    updateTicketParticipants: updateTicketParticipants as ApiDefinition,
+    updateHistory: updateHistory as ApiDefinition,
   },
   tasks: {
     getTasks: getTasks as ApiDefinition,
     createPersonTask: createPersonTask as ApiDefinition,
-    updatePersonTask: updatePersonTask as ApiDefinition,
-    deletePersonTask: deletePersonTask as ApiDefinition,
-    getTaskTypes: getTaskTypes as ApiDefinition,
-    getTaskStatuses: getTaskStatuses as ApiDefinition,
+    closeTask: closeTask as ApiDefinition,
   },
   timeline: {
     getTimeLine: getTimeLine as ApiDefinition,
     patchComment: patchComment as ApiDefinition,
-    deleteComment: deleteComment as ApiDefinition,
+    createMessage: createMessage as ApiDefinition,
   },
 };
 

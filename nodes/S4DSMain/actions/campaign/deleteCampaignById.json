@@ -7,7 +7,7 @@
     {
       "name": "campaignId",
       "type": "integer",
-      "required": false,
+      "required": true,
       "description": "Campaign ID to delete",
       "in": "path"
     }

@@ -10,6 +10,20 @@
       "type": "string",
       "required": true,
       "description": "User search term"
+    },
+    {
+      "name": "searchType",
+      "in": "query",
+      "type": "string",
+      "required": false,
+      "description": "Type of search to perform"
+    },
+    {
+      "name": "consultantCode",
+      "in": "query",
+      "type": "string",
+      "required": false,
+      "description": "Consultant code filter"
     }
   ],
   "requiresAuth": true,

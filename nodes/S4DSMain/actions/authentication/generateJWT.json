@@ -1,12 +1,12 @@
 {
-  "name": "createTicket",
+  "name": "generateJWT",
   "method": "POST",
-  "endpoint": "/ticket",
-  "description": "Create a new ticket",
+  "endpoint": "/login/generateJWT",
+  "description": "Generate JWT token",
   "parameters": [],
-  "requiresAuth": true,
+  "requiresAuth": false,
   "requestBody": {
-    "schema": "CreateTicketDTO",
+    "schema": "UserJwtDTO",
     "required": true
   },
   "response": {

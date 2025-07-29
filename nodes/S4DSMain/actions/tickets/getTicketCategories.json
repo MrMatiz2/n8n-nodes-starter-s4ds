@@ -1,8 +1,8 @@
 {
-  "name": "getTicketTypes",
+  "name": "getTicketCategories",
   "method": "GET",
-  "endpoint": "/ticket/types",
-  "description": "Get ticket types",
+  "endpoint": "/ticket/categorys",
+  "description": "Get ticket categories",
   "parameters": [],
   "requiresAuth": true,
   "response": {

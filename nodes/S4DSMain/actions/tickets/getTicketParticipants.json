@@ -1,8 +1,8 @@
 {
-  "name": "getTicketById",
+  "name": "getTicketParticipants",
   "method": "GET",
-  "endpoint": "/ticket/{issue_id}",
-  "description": "Get ticket details by issue ID",
+  "endpoint": "/ticket/Participants/{issue_id}",
+  "description": "Get ticket participants by issue ID",
   "parameters": [
     {
       "name": "issue_id",
@@ -14,9 +14,9 @@
   ],
   "requiresAuth": true,
   "response": {
-    "type": "object",
+    "type": "array",
     "properties": {
-      "result": "object"
+      "result": "array"
     }
   }
 }

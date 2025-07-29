@@ -1,14 +1,14 @@
 {
-  "name": "deletePersonTask",
-  "method": "DELETE",
-  "endpoint": "/person-task/{taskId}",
-  "description": "Delete person task by ID",
+  "name": "closeTask",
+  "method": "PATCH",
+  "endpoint": "/tasks/closeTask/{taskId}",
+  "description": "Close a task by ID",
   "parameters": [
     {
       "name": "taskId",
       "type": "integer",
-      "required": false,
-      "description": "Task ID to delete",
+      "required": true,
+      "description": "Task ID to close",
       "in": "path"
     }
   ],

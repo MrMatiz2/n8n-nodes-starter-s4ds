@@ -1,12 +1,12 @@
 {
-  "name": "addTicketParticipant",
+  "name": "createMessage",
   "method": "POST",
-  "endpoint": "/ticket/participants",
-  "description": "Add participant to ticket",
+  "endpoint": "/timeLines",
+  "description": "Create timeline message/comment",
   "parameters": [],
   "requiresAuth": true,
   "requestBody": {
-    "schema": "AddTicketParticipantRequestDTO",
+    "schema": "PostComment",
     "required": true
   },
   "response": {

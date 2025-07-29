@@ -7,7 +7,7 @@
     {
       "name": "picklistId",
       "type": "integer",
-      "required": false,
+      "required": true,
       "description": "Picklist ID to update",
       "in": "path"
     }

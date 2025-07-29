@@ -4,6 +4,26 @@
       {
         "name": "generateToken",
         "file": "actions/authentication/generateToken.json"
+      },
+      {
+        "name": "changePassword",
+        "file": "actions/authentication/changePassword.json"
+      },
+      {
+        "name": "login",
+        "file": "actions/authentication/login.json"
+      },
+      {
+        "name": "validateAuthenticationCode",
+        "file": "actions/authentication/validateAuthenticationCode.json"
+      },
+      {
+        "name": "sendAuthenticationEmail",
+        "file": "actions/authentication/sendAuthenticationEmail.json"
+      },
+      {
+        "name": "generateJWT",
+        "file": "actions/authentication/generateJWT.json"
       }
     ]
   },
@@ -247,6 +267,38 @@
       }
     ]
   },
+  "languages": {
+    "services": [
+      {
+        "name": "getLanguages",
+        "file": "actions/languages/getLanguages.json"
+      },
+      {
+        "name": "createLanguage",
+        "file": "actions/languages/createLanguage.json"
+      },
+      {
+        "name": "deleteLanguage",
+        "file": "actions/languages/deleteLanguage.json"
+      },
+      {
+        "name": "updateLanguage",
+        "file": "actions/languages/updateLanguage.json"
+      },
+      {
+        "name": "getLanguageTranslation",
+        "file": "actions/languages/getLanguageTranslation.json"
+      },
+      {
+        "name": "createLanguageTranslation",
+        "file": "actions/languages/createLanguageTranslation.json"
+      },
+      {
+        "name": "updateLanguageTranslation",
+        "file": "actions/languages/updateLanguageTranslation.json"
+      }
+    ]
+  },
   "orders": {
     "services": [
       {
@@ -386,44 +438,28 @@
         "file": "actions/tickets/uploadAttachmentsToHistory.json"
       },
       {
-        "name": "createTicket",
-        "file": "actions/tickets/createTicket.json"
+        "name": "getTicketCategories",
+        "file": "actions/tickets/getTicketCategories.json"
       },
       {
-        "name": "getTicketsByFilters",
-        "file": "actions/tickets/getTicketsByFilters.json"
+        "name": "getTicketPriorities",
+        "file": "actions/tickets/getTicketPriorities.json"
       },
       {
-        "name": "addTicketParticipant",
-        "file": "actions/tickets/addTicketParticipant.json"
-      },
-      {
-        "name": "removeTicketParticipant",
-        "file": "actions/tickets/removeTicketParticipant.json"
-      },
-      {
-        "name": "updateTicketParticipant",
-        "file": "actions/tickets/updateTicketParticipant.json"
-      },
-      {
-        "name": "updateTicketHistory",
-        "file": "actions/tickets/updateTicketHistory.json"
-      },
-      {
-        "name": "changeTicketStatus",
-        "file": "actions/tickets/changeTicketStatus.json"
-      },
-      {
-        "name": "searchTickets",
-        "file": "actions/tickets/searchTickets.json"
+        "name": "getTicketStatus",
+        "file": "actions/tickets/getTicketStatus.json"
       },
       {
         "name": "getTicketTypes",
         "file": "actions/tickets/getTicketTypes.json"
       },
       {
-        "name": "getTicketStatuses",
-        "file": "actions/tickets/getTicketStatuses.json"
+        "name": "getTicketParticipants",
+        "file": "actions/tickets/getTicketParticipants.json"
+      },
+      {
+        "name": "changeTicketStatus",
+        "file": "actions/tickets/changeTicketStatus.json"
       },
       {
         "name": "getTicketById",
@@ -434,8 +470,16 @@
         "file": "actions/tickets/updateTicket.json"
       },
       {
-        "name": "deleteTicket",
-        "file": "actions/tickets/deleteTicket.json"
+        "name": "createTicket",
+        "file": "actions/tickets/createTicket.json"
+      },
+      {
+        "name": "updateTicketParticipants",
+        "file": "actions/tickets/updateTicketParticipants.json"
+      },
+      {
+        "name": "updateHistory",
+        "file": "actions/tickets/updateHistory.json"
       }
     ]
   },
@@ -450,20 +494,8 @@
         "file": "actions/tasks/createPersonTask.json"
       },
       {
-        "name": "updatePersonTask",
-        "file": "actions/tasks/updatePersonTask.json"
-      },
-      {
-        "name": "deletePersonTask",
-        "file": "actions/tasks/deletePersonTask.json"
-      },
-      {
-        "name": "getTaskTypes",
-        "file": "actions/tasks/getTaskTypes.json"
-      },
-      {
-        "name": "getTaskStatuses",
-        "file": "actions/tasks/getTaskStatuses.json"
+        "name": "closeTask",
+        "file": "actions/tasks/closeTask.json"
       }
     ]
   },
@@ -478,9 +510,8 @@
         "file": "actions/timeline/patchComment.json"
       },
       {
-        "name": "deleteComment",
-        "file": "actions/timeline/deleteComment.json"
-
+        "name": "createMessage",
+        "file": "actions/timeline/createMessage.json"
       }
     ]
   }
