@@ -1,0 +1,26 @@
+{
+  "method": "GET",
+  "endpoint": "/payment/getOrderPayments",
+  "description": "Get payments for a specific order",
+  "parameters": [
+    {
+      "name": "orderNumber",
+      "type": "string",
+      "required": false,
+      "description": "Order number to get payments for",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

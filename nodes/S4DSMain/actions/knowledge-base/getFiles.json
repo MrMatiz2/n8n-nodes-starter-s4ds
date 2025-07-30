@@ -1,0 +1,26 @@
+{
+  "method": "GET",
+  "endpoint": "/knowledgeBase",
+  "description": "Get knowledge base files with optional title filter",
+  "parameters": [
+    {
+      "name": "tittle",
+      "type": "string",
+      "required": false,
+      "description": "Title filter for knowledge base files",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

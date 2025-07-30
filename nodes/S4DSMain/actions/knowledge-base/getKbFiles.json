@@ -1,0 +1,26 @@
+{
+  "method": "GET",
+  "endpoint": "/knowledgeBase/getFiles",
+  "description": "Get knowledge base files by IDs",
+  "parameters": [
+    {
+      "name": "ids",
+      "type": "string",
+      "required": false,
+      "description": "Comma-separated list of file IDs",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

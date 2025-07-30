@@ -1,0 +1,19 @@
+{
+  "method": "POST",
+  "endpoint": "/payment",
+  "description": "Create a new payment",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "CreatePaymentDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

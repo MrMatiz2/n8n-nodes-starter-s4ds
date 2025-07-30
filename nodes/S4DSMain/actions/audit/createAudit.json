@@ -1,0 +1,19 @@
+{
+  "method": "POST",
+  "endpoint": "/audit/createAudit",
+  "description": "Create a new audit entry",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "AuditRequestDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

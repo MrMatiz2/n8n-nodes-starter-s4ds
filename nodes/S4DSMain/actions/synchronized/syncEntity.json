@@ -1,0 +1,27 @@
+{
+  "method": "PATCH",
+  "endpoint": "/synchronized/{entity}",
+  "description": "Synchronize an entity with external systems",
+  "parameters": [
+    {
+      "name": "entity",
+      "type": "string",
+      "required": true,
+      "description": "Name of the entity to synchronize",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "EntityDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

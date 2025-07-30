@@ -1,0 +1,23 @@
+{
+  "method": "GET",
+  "endpoint": "/translations/generate",
+  "description": "Generate translations for a specific language",
+  "parameters": [
+    {
+      "name": "language",
+      "type": "string",
+      "required": false,
+      "description": "Language code for translation generation",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

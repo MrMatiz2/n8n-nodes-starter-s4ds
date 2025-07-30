@@ -1,0 +1,23 @@
+{
+  "method": "DELETE",
+  "endpoint": "/calendars/meeting/{meetingId}/guests",
+  "description": "Delete guests from a meeting",
+  "parameters": [
+    {
+      "name": "meetingId",
+      "type": "integer",
+      "required": true,
+      "description": "ID of the meeting to remove guests from",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

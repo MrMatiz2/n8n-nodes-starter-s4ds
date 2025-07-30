@@ -1,0 +1,27 @@
+{
+  "method": "PATCH",
+  "endpoint": "/calendars/meeting/{meetingId}",
+  "description": "Edit an existing calendar event",
+  "parameters": [
+    {
+      "name": "meetingId",
+      "type": "integer",
+      "required": true,
+      "description": "ID of the meeting to edit",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "UpdateEventDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

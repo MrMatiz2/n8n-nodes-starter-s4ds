@@ -1,0 +1,19 @@
+{
+  "method": "POST",
+  "endpoint": "/webhook/subscribe",
+  "description": "Subscribe to webhook events",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "WebhookRequestDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

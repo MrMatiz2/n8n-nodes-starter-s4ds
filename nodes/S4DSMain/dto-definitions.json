@@ -2721,5 +2721,514 @@
         "required": true
       }
     }
+  },
+  "CreateKnowledgeBaseDTO": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "description": "Knowledge base title",
+        "required": false
+      },
+      "description": {
+        "type": "string",
+        "description": "Knowledge base description",
+        "required": false
+      },
+      "category": {
+        "type": "string",
+        "description": "Knowledge base category",
+        "required": false
+      },
+      "language": {
+        "type": "string",
+        "description": "Knowledge base language",
+        "required": false
+      },
+      "roleId": {
+        "type": "string",
+        "description": "Role ID associated with the knowledge base",
+        "required": false
+      },
+      "tags": {
+        "type": "string",
+        "description": "Knowledge base tags",
+        "required": false
+      }
+    }
+  },
+  "UpdateKnowledgeBaseDTO": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "description": "Knowledge base title",
+        "required": false
+      },
+      "description": {
+        "type": "string",
+        "description": "Knowledge base description",
+        "required": false
+      },
+      "category": {
+        "type": "string",
+        "description": "Knowledge base category",
+        "required": false
+      },
+      "language": {
+        "type": "string",
+        "description": "Knowledge base language",
+        "required": false
+      },
+      "roleId": {
+        "type": "string",
+        "description": "Role ID associated with the knowledge base",
+        "required": false
+      },
+      "tags": {
+        "type": "string",
+        "description": "Knowledge base tags",
+        "required": false
+      }
+    }
+  },
+  "CreateEventDTO": {
+    "type": "object",
+    "properties": {
+      "personCreateEvent": {
+        "type": "object",
+        "description": "Person creating the event",
+        "schema": "PersonDTO",
+        "required": false
+      },
+      "eventName": {
+        "type": "string",
+        "description": "Name of the event",
+        "required": false
+      },
+      "date": {
+        "type": "string",
+        "description": "Event date",
+        "required": false
+      },
+      "duration": {
+        "type": "string",
+        "description": "Event duration",
+        "required": false
+      },
+      "address": {
+        "type": "string",
+        "description": "Event address",
+        "required": false
+      },
+      "guests": {
+        "type": "array",
+        "description": "Event guests",
+        "items": {
+          "type": "object",
+          "schema": "PersonDTO"
+        },
+        "required": false
+      },
+      "metadata": {
+        "type": "object",
+        "description": "Event metadata",
+        "required": false
+      }
+    }
+  },
+  "UpdateEventDTO": {
+    "type": "object",
+    "properties": {
+      "personCreateEvent": {
+        "type": "object",
+        "description": "Person updating the event",
+        "schema": "PersonDTO",
+        "required": false
+      },
+      "eventName": {
+        "type": "string",
+        "description": "Name of the event",
+        "required": false
+      },
+      "date": {
+        "type": "string",
+        "description": "Event date",
+        "required": false
+      },
+      "duration": {
+        "type": "string",
+        "description": "Event duration",
+        "required": false
+      },
+      "address": {
+        "type": "string",
+        "description": "Event address",
+        "required": false
+      },
+      "guests": {
+        "type": "array",
+        "description": "Event guests",
+        "items": {
+          "type": "object",
+          "schema": "PersonDTO"
+        },
+        "required": false
+      },
+      "metadata": {
+        "type": "object",
+        "description": "Event metadata",
+        "required": false
+      }
+    }
+  },
+  "CreatePaymentDTO": {
+    "type": "object",
+    "properties": {
+      "paymentCode": {
+        "type": "string",
+        "description": "Payment code",
+        "required": false
+      },
+      "paymentMethod": {
+        "type": "string",
+        "description": "Payment method",
+        "required": false
+      },
+      "customerDocument": {
+        "type": "string",
+        "description": "Customer document",
+        "required": false
+      },
+      "customerDocumentType": {
+        "type": "string",
+        "description": "Customer document type",
+        "required": false
+      },
+      "paymentDate": {
+        "type": "string",
+        "description": "Payment date",
+        "required": false
+      },
+      "paymentAmount": {
+        "type": "string",
+        "description": "Payment amount",
+        "required": false
+      },
+      "orderNumber": {
+        "type": "string",
+        "description": "Order number",
+        "required": false
+      }
+    }
+  },
+  "WebhookPaymentDTO": {
+    "type": "object",
+    "properties": {
+      "orderId": {
+        "type": "string",
+        "description": "Order ID",
+        "required": false
+      },
+      "orderNumber": {
+        "type": "string",
+        "description": "Order number",
+        "required": false
+      },
+      "paymentCode": {
+        "type": "string",
+        "description": "Payment code",
+        "required": false
+      },
+      "paymentDate": {
+        "type": "string",
+        "description": "Payment date",
+        "required": false
+      },
+      "currencyCode": {
+        "type": "string",
+        "description": "Currency code",
+        "required": false
+      },
+      "paymentAmmount": {
+        "type": "string",
+        "description": "Payment amount",
+        "required": false
+      },
+      "paymentMethodId": {
+        "type": "string",
+        "description": "Payment method ID",
+        "required": false
+      },
+      "s4PaymentStatus": {
+        "type": "string",
+        "description": "S4 payment status",
+        "required": false
+      },
+      "paymentMethodCode": {
+        "type": "string",
+        "description": "Payment method code",
+        "required": false
+      }
+    }
+  },
+  "CreateInventoryDTO": {
+    "type": "object",
+    "properties": {
+      "startWarehouseCode": {
+        "type": "string",
+        "description": "Start warehouse code",
+        "required": false
+      },
+      "endWarehouseCode": {
+        "type": "string",
+        "description": "End warehouse code",
+        "required": false
+      },
+      "productSKU": {
+        "type": "string",
+        "description": "Product SKU",
+        "required": false
+      },
+      "lotCode": {
+        "type": "string",
+        "description": "Lot code",
+        "required": false
+      },
+      "quantity": {
+        "type": "string",
+        "description": "Quantity",
+        "required": false
+      },
+      "modificationDate": {
+        "type": "string",
+        "description": "Modification date",
+        "required": false
+      },
+      "warehouseCode": {
+        "type": "string",
+        "description": "Warehouse code",
+        "required": false
+      },
+      "expirationDate": {
+        "type": "string",
+        "description": "Expiration date",
+        "required": false
+      },
+      "inventoryMovementType": {
+        "type": "integer",
+        "description": "Inventory movement type",
+        "required": false
+      }
+    }
+  },
+  "TransferInventoryDTO": {
+    "type": "object",
+    "properties": {
+      "startWarehouseCode": {
+        "type": "string",
+        "description": "Start warehouse code",
+        "required": false
+      },
+      "endWarehouseCode": {
+        "type": "string",
+        "description": "End warehouse code",
+        "required": false
+      },
+      "productSKU": {
+        "type": "string",
+        "description": "Product SKU",
+        "required": false
+      },
+      "lotCode": {
+        "type": "string",
+        "description": "Lot code",
+        "required": false
+      },
+      "quantity": {
+        "type": "string",
+        "description": "Quantity to transfer",
+        "required": false
+      },
+      "modificationDate": {
+        "type": "string",
+        "description": "Modification date",
+        "required": false
+      },
+      "warehouseCode": {
+        "type": "string",
+        "description": "Warehouse code",
+        "required": false
+      },
+      "expirationDate": {
+        "type": "string",
+        "description": "Expiration date",
+        "required": false
+      },
+      "inventoryMovementType": {
+        "type": "integer",
+        "description": "Inventory movement type",
+        "required": false
+      }
+    }
+  },
+  "WebhookRequestDTO": {
+    "type": "object",
+    "properties": {
+      "hookUrl": {
+        "type": "string",
+        "description": "URL to receive webhook notifications",
+        "required": false
+      },
+      "eventType": {
+        "type": "string",
+        "description": "Type of event to subscribe to",
+        "required": false
+      }
+    }
+  },
+  "EntityDTO": {
+    "type": "object",
+    "properties": {
+      "entityList": {
+        "type": "array",
+        "description": "List of entities to synchronize",
+        "items": {
+          "type": "object",
+          "schema": "EntityListDTO"
+        },
+        "required": false
+      }
+    }
+  },
+  "EntityListDTO": {
+    "type": "object",
+    "properties": {
+      "entity": {
+        "type": "string",
+        "description": "Entity name",
+        "required": false
+      },
+      "status": {
+        "type": "string",
+        "description": "Entity synchronization status",
+        "required": false
+      }
+    }
+  },
+  "AuditRequestDTO": {
+    "type": "object",
+    "properties": {
+      "auditType": {
+        "type": "string",
+        "description": "Type of audit (SYSTEM_AUDIT, EXTERNAL_INTEGRATIONS_AUDIT, ORDER_AUDIT, PROCESSING_LOGS)",
+        "required": false
+      },
+      "auditableEntity": {
+        "type": "integer",
+        "description": "Auditable entity ID",
+        "required": false
+      },
+      "groupId": {
+        "type": "integer",
+        "description": "Group ID",
+        "required": false
+      },
+      "auditableId": {
+        "type": "integer",
+        "description": "Auditable item ID",
+        "required": false
+      },
+      "auditableGroup": {
+        "type": "integer",
+        "description": "Auditable group ID",
+        "required": false
+      },
+      "auditVisible": {
+        "type": "string",
+        "description": "Audit visibility setting",
+        "required": false
+      },
+      "auditDescription": {
+        "type": "string",
+        "description": "Audit description",
+        "required": false
+      },
+      "event": {
+        "type": "string",
+        "description": "Event name",
+        "required": false
+      },
+      "auditEvent": {
+        "type": "string",
+        "description": "Audit event type",
+        "required": false
+      },
+      "currentTime": {
+        "type": "string",
+        "description": "Current timestamp",
+        "required": false
+      },
+      "ipAddress": {
+        "type": "string",
+        "description": "IP address",
+        "required": false
+      },
+      "personId": {
+        "type": "integer",
+        "description": "Person ID",
+        "required": false
+      },
+      "username": {
+        "type": "string",
+        "description": "Username",
+        "required": false
+      },
+      "auditUser": {
+        "type": "string",
+        "description": "Audit user",
+        "required": false
+      },
+      "auditId": {
+        "type": "integer",
+        "description": "Audit ID",
+        "required": false
+      },
+      "wsRequest": {
+        "type": "string",
+        "description": "Web service request",
+        "required": false
+      },
+      "wsResponse": {
+        "type": "string",
+        "description": "Web service response",
+        "required": false
+      },
+      "url": {
+        "type": "string",
+        "description": "URL",
+        "required": false
+      },
+      "integrationType": {
+        "type": "string",
+        "description": "Integration type",
+        "required": false
+      },
+      "orderId": {
+        "type": "string",
+        "description": "Order ID",
+        "required": false
+      },
+      "orderNumber": {
+        "type": "string",
+        "description": "Order number",
+        "required": false
+      },
+      "requestJson": {
+        "type": "object",
+        "description": "Request JSON data",
+        "required": false
+      }
+    }
   }
 } 

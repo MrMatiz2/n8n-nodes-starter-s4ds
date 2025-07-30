@@ -1,0 +1,19 @@
+{
+  "method": "POST",
+  "endpoint": "/inventory",
+  "description": "Create a new inventory entry",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "CreateInventoryDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

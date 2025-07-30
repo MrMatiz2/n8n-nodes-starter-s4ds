@@ -1,0 +1,40 @@
+{
+  "method": "GET",
+  "endpoint": "/data/list",
+  "description": "Get available report filters",
+  "parameters": [
+    {
+      "name": "reportName",
+      "type": "string",
+      "required": false,
+      "description": "Name of the report to get filters for",
+      "in": "query"
+    },
+    {
+      "name": "reportId",
+      "type": "integer",
+      "required": false,
+      "description": "ID of the report to get filters for",
+      "in": "query"
+    },
+    {
+      "name": "reportType",
+      "type": "integer",
+      "required": false,
+      "description": "Type of the report",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

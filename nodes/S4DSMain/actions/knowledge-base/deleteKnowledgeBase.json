@@ -1,0 +1,23 @@
+{
+  "method": "DELETE",
+  "endpoint": "/knowledgeBase/{KnowledgeID}",
+  "description": "Delete a knowledge base entry",
+  "parameters": [
+    {
+      "name": "KnowledgeID",
+      "type": "integer",
+      "required": true,
+      "description": "ID of the knowledge base entry to delete",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}
