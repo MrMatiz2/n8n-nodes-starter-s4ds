@@ -1,0 +1,19 @@
+{
+  "method": "POST",
+  "endpoint": "/inventory/transferInventory",
+  "description": "Transfer inventory between warehouses",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "TransferInventoryDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

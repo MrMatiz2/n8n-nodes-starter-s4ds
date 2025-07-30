@@ -1,0 +1,47 @@
+{
+  "method": "GET",
+  "endpoint": "/calendars/availableDate",
+  "description": "Get available dates for calendar scheduling",
+  "parameters": [
+    {
+      "name": "documentType",
+      "type": "string",
+      "required": false,
+      "description": "Document type filter",
+      "in": "query"
+    },
+    {
+      "name": "documentId",
+      "type": "string",
+      "required": false,
+      "description": "Document ID filter",
+      "in": "query"
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": false,
+      "description": "Start date for availability search",
+      "in": "query"
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": false,
+      "description": "End date for availability search",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

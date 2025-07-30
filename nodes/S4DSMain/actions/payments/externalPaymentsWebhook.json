@@ -1,0 +1,19 @@
+{
+  "method": "POST",
+  "endpoint": "/payment/externalPaymentsWebhook",
+  "description": "Handle external payments webhook",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "WebhookPaymentDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

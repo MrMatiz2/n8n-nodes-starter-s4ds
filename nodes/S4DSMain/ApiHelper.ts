@@ -112,6 +112,36 @@ import closeTask from './actions/tasks/closeTask.json';
 import getTimeLine from './actions/timeline/getTimeLine.json';
 import patchComment from './actions/timeline/patchComment.json';
 import createMessage from './actions/timeline/createMessage.json';
+import getFiles from './actions/knowledge-base/getFiles.json';
+import createKnowledgeBase from './actions/knowledge-base/createKnowledgeBase.json';
+import updateKnowledgeBase from './actions/knowledge-base/updateKnowledgeBase.json';
+import getSearchKB from './actions/knowledge-base/getSearchKB.json';
+import indexDocuments from './actions/knowledge-base/indexDocuments.json';
+import getKbFiles from './actions/knowledge-base/getKbFiles.json';
+import deleteKnowledgeBase from './actions/knowledge-base/deleteKnowledgeBase.json';
+import getEvents from './actions/calendar/getEvents.json';
+import createEvent from './actions/calendar/createEvent.json';
+import editEvent from './actions/calendar/editEvent.json';
+import getAvailableDate from './actions/calendar/getAvailableDate.json';
+import deleteMeetingGuests from './actions/calendar/deleteMeetingGuests.json';
+import getPayments from './actions/payments/getPayments.json';
+import createPayment from './actions/payments/createPayment.json';
+import externalPaymentsWebhook from './actions/payments/externalPaymentsWebhook.json';
+import getOrderPayments from './actions/payments/getOrderPayments.json';
+import getInventory from './actions/inventory/getInventory.json';
+import createInventory from './actions/inventory/createInventory.json';
+import transferInventory from './actions/inventory/transferInventory.json';
+import getWarehouse from './actions/inventory/getWarehouse.json';
+import subscribe from './actions/webhook/subscribe.json';
+import unsubscribe from './actions/webhook/unsubscribe.json';
+import generateData from './actions/data/generateData.json';
+import getReportFilters from './actions/data/getReportFilters.json';
+import generateTranslations from './actions/translation/generateTranslations.json';
+import syncEntity from './actions/synchronized/syncEntity.json';
+import getNotifications from './actions/notification/getNotifications.json';
+import getGoals from './actions/goals/getGoals.json';
+import getDivisions from './actions/division/getDivisions.json';
+import createAudit from './actions/audit/createAudit.json';
 
 export interface ApiDefinition {
 	method: string;
@@ -299,6 +329,60 @@ const staticApiDefinitions: Record<string, Record<string, ApiDefinition>> = {
     getTimeLine: getTimeLine as ApiDefinition,
     patchComment: patchComment as ApiDefinition,
     createMessage: createMessage as ApiDefinition,
+  },
+  knowledgeBase: {
+    getFiles: getFiles as ApiDefinition,
+    createKnowledgeBase: createKnowledgeBase as ApiDefinition,
+    updateKnowledgeBase: updateKnowledgeBase as ApiDefinition,
+    getSearchKB: getSearchKB as ApiDefinition,
+    indexDocuments: indexDocuments as ApiDefinition,
+    getKbFiles: getKbFiles as ApiDefinition,
+    deleteKnowledgeBase: deleteKnowledgeBase as ApiDefinition,
+  },
+  calendar: {
+    getEvents: getEvents as ApiDefinition,
+    createEvent: createEvent as ApiDefinition,
+    editEvent: editEvent as ApiDefinition,
+    getAvailableDate: getAvailableDate as ApiDefinition,
+    deleteMeetingGuests: deleteMeetingGuests as ApiDefinition,
+  },
+  payments: {
+    getPayments: getPayments as ApiDefinition,
+    createPayment: createPayment as ApiDefinition,
+    externalPaymentsWebhook: externalPaymentsWebhook as ApiDefinition,
+    getOrderPayments: getOrderPayments as ApiDefinition,
+  },
+  inventory: {
+    getInventory: getInventory as ApiDefinition,
+    createInventory: createInventory as ApiDefinition,
+    transferInventory: transferInventory as ApiDefinition,
+    getWarehouse: getWarehouse as ApiDefinition,
+  },
+  webhook: {
+    subscribe: subscribe as ApiDefinition,
+    unsubscribe: unsubscribe as ApiDefinition,
+  },
+  data: {
+    generateData: generateData as ApiDefinition,
+    getReportFilters: getReportFilters as ApiDefinition,
+  },
+  translation: {
+    generateTranslations: generateTranslations as ApiDefinition,
+  },
+  synchronized: {
+    syncEntity: syncEntity as ApiDefinition,
+  },
+  notification: {
+    getNotifications: getNotifications as ApiDefinition,
+  },
+  goals: {
+    getGoals: getGoals as ApiDefinition,
+  },
+  division: {
+    getDivisions: getDivisions as ApiDefinition,
+  },
+  audit: {
+    createAudit: createAudit as ApiDefinition,
   },
 };
 

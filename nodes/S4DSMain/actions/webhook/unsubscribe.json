@@ -1,0 +1,23 @@
+{
+  "method": "DELETE",
+  "endpoint": "/webhook/unsubscribe/{hookId}",
+  "description": "Unsubscribe from webhook events",
+  "parameters": [
+    {
+      "name": "hookId",
+      "type": "integer",
+      "required": true,
+      "description": "ID of the webhook to unsubscribe from",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

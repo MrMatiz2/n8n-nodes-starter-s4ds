@@ -1,0 +1,33 @@
+{
+  "method": "GET",
+  "endpoint": "/inventory/warehouse",
+  "description": "Get warehouse information with optional coverage filter",
+  "parameters": [
+    {
+      "name": "coverage",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter by coverage",
+      "in": "query"
+    },
+    {
+      "name": "warehouseCode",
+      "type": "string",
+      "required": false,
+      "description": "Specific warehouse code",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

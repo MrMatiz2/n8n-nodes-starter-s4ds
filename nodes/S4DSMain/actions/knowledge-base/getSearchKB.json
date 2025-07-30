@@ -1,0 +1,33 @@
+{
+  "method": "GET",
+  "endpoint": "/knowledgeBase/search",
+  "description": "Search in knowledge base",
+  "parameters": [
+    {
+      "name": "knowledgeBaseId",
+      "type": "integer",
+      "required": false,
+      "description": "Knowledge base ID to search in",
+      "in": "query"
+    },
+    {
+      "name": "query",
+      "type": "string",
+      "required": false,
+      "description": "Search query text",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "method": "GET",
+  "endpoint": "/knowledgeBase/indexDocuments",
+  "description": "Index documents in knowledge base",
+  "parameters": [
+    {
+      "name": "removeIndex",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to remove existing index before indexing",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "method": "GET",
+  "endpoint": "/data/report",
+  "description": "Generate data report with optional filters",
+  "parameters": [
+    {
+      "name": "reportName",
+      "type": "string",
+      "required": false,
+      "description": "Name of the report to generate",
+      "in": "query"
+    },
+    {
+      "name": "reportId",
+      "type": "integer",
+      "required": false,
+      "description": "ID of the report to generate",
+      "in": "query"
+    },
+    {
+      "name": "reportFilters",
+      "type": "string",
+      "required": false,
+      "description": "Filters to apply to the report",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

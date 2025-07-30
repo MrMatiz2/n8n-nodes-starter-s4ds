@@ -1,0 +1,19 @@
+{
+  "method": "PATCH",
+  "endpoint": "/knowledgeBase",
+  "description": "Update an existing knowledge base entry",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "UpdateKnowledgeBaseDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

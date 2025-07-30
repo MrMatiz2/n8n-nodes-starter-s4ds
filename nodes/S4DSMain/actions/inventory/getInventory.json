@@ -1,0 +1,40 @@
+{
+  "method": "GET",
+  "endpoint": "/inventory",
+  "description": "Get inventory information with optional product SKU filter",
+  "parameters": [
+    {
+      "name": "productSKU",
+      "type": "string",
+      "required": false,
+      "description": "Product SKU to filter inventory",
+      "in": "query"
+    },
+    {
+      "name": "warehouseCode",
+      "type": "string",
+      "required": false,
+      "description": "Warehouse code to filter inventory",
+      "in": "query"
+    },
+    {
+      "name": "lotCode",
+      "type": "string",
+      "required": false,
+      "description": "Lot code to filter inventory",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

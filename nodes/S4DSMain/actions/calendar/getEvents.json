@@ -1,0 +1,26 @@
+{
+  "method": "GET",
+  "endpoint": "/calendars",
+  "description": "Get calendar events with optional event ID filter",
+  "parameters": [
+    {
+      "name": "eventId",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by specific event ID",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

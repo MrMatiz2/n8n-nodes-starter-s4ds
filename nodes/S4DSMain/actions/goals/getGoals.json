@@ -1,0 +1,68 @@
+{
+  "method": "GET",
+  "endpoint": "/goals",
+  "description": "Get goals with optional filters and sorting",
+  "parameters": [
+    {
+      "name": "documentId",
+      "type": "string",
+      "required": false,
+      "description": "Filter by document ID",
+      "in": "query"
+    },
+    {
+      "name": "documentType",
+      "type": "string",
+      "required": false,
+      "description": "Filter by document type",
+      "in": "query"
+    },
+    {
+      "name": "idGoal",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by goal ID",
+      "in": "query"
+    },
+    {
+      "name": "nameGoal",
+      "type": "string",
+      "required": false,
+      "description": "Filter by goal name",
+      "in": "query"
+    },
+    {
+      "name": "totalProgress",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by total progress",
+      "in": "query"
+    },
+    {
+      "name": "orderBy",
+      "type": "string",
+      "required": false,
+      "description": "Order results by field",
+      "in": "query"
+    },
+    {
+      "name": "quantity",
+      "type": "integer",
+      "required": false,
+      "description": "Number of goals to retrieve (default: 100)",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

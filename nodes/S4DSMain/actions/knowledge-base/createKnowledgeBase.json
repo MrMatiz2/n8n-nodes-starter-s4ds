@@ -1,0 +1,19 @@
+{
+  "method": "POST",
+  "endpoint": "/knowledgeBase",
+  "description": "Create a new knowledge base entry",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "CreateKnowledgeBaseDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}

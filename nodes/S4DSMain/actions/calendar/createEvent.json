@@ -1,0 +1,19 @@
+{
+  "method": "POST",
+  "endpoint": "/calendars",
+  "description": "Create a new calendar event",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "CreateEventDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object"
+      }
+    }
+  }
+}
