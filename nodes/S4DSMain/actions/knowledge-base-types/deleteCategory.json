@@ -1,0 +1,22 @@
+{
+  "name": "deleteCategory",
+  "method": "DELETE",
+  "endpoint": "/knowledgeBaseTypes/{knowledgeBaseTypeId}",
+  "description": "Delete a knowledge base category",
+  "parameters": [
+    {
+      "name": "knowledgeBaseTypeId",
+      "type": "integer",
+      "required": true,
+      "description": "Knowledge base type ID to delete",
+      "in": "path"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "object"
+    }
+  }
+}

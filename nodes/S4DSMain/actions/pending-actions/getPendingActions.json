@@ -1,0 +1,43 @@
+{
+  "name": "getPendingActions",
+  "method": "GET",
+  "endpoint": "/pendingActions",
+  "description": "Get pending actions with optional filters",
+  "parameters": [
+    {
+      "name": "pendingGroupId",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by pending group ID",
+      "in": "query"
+    },
+    {
+      "name": "pendingActionDescription",
+      "type": "string",
+      "required": false,
+      "description": "Filter by action description",
+      "in": "query"
+    },
+    {
+      "name": "pendingCode",
+      "type": "string",
+      "required": false,
+      "description": "Filter by pending code",
+      "in": "query"
+    },
+    {
+      "name": "pendingMandatory",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter by mandatory status",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "array"
+    }
+  }
+}

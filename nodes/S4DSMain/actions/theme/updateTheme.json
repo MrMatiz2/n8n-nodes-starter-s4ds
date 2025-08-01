@@ -1,0 +1,16 @@
+{
+  "name": "updateTheme",
+  "method": "POST",
+  "endpoint": "/setup/theme",
+  "description": "Update theme configuration",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "object",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {}
+  }
+}

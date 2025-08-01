@@ -1,0 +1,43 @@
+{
+  "name": "getEnviromentVariable",
+  "method": "GET",
+  "endpoint": "/setup/enviromentVariable",
+  "description": "Get environment variables with optional filters",
+  "parameters": [
+    {
+      "name": "search",
+      "type": "string",
+      "required": false,
+      "description": "Search term filter",
+      "in": "query"
+    },
+    {
+      "name": "creationDate",
+      "type": "string",
+      "required": false,
+      "description": "Filter by creation date",
+      "in": "query"
+    },
+    {
+      "name": "modificationDate",
+      "type": "string",
+      "required": false,
+      "description": "Filter by modification date",
+      "in": "query"
+    },
+    {
+      "name": "group",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by group ID",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "array"
+    }
+  }
+}

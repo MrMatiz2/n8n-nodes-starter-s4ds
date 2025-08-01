@@ -82,6 +82,22 @@ export class S4DSMain implements INodeType {
 					headers.Authorization = tokenData.authorization_header;
 				}
 
+				// Preparar parámetros de path
+				let endpoint = apiDefinition.endpoint;
+				if (apiDefinition.parameters) {
+					const pathParameters = this.getNodeParameter('pathParameters', i, {}) as Record<string, any>;
+					const pathParams = apiDefinition.parameters.filter(p => p.in === 'path');					
+					pathParams.forEach(param => {
+						const paramValue = pathParameters[param.name];
+						if (paramValue !== undefined && paramValue !== '') {
+							// Reemplazar {paramName} en el endpoint con el valor actual
+							endpoint = endpoint.replace(`{${param.name}}`, encodeURIComponent(paramValue));
+						} else if (param.required) {
+							throw new Error(`Required path parameter '${param.name}' is missing`);
+						}
+					});
+				}
+
 				// Preparar parámetros de query
 				const queryParams: Record<string, any> = {};
 				if (apiDefinition.parameters) {
@@ -127,7 +143,7 @@ export class S4DSMain implements INodeType {
 				}
 
 				// Construir URL con parámetros de query
-				let url = `${baseUrl}${apiDefinition.endpoint}`;
+				let url = `${baseUrl}${endpoint}`;
 				if (Object.keys(queryParams).length > 0) {
 					const queryString = Object.keys(queryParams)
 						.map(key => `${encodeURIComponent(key)}=${encodeURIComponent(queryParams[key])}`)

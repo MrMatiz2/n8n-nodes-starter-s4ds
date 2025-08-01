@@ -142,6 +142,39 @@ import getNotifications from './actions/notification/getNotifications.json';
 import getGoals from './actions/goals/getGoals.json';
 import getDivisions from './actions/division/getDivisions.json';
 import createAudit from './actions/audit/createAudit.json';
+import getPendingActions from './actions/pending-actions/getPendingActions.json';
+import createPendingAction from './actions/pending-actions/createPendingAction.json';
+import deletePendingActions from './actions/pending-actions/deletePendingActions.json';
+import updatePendingAction from './actions/pending-actions/updatePendingAction.json';
+import getPendingGroups from './actions/pending-actions/getPendingGroups.json';
+import createPendingGroup from './actions/pending-actions/createPendingGroup.json';
+import deletePendingGroups from './actions/pending-actions/deletePendingGroups.json';
+import updatePendingGroup from './actions/pending-actions/updatePendingGroup.json';
+import createFulfillment from './actions/fulfillment/createFulfillment.json';
+import getTracking from './actions/fulfillment/getTracking.json';
+import createTracking from './actions/fulfillment/createTracking.json';
+import updateTracking from './actions/fulfillment/updateTracking.json';
+import freightCost from './actions/fulfillment/freightCost.json';
+import getProductImages from './actions/product-image/getProductImages.json';
+import createProductImage from './actions/product-image/createProductImage.json';
+import deleteImage from './actions/product-image/deleteImage.json';
+import countProductImages from './actions/product-image/countProductImages.json';
+import getCategories from './actions/knowledge-base-types/getCategories.json';
+import createCategory from './actions/knowledge-base-types/createCategory.json';
+import updateCategory from './actions/knowledge-base-types/updateCategory.json';
+import deleteCategory from './actions/knowledge-base-types/deleteCategory.json';
+import getEnviromentVariable from './actions/environment-variable/getEnviromentVariable.json';
+import createEnviromentVariable from './actions/environment-variable/createEnviromentVariable.json';
+import updateEnviromentVariable from './actions/environment-variable/updateEnviromentVariable.json';
+import getEnviromentVariableGroups from './actions/environment-variable/getEnviromentVariableGroups.json';
+import getDevolutions from './actions/returns/getDevolutions.json';
+import refundProduct from './actions/returns/refundProduct.json';
+import sendMessage from './actions/communication/sendMessage.json';
+import getTemplates from './actions/communication/getTemplates.json';
+import getWorkflowSteps from './actions/workflows/getWorkflowSteps.json';
+import updateTheme from './actions/theme/updateTheme.json';
+import executeProcess from './actions/rule-engine/executeProcess.json';
+import getOnlineHelps from './actions/online-helps/getOnlineHelps.json';
 
 export interface ApiDefinition {
 	method: string;
@@ -384,6 +417,61 @@ const staticApiDefinitions: Record<string, Record<string, ApiDefinition>> = {
   audit: {
     createAudit: createAudit as ApiDefinition,
   },
+  'pending-actions': {
+    getPendingActions: getPendingActions as ApiDefinition,
+    createPendingAction: createPendingAction as ApiDefinition,
+    deletePendingActions: deletePendingActions as ApiDefinition,
+    updatePendingAction: updatePendingAction as ApiDefinition,
+    getPendingGroups: getPendingGroups as ApiDefinition,
+    createPendingGroup: createPendingGroup as ApiDefinition,
+    deletePendingGroups: deletePendingGroups as ApiDefinition,
+    updatePendingGroup: updatePendingGroup as ApiDefinition,
+  },
+  fulfillment: {
+    createFulfillment: createFulfillment as ApiDefinition,
+    getTracking: getTracking as ApiDefinition,
+    createTracking: createTracking as ApiDefinition,
+    updateTracking: updateTracking as ApiDefinition,
+    freightCost: freightCost as ApiDefinition,
+  },
+  'product-image': {
+    getProductImages: getProductImages as ApiDefinition,
+    createProductImage: createProductImage as ApiDefinition,
+    deleteImage: deleteImage as ApiDefinition,
+    countProductImages: countProductImages as ApiDefinition,
+  },
+  'knowledge-base-types': {
+    getCategories: getCategories as ApiDefinition,
+    createCategory: createCategory as ApiDefinition,
+    updateCategory: updateCategory as ApiDefinition,
+    deleteCategory: deleteCategory as ApiDefinition,
+  },
+  'environment-variable': {
+    getEnviromentVariable: getEnviromentVariable as ApiDefinition,
+    createEnviromentVariable: createEnviromentVariable as ApiDefinition,
+    updateEnviromentVariable: updateEnviromentVariable as ApiDefinition,
+    getEnviromentVariableGroups: getEnviromentVariableGroups as ApiDefinition,
+  },
+  returns: {
+    getDevolutions: getDevolutions as ApiDefinition,
+    refundProduct: refundProduct as ApiDefinition,
+  },
+  communication: {
+    sendMessage: sendMessage as ApiDefinition,
+    getTemplates: getTemplates as ApiDefinition,
+  },
+  workflows: {
+    getWorkflowSteps: getWorkflowSteps as ApiDefinition,
+  },
+  theme: {
+    updateTheme: updateTheme as ApiDefinition,
+  },
+  'rule-engine': {
+    executeProcess: executeProcess as ApiDefinition,
+  },
+  'online-helps': {
+    getOnlineHelps: getOnlineHelps as ApiDefinition,
+  },
 };
 
 export class ApiHelper {
@@ -469,8 +557,33 @@ export class ApiHelper {
 	private static getOperationFields(resource: string, operation: string, parameters: ApiParameter[]): INodeProperties[] {
 		const fields: INodeProperties[] = [];
 
+		const pathParams = parameters.filter(p => p.in === 'path');
 		const queryParams = parameters.filter(p => p.in === 'query');
 		const bodyParams = parameters.filter(p => p.in === 'body');
+
+		if (pathParams.length > 0) {
+			fields.push({
+				displayName: 'Path Parameters',
+				name: 'pathParameters',
+				type: 'collection',
+				placeholder: 'Add Path Parameter',
+				default: {},
+				displayOptions: {
+					show: {
+						resource: [resource],
+						operation: [operation],
+					},
+				},
+				options: pathParams.map(param => ({
+					displayName: this.capitalizeFirst(param.name),
+					name: param.name,
+					type: this.mapParameterType(param.type),
+					default: '',
+					required: false, // Manejamos la validación en tiempo de ejecución
+					description: `${param.description}${param.required ? ' (Required)' : ''}`,
+				})),
+			});
+		}
 
 		if (queryParams.length > 0) {
 			fields.push({

@@ -1,0 +1,23 @@
+{
+  "name": "getProductImages",
+  "method": "GET",
+  "endpoint": "/productsImage",
+  "description": "Get product images",
+  "parameters": [
+    {
+      "name": "productImageDTO",
+      "type": "object",
+      "required": true,
+      "description": "Product image filter parameters",
+      "in": "query",
+      "schema": "GetProductImagesDTO"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "array"
+    }
+  }
+}

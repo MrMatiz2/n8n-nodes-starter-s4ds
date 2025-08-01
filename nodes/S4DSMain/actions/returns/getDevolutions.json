@@ -1,0 +1,51 @@
+{
+  "name": "getDevolutions",
+  "method": "GET",
+  "endpoint": "/returns",
+  "description": "Get devolutions/returns with optional filters",
+  "parameters": [
+    {
+      "name": "quantity",
+      "type": "integer",
+      "required": false,
+      "description": "Number of records to return",
+      "in": "query",
+      "default": 100
+    },
+    {
+      "name": "rmaConsecutive",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by RMA consecutive number",
+      "in": "query"
+    },
+    {
+      "name": "documentId",
+      "type": "string",
+      "required": false,
+      "description": "Filter by document ID",
+      "in": "query"
+    },
+    {
+      "name": "documentType",
+      "type": "string",
+      "required": false,
+      "description": "Filter by document type",
+      "in": "query"
+    },
+    {
+      "name": "dateTo",
+      "type": "string",
+      "required": false,
+      "description": "Filter by end date",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "array"
+    }
+  }
+}

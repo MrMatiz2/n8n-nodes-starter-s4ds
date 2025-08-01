@@ -1,0 +1,44 @@
+{
+  "name": "getTemplates",
+  "method": "GET",
+  "endpoint": "/communications/templates",
+  "description": "Get communication templates with optional filters",
+  "parameters": [
+    {
+      "name": "quantity",
+      "type": "integer",
+      "required": false,
+      "description": "Number of records to return",
+      "in": "query",
+      "default": 100
+    },
+    {
+      "name": "templateId",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by template ID",
+      "in": "query"
+    },
+    {
+      "name": "templateCode",
+      "type": "string",
+      "required": false,
+      "description": "Filter by template code",
+      "in": "query"
+    },
+    {
+      "name": "templateDescription",
+      "type": "string",
+      "required": false,
+      "description": "Filter by template description",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "array"
+    }
+  }
+}

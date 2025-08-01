@@ -1,0 +1,36 @@
+{
+  "name": "getPendingGroups",
+  "method": "GET",
+  "endpoint": "/pendingActions/pendingGroups",
+  "description": "Get pending groups with optional filters",
+  "parameters": [
+    {
+      "name": "pendingGroupId",
+      "type": "string",
+      "required": false,
+      "description": "Filter by pending group ID",
+      "in": "query"
+    },
+    {
+      "name": "pendingGroupRole",
+      "type": "string",
+      "required": false,
+      "description": "Filter by group role",
+      "in": "query"
+    },
+    {
+      "name": "pendingGroupDescription",
+      "type": "string",
+      "required": false,
+      "description": "Filter by group description",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "array"
+    }
+  }
+}
