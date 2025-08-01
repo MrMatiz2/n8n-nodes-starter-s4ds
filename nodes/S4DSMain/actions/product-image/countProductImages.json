@@ -1,0 +1,23 @@
+{
+  "name": "countProductImages",
+  "method": "GET",
+  "endpoint": "/productsImage/count",
+  "description": "Count product images",
+  "parameters": [
+    {
+      "name": "productImageDTO",
+      "type": "object",
+      "required": true,
+      "description": "Product image count parameters",
+      "in": "query",
+      "schema": "CountProductImagesDTO"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "number"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "createProductImage",
+  "method": "POST",
+  "endpoint": "/productsImage",
+  "description": "Create a new product image",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "CreateProductImageDTO",
+    "required": true
+  },
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "object"
+    }
+  }
+}

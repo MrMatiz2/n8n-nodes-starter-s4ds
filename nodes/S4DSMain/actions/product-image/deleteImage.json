@@ -1,0 +1,16 @@
+{
+  "name": "deleteImage",
+  "method": "DELETE",
+  "endpoint": "/productsImage",
+  "description": "Delete a product image",
+  "parameters": [],
+  "requiresAuth": true,
+  "requestBody": {
+    "schema": "DeleteProductImageDTO",
+    "required": true
+  },
+  "response": {
+    "type": "string",
+    "properties": {}
+  }
+}

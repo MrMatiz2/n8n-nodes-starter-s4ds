@@ -1,0 +1,29 @@
+{
+  "name": "getOnlineHelps",
+  "method": "GET",
+  "endpoint": "/communications/onlineHelps",
+  "description": "Get online help resources",
+  "parameters": [
+    {
+      "name": "pageId",
+      "type": "string",
+      "required": false,
+      "description": "Filter by page ID",
+      "in": "query"
+    },
+    {
+      "name": "languageId",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by language ID",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "array"
+    }
+  }
+}

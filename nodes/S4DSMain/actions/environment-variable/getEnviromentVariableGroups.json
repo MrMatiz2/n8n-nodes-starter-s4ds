@@ -1,0 +1,29 @@
+{
+  "name": "getEnviromentVariableGroups",
+  "method": "GET",
+  "endpoint": "/setup/enviromentVariableGroups",
+  "description": "Get environment variable groups with optional filters",
+  "parameters": [
+    {
+      "name": "groupid",
+      "type": "string",
+      "required": false,
+      "description": "Filter by group ID",
+      "in": "query"
+    },
+    {
+      "name": "groupCode",
+      "type": "string",
+      "required": false,
+      "description": "Filter by group code",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "array"
+    }
+  }
+}

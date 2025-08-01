@@ -1,0 +1,36 @@
+{
+  "name": "getWorkflowSteps",
+  "method": "GET",
+  "endpoint": "/workflows",
+  "description": "Get workflow steps with optional filters",
+  "parameters": [
+    {
+      "name": "wizardId",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by wizard ID",
+      "in": "query"
+    },
+    {
+      "name": "enabled",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter by enabled status",
+      "in": "query"
+    },
+    {
+      "name": "orderBy",
+      "type": "string",
+      "required": false,
+      "description": "Order results by field",
+      "in": "query"
+    }
+  ],
+  "requiresAuth": true,
+  "response": {
+    "type": "object",
+    "properties": {
+      "result": "array"
+    }
+  }
+}
